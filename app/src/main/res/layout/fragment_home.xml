@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_light"
+        tools:context=".HomeFragment">
+
+        <ImageView
+            android:id="@+id/hogent_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/desc_hogent_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hogent_logo" />
+
+        <Button
+            android:id="@+id/nav_btn_virtualMachines"
+            style="@style/ButtonLight"
+            android:layout_marginBottom="16dp"
+            android:text="@string/txt_virtual_machines"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/nav_btn_aanvragen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hogent_logo"
+            app:layout_constraintVertical_bias="0.388"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/nav_btn_aanvragen"
+            style="@style/ButtonLight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/txt_aanvragen"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/nav_btn_klanten"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nav_btn_virtualMachines" />
+
+        <Button
+            android:id="@+id/nav_btn_klanten"
+            style="@style/ButtonLight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_klanten"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nav_btn_aanvragen" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
