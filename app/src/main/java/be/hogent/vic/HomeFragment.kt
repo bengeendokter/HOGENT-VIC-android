@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
+import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -25,13 +28,19 @@ class HomeFragment : Fragment() {
         val binding: FragmentHomeBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_home, container, false
         )
-        binding.navBtnVirtualMachines.setOnClickListener (
-            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_VMListFragment)
-                )
-
-        /* binding.navBtnVirtualMachines.setOnClickListener { view: View ->
+        binding.navBtnVirtualMachines.setOnClickListener { view: View ->
             view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToVMListFragment())
-        } */
+        }
+
+        binding.dayNightSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+            if(isChecked) {
+                AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO)
+            }
+
+        }
+
         return binding.root
     }
 
