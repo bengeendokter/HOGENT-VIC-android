@@ -10,4 +10,12 @@
     <color name="primary">#F2F5FA</color>
     <color name="secondary">#FFFFFF</color>
     <color name="CTA">#38BDF8</color>
+    <color name="green">#36BD7C</color>
+
+    <!-- Colors for icons -->
+    <color name="ic_hogent">#504F4F</color>
+    <color name="ic_logout_1">#ffffff</color>
+    <color name="ic_logout_2">#E63462</color>
+    <color name="ic_profile_1">#ffffff</color>
+    <color name="ic_profile_2">#38BDF8</color>
 </resources>

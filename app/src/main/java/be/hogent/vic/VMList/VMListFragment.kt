@@ -1,4 +1,4 @@
-package be.hogent.vic
+package be.hogent.vic.VMList
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import be.hogent.vic.databinding.FragmentHomeBinding
+import androidx.navigation.findNavController
+import be.hogent.vic.R
 import be.hogent.vic.databinding.FragmentVmListBinding
 
 /**
@@ -24,6 +25,9 @@ class VMListFragment : Fragment() {
         val binding: FragmentVmListBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_vm_list, container, false
         )
+        binding.vmItem.setOnClickListener { view: View ->
+            view.findNavController().navigate(VMListFragmentDirections.actionVMListFragmentToVirtualMachineFragment())
+        }
         return binding.root
     }
 

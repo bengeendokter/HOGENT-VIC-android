@@ -16,7 +16,15 @@
     </fragment>
     <fragment
         android:id="@+id/VMListFragment"
-        android:name="be.hogent.vic.VMListFragment"
+        android:name="be.hogent.vic.VMList.VMListFragment"
         android:label="VMListFragment"
-        tools:layout="@layout/fragment_vm_list"/>
+        tools:layout="@layout/fragment_vm_list">
+        <action
+            android:id="@+id/action_VMListFragment_to_virtualMachineFragment"
+            app:destination="@id/virtualMachineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/virtualMachineFragment"
+        android:name="be.hogent.vic.VirtualMachine.VirtualMachineFragment"
+        android:label="VirtualMachineFragment" />
 </navigation>

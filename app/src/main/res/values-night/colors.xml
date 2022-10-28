@@ -2,5 +2,13 @@
 <resources>
     <color name="primary">#0F1729</color>
     <color name="secondary">#232F4A</color>
-    <color name="CTA">#F7F7FF</color>
+    <color name="CTA">#0B96D3</color>
+    <color name="green">#FFFCBD</color>
+
+    <!-- Colors for icons -->
+    <color name="ic_hogent">#F7F7FF</color>
+    <color name="ic_logout_1">#E63462</color>
+    <color name="ic_logout_2">#ffffff</color>
+    <color name="ic_profile_1">#232F4A</color>
+    <color name="ic_profile_2">#F7F7FF</color>
 </resources>
