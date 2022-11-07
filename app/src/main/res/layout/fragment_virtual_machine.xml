@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background"
+        android:orientation="vertical"
         tools:context=".VirtualMachine.VirtualMachineFragment">
 
         <TextView
             android:id="@+id/txt_virtualMachine"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:text="Virtual Machine"
             android:textAlignment="center"
             android:textColor="@color/CTA"
@@ -23,244 +25,262 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
 
         <ScrollView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:id="@+id/scroll_VirtualMachine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_virtualMachine">
+            app:layout_constraintTop_toBottomOf="@+id/txt_virtualMachine"
+            app:layout_constraintVertical_bias="0.0">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                <LinearLayout
+                    android:id="@+id/ll_vmKlantInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="48dp"
+                    android:background="@drawable/bg_vm_list_item"
+                    android:gravity="start|center_vertical"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_vmInfo"
+                    app:layout_constraintEnd_toStartOf="@+id/ll_vmStats"
+                    app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <LinearLayout
-                        android:id="@+id/lyt_storage"
-                        style="@style/VMDetail"
-                        android:layout_width="0dp"
+                    <TextView
+                        android:id="@+id/vm_txt_gebruiker"
+                        style="@style/boldGreen"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:orientation="vertical"
-                        app:layout_constraintEnd_toStartOf="@+id/lyt_mode"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/lyt_memory">
+                        android:text="@string/txt_gebruiker" />
 
-                        <TextView
-                            android:id="@+id/txt_storage"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/txt_mode"
-                            android:textColor="@color/green"
-                            android:textStyle="bold"
-                            tools:ignore="TextContrastCheck" />
-
-                        <TextView
-                            android:id="@+id/txt_storage_current"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/lyt_mode"
-                        style="@style/VMDetail"
-                        android:layout_width="0dp"
+                    <TextView
+                        android:id="@+id/vm_gebruiker_in"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="16dp"
-                        android:orientation="vertical"
-                        app:layout_constraintBottom_toBottomOf="@+id/lyt_storage"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/lyt_storage"
-                        app:layout_constraintTop_toTopOf="@+id/lyt_storage">
+                        android:paddingBottom="8dp"
+                        tools:text="Marc Asselberg" />
 
-                        <TextView
-                            android:id="@+id/txt_mode"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/txt_memory"
-                            android:textColor="@color/green"
-                            android:textStyle="bold"
-                            tools:ignore="TextContrastCheck" />
-
-                        <TextView
-                            android:id="@+id/txt_mode_current"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/lyt_memory"
-                        style="@style/VMDetail"
-                        android:layout_width="0dp"
+                    <TextView
+                        android:id="@+id/vm_txt_beginDatum"
+                        style="@style/boldGreen"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="32dp"
-                        android:layout_marginEnd="16dp"
-                        android:orientation="vertical"
-                        app:layout_constraintEnd_toStartOf="@+id/lyt_cpuCores"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:text="@string/txt_begindatum" />
 
-                        <TextView
-                            android:id="@+id/txt_memory"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/txt_memory"
-                            android:textColor="@color/green"
-                            android:textStyle="bold"
-                            tools:ignore="TextContrastCheck" />
+                    <TextView
+                        android:id="@+id/vm_txt_beginDatum_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        tools:text="01/01/2023" />
 
-                        <TextView
-                            android:id="@+id/txt_memory_current"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/vm_txt_eindDatum"
+                        style="@style/boldGreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_einddatum" />
 
-                    <LinearLayout
-                        android:id="@+id/lyt_cpuCores"
-                        style="@style/VMDetail"
-                        android:layout_width="0dp"
-                        android:layout_marginEnd="16dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/lyt_memory"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/lyt_memory"
-                        app:layout_constraintTop_toTopOf="@+id/lyt_memory">
-
-                        <TextView
-                            android:id="@+id/txt_cpuCores"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="#00FFFFFF"
-                            android:backgroundTint="#00FFFFFF"
-                            android:text="@string/txt_cpuCores"
-                            android:textColor="@color/green"
-                            android:textStyle="bold"
-                            tools:ignore="TextContrastCheck" />
-
-                        <TextView
-                            android:id="@+id/txt_cpuCores_current"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-                    </LinearLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/vm_txt_eindDatum_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        tools:text="01/02/2023" />
+                </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:id="@+id/ll_vmStats"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="64dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/bg_vm_list_item"
+                    android:gravity="start|center_vertical"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ll_vmKlantInfo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ll_vmKlantInfo"
+                    app:layout_constraintTop_toTopOf="@+id/ll_vmKlantInfo"
+                    tools:context=".VirtualMachine.VirtualMachineStatsFragment">
+
+                    <TextView
+                        android:id="@+id/vm_txt_storage"
+                        style="@style/boldGreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_storage" />
+
+                    <TextView
+                        android:id="@+id/vm_txt_storage_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="20 GB" />
+
+                    <TextView
+                        android:id="@+id/vm_txt_memory"
+                        style="@style/boldGreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_memory" />
+
+                    <TextView
+                        android:id="@+id/vm_txt_memory_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="2 GB" />
+
+                    <TextView
+                        android:id="@+id/vm_txt_cpuCores"
+                        style="@style/boldGreen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_cpuCores" />
+
+                    <TextView
+                        android:id="@+id/vm_txt_cpuCores_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="4" />
+
+                    <TextView
+                        android:id="@+id/vm_txt_mode"
+                        style="@style/boldGreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_mode" />
+
+                    <TextView
+                        android:id="@+id/vm_txt_mode_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="IaaS" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_vmInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+                    app:layout_constraintEnd_toEndOf="@+id/ll_vmStats"
+                    app:layout_constraintStart_toStartOf="@+id/ll_vmKlantInfo"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_vmKlantInfo">
 
                     <LinearLayout
-                        android:id="@+id/lyt_name"
-                        style="@style/VMDetail"
+                        android:id="@+id/ll_vmName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
-                        android:orientation="vertical">
+                        android:background="@drawable/bg_vm_list_item"
+                        android:orientation="vertical"
+                        android:padding="16dp" >
 
                         <TextView
-                            android:id="@+id/txt_name"
+                            android:id="@+id/vm_txt_name"
+                            style="@style/boldBlue"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/txt_name"
-                            android:textColor="@color/CTA"
-                            android:textStyle="bold" />
+                            android:text="@string/txt_name" />
 
                         <TextView
-                            android:id="@+id/txt_name_current"
+                            android:id="@+id/vm_txt_name_in"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
+                            android:layout_height="wrap_content"
+                            tools:text="virtual-machine-hogent-1" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/lyt_hostname"
-                        style="@style/VMDetail"
+                        android:id="@+id/ll_vmHostname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
-                        android:orientation="vertical">
+                        android:background="@drawable/bg_vm_list_item"
+                        android:orientation="vertical"
+                        android:padding="16dp" >
 
                         <TextView
-                            android:id="@+id/txt_hostname"
+                            android:id="@+id/vm_txt_hostname"
+                            style="@style/boldBlue"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/txt_hostname"
-                            android:textColor="@color/CTA"
-                            android:textStyle="bold" />
+                            android:text="@string/txt_hostname" />
 
                         <TextView
-                            android:id="@+id/txt_hostname_current"
+                            android:id="@+id/vm_txt_hostname_in"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
+                            android:layout_height="wrap_content"
+                            tools:text="vik1" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/lyt_fqdn"
-                        style="@style/VMDetail"
+                        android:id="@+id/ll_vmFQDN"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
-                        android:orientation="vertical">
+                        android:background="@drawable/bg_vm_list_item"
+                        android:orientation="vertical"
+                        android:padding="16dp" >
 
                         <TextView
-                            android:id="@+id/txt_fqdn"
+                            android:id="@+id/vm_txt_FQDN"
+                            style="@style/boldBlue"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/txt_fqdn"
-                            android:textColor="@color/CTA"
-                            android:textStyle="bold" />
+                            android:text="@string/txt_fqdn" />
 
                         <TextView
-                            android:id="@+id/txt_fqdn_current"
+                            android:id="@+id/vm_txt_FQDN_in"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            tools:text="devops-proj1.vichogent.be" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/lyt_template"
-                        style="@style/VMDetail"
+                        android:id="@+id/ll_vmTemplate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_vm_list_item"
+                        android:orientation="vertical"
+                        android:padding="16dp" >
 
                         <TextView
-                            android:id="@+id/txt_template"
+                            android:id="@+id/vm_txt_template"
+                            style="@style/boldBlue"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/txt_template"
-                            android:textColor="@color/CTA"
-                            android:textStyle="bold" />
+                            android:text="@string/txt_template" />
 
                         <TextView
-                            android:id="@+id/txt_template_current"
+                            android:id="@+id/vm_txt_template_in"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            tools:text="Standaard" />
                     </LinearLayout>
+
+
                 </LinearLayout>
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+    </LinearLayout>
 </layout>

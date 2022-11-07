@@ -25,7 +25,7 @@ class VMListFragment : Fragment() {
         val binding: FragmentVmListBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_vm_list, container, false
         )
-        binding.vmItem.setOnClickListener { view: View ->
+        binding.fragmentContainerView.setOnClickListener { view: View ->
             view.findNavController().navigate(VMListFragmentDirections.actionVMListFragmentToVirtualMachineFragment())
         }
         return binding.root
