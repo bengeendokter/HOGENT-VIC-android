@@ -34,6 +34,7 @@ class VirtualMachineFragment : Fragment() {
         return binding.root
     }
 
+    /* Tijdelijk */
     private fun setTexts() {
         binding.apply {
             // klant info
