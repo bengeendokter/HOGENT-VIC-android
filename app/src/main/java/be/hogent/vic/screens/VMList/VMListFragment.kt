@@ -1,4 +1,4 @@
-package be.hogent.vic.VMList
+package be.hogent.vic.screens.VMList
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -25,9 +25,16 @@ class VMListFragment : Fragment() {
         val binding: FragmentVmListBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_vm_list, container, false
         )
-        binding.vmItem.setOnClickListener { view: View ->
-            view.findNavController().navigate(VMListFragmentDirections.actionVMListFragmentToVirtualMachineFragment())
-        }
+
+//        binding.fragmentContainerView.setOnClickListener { view: View ->
+//            view.findNavController().navigate(VMListFragmentDirections.actionVMListFragmentToVirtualMachineFragment())
+//        }
+
+        val adapter = VMAdapter()
+        binding.vmList.adapter = adapter
+
+        binding.lifecycleOwner = viewLifecycleOwner
+
         return binding.root
     }
 

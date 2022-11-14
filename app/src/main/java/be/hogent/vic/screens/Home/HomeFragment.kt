@@ -1,4 +1,4 @@
-package be.hogent.vic
+package be.hogent.vic.screens.Home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import be.hogent.vic.R
 import be.hogent.vic.databinding.FragmentHomeBinding
 
 /**
@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
             inflater, R.layout.fragment_home, container, false
         )
         binding.navBtnVirtualMachines.setOnClickListener { view: View ->
-            view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToVMListFragment())
+            view.findNavController().navigate(be.hogent.vic.screens.Home.HomeFragmentDirections.actionHomeFragmentToVMListFragment())
         }
 
         binding.dayNightSwitch.setOnCheckedChangeListener { buttonView, isChecked ->

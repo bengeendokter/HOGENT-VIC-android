@@ -1,4 +1,4 @@
-package be.hogent.vic.VirtualMachine
+package be.hogent.vic.screens.VirtualMachine
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -34,16 +34,25 @@ class VirtualMachineFragment : Fragment() {
         return binding.root
     }
 
+    /* Tijdelijk */
     private fun setTexts() {
         binding.apply {
-            txtCpuCoresCurrent.text = "2"
-            txtMemoryCurrent.text = "2 GB"
-            txtStorageCurrent.text = "20GB"
-            txtModeCurrent.text = "IaaS"
-            txtNameCurrent.text="virtual-machine-hogent-1"
-            txtHostnameCurrent.text = "vik1"
-            txtFqdnCurrent.text = "devops-proj1.vichogent.be"
-            txtTemplateCurrent.text = "Standaard"
+            // klant info
+            vmGebruikerIn.text = "Marc Asselberg"
+            vmTxtBeginDatumIn.text = "01/01/2023"
+            vmTxtEindDatumIn.text = "01/02/2023"
+
+            // stats info
+            vmTxtStorageIn.text = "20 GB"
+            vmTxtMemoryIn.text = "2 GB"
+            vmTxtCpuCoresIn.text = "4"
+            vmTxtModeIn.text = "IaaS"
+
+            // vm info
+            vmTxtNameIn.text = "virtual-machine-hogent-1"
+            vmTxtHostnameIn.text = "vik1"
+            vmTxtFQDNIn.text = "devops-proj1.vichogent.be"
+            vmTxtTemplateIn.text = "standaard"
         }
     }
 

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_vm_list_item"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/vmli_txt_clientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Unizo 1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/vmli_txt_vmName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/vmli_txt_vmName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="unizo1.vichogent.be"
+            app:layout_constraintBottom_toTopOf="@+id/vmli_txt_startEndDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vmli_txt_clientName"
+            app:layout_constraintVertical_bias="0.50" />
+
+        <ImageView
+            android:id="@+id/img_vmIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/vmli_txt_startEndDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/vmli_txt_clientName"
+            app:layout_constraintTop_toTopOf="@+id/vmli_txt_clientName"
+            tools:srcCompat="@drawable/ic_vm" />
+
+        <TextView
+            android:id="@+id/vmli_txt_startEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="%s - %s"
+            app:layout_constraintBottom_toTopOf="@+id/vmli_txt_storage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vmli_txt_vmName"
+            tools:text="01/01/2023 - 01/02/2023" />
+
+        <TextView
+            android:id="@+id/vmli_txt_storage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="TextView"
+            android:textColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vmli_txt_ram"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vmli_txt_startEndDate" />
+
+        <TextView
+            android:id="@+id/vmli_txt_ram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/vmli_txt_storage"
+            app:layout_constraintEnd_toStartOf="@+id/vmli_txt_vCPU"
+            app:layout_constraintStart_toEndOf="@+id/vmli_txt_storage"
+            app:layout_constraintTop_toTopOf="@+id/vmli_txt_storage" />
+
+        <TextView
+            android:id="@+id/vmli_txt_vCPU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/vmli_txt_ram"
+            app:layout_constraintEnd_toStartOf="@+id/vmli_txt_mode"
+            app:layout_constraintStart_toEndOf="@+id/vmli_txt_ram"
+            app:layout_constraintTop_toTopOf="@+id/vmli_txt_ram" />
+
+        <TextView
+            android:id="@+id/vmli_txt_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="TextView"
+            android:textColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/vmli_txt_vCPU"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/vmli_txt_vCPU"
+            app:layout_constraintTop_toTopOf="@+id/vmli_txt_vCPU" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
