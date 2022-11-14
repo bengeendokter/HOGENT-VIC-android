@@ -1,4 +1,4 @@
-package be.hogent.vic.VirtualMachine
+package be.hogent.vic.screens.VirtualMachine
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

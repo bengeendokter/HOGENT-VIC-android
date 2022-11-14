@@ -191,7 +191,7 @@
                         android:layout_marginBottom="16dp"
                         android:background="@drawable/bg_vm_list_item"
                         android:orientation="vertical"
-                        android:padding="16dp" >
+                        android:padding="16dp">
 
                         <TextView
                             android:id="@+id/vm_txt_name"
@@ -214,7 +214,7 @@
                         android:layout_marginBottom="16dp"
                         android:background="@drawable/bg_vm_list_item"
                         android:orientation="vertical"
-                        android:padding="16dp" >
+                        android:padding="16dp">
 
                         <TextView
                             android:id="@+id/vm_txt_hostname"
@@ -237,7 +237,7 @@
                         android:layout_marginBottom="16dp"
                         android:background="@drawable/bg_vm_list_item"
                         android:orientation="vertical"
-                        android:padding="16dp" >
+                        android:padding="16dp">
 
                         <TextView
                             android:id="@+id/vm_txt_FQDN"
@@ -260,7 +260,7 @@
                         android:layout_marginBottom="16dp"
                         android:background="@drawable/bg_vm_list_item"
                         android:orientation="vertical"
-                        android:padding="16dp" >
+                        android:padding="16dp">
 
                         <TextView
                             android:id="@+id/vm_txt_template"

@@ -1,4 +1,4 @@
-package be.hogent.vic.VMList
+package be.hogent.vic.screens.VMList
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
