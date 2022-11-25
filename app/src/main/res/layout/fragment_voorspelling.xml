@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="voorspelling"
+            type="be.hogent.vic.screens.Voorspelling.VoorspellingViewModel" />
     </data>
 
     <FrameLayout
@@ -28,6 +30,16 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:text="Kies een datum" />
+
+        <TextView
+            android:id="@+id/voorspelling_cpu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@{voorspelling}"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </FrameLayout>
 </layout>

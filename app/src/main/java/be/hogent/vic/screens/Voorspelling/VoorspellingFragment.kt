@@ -68,6 +68,8 @@ class VoorspellingFragment : Fragment() {
 
         }
 
+        binding.voorspellingCpu.text = ""
+
         return binding.root
 
     }
