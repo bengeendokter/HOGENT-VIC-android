@@ -9,12 +9,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import be.hogent.vic.R
 import be.hogent.vic.databinding.FragmentHomeBinding
 import be.hogent.vic.databinding.FragmentVirtualMachineBinding
 import be.hogent.vic.databinding.FragmentVoorspellingBinding
+import java.text.SimpleDateFormat
 import java.util.Calendar
+import java.util.Date
 
 /**
  * A simple [Fragment] subclass.
@@ -27,6 +30,9 @@ class VoorspellingFragment : Fragment() {
 
     }
 
+    lateinit var viewModel : VoorspellingViewModel
+    var datum: Date = SimpleDateFormat("yyyy/MM/dd").parse("2022/11/25")
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,6 +41,10 @@ class VoorspellingFragment : Fragment() {
         val binding: FragmentVoorspellingBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_voorspelling, container, false
         )
+        viewModel = ViewModelProvider(this).get(VoorspellingViewModel::class.java)
+
+        binding.setLifecycleOwner (this)
+
        binding.voorspellingBtnDatum.setOnClickListener {
             val c = Calendar.getInstance()
 
@@ -46,6 +56,7 @@ class VoorspellingFragment : Fragment() {
                 requireActivity(),
                 { view, year, monthOfYear, dayOfMonth ->
                     binding.voorspellingDatum.text = (dayOfMonth.toString() + "-" + (monthOfYear + 1) + "-" + year)
+                    datum = SimpleDateFormat("yyyy/MM/dd").parse("${year}/${monthOfYear}/${dayOfMonth}")
                 },
                 year,
                 month,
@@ -68,7 +79,7 @@ class VoorspellingFragment : Fragment() {
 
         }
 
-        binding.voorspellingCpu.text = ""
+        binding.voorspellingCpu.text = viewModel.geefcpu(datum)
 
         return binding.root
 
