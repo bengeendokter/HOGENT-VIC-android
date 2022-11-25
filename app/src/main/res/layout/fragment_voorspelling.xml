@@ -35,7 +35,7 @@
             android:id="@+id/voorspelling_cpu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@{voorspelling}"
+            android:text="@{voorspelling.aantalCPU}"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
