@@ -72,4 +72,10 @@ class VoorspellingFragment : Fragment() {
 
     }
 
+    //TODO
+    //functies voor voorspelling
+    //viewmodel voorspelling
+    //databinding voor functie variabele
+    //3 delen tonen (cpu, ram, opslag)
+
 }
