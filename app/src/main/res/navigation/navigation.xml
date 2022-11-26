@@ -32,7 +32,7 @@
         android:label="VirtualMachineFragment" />
     <fragment
         android:id="@+id/voorspellingFragment"
-        android:name="be.hogent.vic.screens.Voorspelling.VoorspellingFragment"
+        android:name="be.hogent.vic.screens.voorspelling.VoorspellingFragment"
         android:label="fragment_voorspelling"
         tools:layout="@layout/fragment_voorspelling" />
 </navigation>

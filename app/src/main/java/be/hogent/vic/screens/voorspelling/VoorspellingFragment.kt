@@ -1,8 +1,6 @@
-package be.hogent.vic.screens.Voorspelling
+package be.hogent.vic.screens.voorspelling
 
-import android.app.Activity
 import android.app.DatePickerDialog
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,10 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import be.hogent.vic.R
-import be.hogent.vic.databinding.FragmentHomeBinding
-import be.hogent.vic.databinding.FragmentVirtualMachineBinding
 import be.hogent.vic.databinding.FragmentVoorspellingBinding
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -57,6 +52,7 @@ class VoorspellingFragment : Fragment() {
                 { view, year, monthOfYear, dayOfMonth ->
                     binding.voorspellingDatum.text = (dayOfMonth.toString() + "-" + (monthOfYear + 1) + "-" + year)
                     datum = SimpleDateFormat("yyyy/MM/dd").parse("${year}/${monthOfYear}/${dayOfMonth}")
+                    binding.voorspellingCpu.text = "${SimpleDateFormat("yyyy/MM/dd").parse("${year}/${monthOfYear}/${dayOfMonth}")}"
                 },
                 year,
                 month,

@@ -1,4 +1,4 @@
-package be.hogent.vic.screens.Voorspelling
+package be.hogent.vic.screens.voorspelling
 
 import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
@@ -6,11 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import be.hogent.vic.domain.VirtualMachine
 import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.time.ZoneId
-import java.time.ZoneId.systemDefault
 import java.util.*
-import kotlin.time.Duration.Companion.days
 
 class VoorspellingViewModel: ViewModel() {
     var cpu = 0

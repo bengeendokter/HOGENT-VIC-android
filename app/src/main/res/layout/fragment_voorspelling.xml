@@ -5,13 +5,13 @@
     <data>
         <variable
             name="voorspelling"
-            type="be.hogent.vic.screens.Voorspelling.VoorspellingViewModel" />
+            type="be.hogent.vic.screens.voorspelling.VoorspellingViewModel" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".screens.Voorspelling.VoorspellingFragment">
+        tools:context=".screens.voorspelling.VoorspellingFragment">
 
         <!-- TODO: Update blank fragment layout -->
         <TextView
@@ -33,10 +33,15 @@
 
         <TextView
             android:id="@+id/voorspelling_cpu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="196dp"
+            android:layout_height="205dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="200dp"
+            android:background="#BC6A6A"
+            android:paddingTop="100dp"
+            android:text="100"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
