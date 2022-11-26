@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import be.hogent.vic.R
 import be.hogent.vic.databinding.FragmentVoorspellingBinding
+import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -26,7 +27,9 @@ class VoorspellingFragment : Fragment() {
     }
 
     lateinit var viewModel : VoorspellingViewModel
-    var datum: Date = SimpleDateFormat("yyyy/MM/dd").parse("2022/11/25")
+    //TODO
+    //-localDate gebruiken en day, month en year gebruiken voor de parse
+    var datum: Date = Date()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,6 +46,9 @@ class VoorspellingFragment : Fragment() {
        binding.voorspellingBtnDatum.setOnClickListener {
             val c = Calendar.getInstance()
 
+
+            c.setTimeInMillis(datum.getTime())
+
             val year = c.get(Calendar.YEAR)
             val month = c.get(Calendar.MONTH)
             val day = c.get(Calendar.DAY_OF_MONTH)
@@ -50,9 +56,10 @@ class VoorspellingFragment : Fragment() {
             val datePickerDialog = DatePickerDialog(
                 requireActivity(),
                 { view, year, monthOfYear, dayOfMonth ->
-                    binding.voorspellingDatum.text = (dayOfMonth.toString() + "-" + (monthOfYear + 1) + "-" + year)
-                    datum = SimpleDateFormat("yyyy/MM/dd").parse("${year}/${monthOfYear}/${dayOfMonth}")
-                    binding.voorspellingCpu.text = "${SimpleDateFormat("yyyy/MM/dd").parse("${year}/${monthOfYear}/${dayOfMonth}")}"
+                    binding.voorspellingDatum.text = (dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year)
+                    datum = SimpleDateFormat("dd/MM/yyyy").parse("${dayOfMonth}/${monthOfYear}/${year}")
+                    //binding.voorspellingCpu.text = "${SimpleDateFormat("yyyy/MM/dd").parse("${year}/${monthOfYear}/${dayOfMonth}")}"
+                    binding.voorspellingCpu.text = viewModel.geefcpu(datum)
                 },
                 year,
                 month,
@@ -71,10 +78,12 @@ class VoorspellingFragment : Fragment() {
            c.set(maxYear, maxMonth, maxDay)
            datePickerDialog.datePicker.maxDate = c.timeInMillis
 
-            datePickerDialog.show()
+           datePickerDialog.show()
 
         }
 
+        //initeel iets tonen
+        binding.voorspellingDatum.text =  SimpleDateFormat("dd/MM/yyyy").format(datum).toString()
         binding.voorspellingCpu.text = viewModel.geefcpu(datum)
 
         return binding.root
