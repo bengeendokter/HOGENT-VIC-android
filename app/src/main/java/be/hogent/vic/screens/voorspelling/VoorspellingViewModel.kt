@@ -15,14 +15,39 @@ class VoorspellingViewModel: ViewModel() {
             1, "VM-IT-1", "VM_JN58CE_2354", "host123pt-45f", "TBD",
             4, 3, 950, "IaaS",
             SimpleDateFormat("yyyy/MM/dd").parse("2022/11/24"),
-            SimpleDateFormat("yyyy/MM/dd").parse("2022/11/24")
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/11/25")
         ),
         VirtualMachine(
-            1, "VM-IT-2", "VM_JN58CE_2354", "host123pt-45f", "TBD",
+            2, "VM-IT-2", "VM_JN58CE_2354", "host123pt-45f", "TBD",
             2, 5, 920, "IaaS",
             SimpleDateFormat("yyyy/MM/dd").parse("2022/11/26"),
-            SimpleDateFormat("yyyy/MM/dd").parse("2022/11/26")
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/11/27")
+        ),
+        VirtualMachine(
+            3, "VM-IT-3", "VM_JN58CE_2354", "host123pt-45f", "TBD",
+            4, 3, 950, "IaaS",
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/11/28"),
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/11/29")
+        ),
+        VirtualMachine(
+            4, "VM-IT-4", "VM_JN58CE_2354", "host123pt-45f", "TBD",
+            2, 5, 920, "IaaS",
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/20"),
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/21")
+        ),
+        VirtualMachine(
+            5, "VM-IT-5", "VM_JN58CE_2354", "host123pt-45f", "TBD",
+            4, 3, 950, "IaaS",
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/22"),
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/23")
+        ),
+        VirtualMachine(
+            6, "VM-IT-6", "VM_JN58CE_2354", "host123pt-45f", "TBD",
+            2, 5, 920, "IaaS",
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/22"),
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/23")
         )
+
     )
 
     private val _aantalCPU = MutableLiveData<Int>()

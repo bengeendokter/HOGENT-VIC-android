@@ -36,7 +36,7 @@ class VoorspellingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding: FragmentVoorspellingBinding = DataBindingUtil.inflate(
+         var binding: FragmentVoorspellingBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_voorspelling, container, false
         )
         viewModel = ViewModelProvider(this).get(VoorspellingViewModel::class.java)
@@ -44,14 +44,14 @@ class VoorspellingFragment : Fragment() {
         binding.setLifecycleOwner (this)
 
        binding.voorspellingBtnDatum.setOnClickListener {
-            val c = Calendar.getInstance()
+            var c = Calendar.getInstance()
 
 
-            c.setTimeInMillis(datum.getTime())
+            //c.setTimeInMillis(datum.getTime())
 
-            val year = c.get(Calendar.YEAR)
-            val month = c.get(Calendar.MONTH)
-            val day = c.get(Calendar.DAY_OF_MONTH)
+            var year = c.get(Calendar.YEAR)
+            var month = c.get(Calendar.MONTH)
+            var day = c.get(Calendar.DAY_OF_MONTH)
 
             val datePickerDialog = DatePickerDialog(
                 requireActivity(),
@@ -60,6 +60,7 @@ class VoorspellingFragment : Fragment() {
                     datum = SimpleDateFormat("dd/MM/yyyy").parse("${dayOfMonth}/${monthOfYear}/${year}")
                     //binding.voorspellingCpu.text = "${SimpleDateFormat("yyyy/MM/dd").parse("${year}/${monthOfYear}/${dayOfMonth}")}"
                     binding.voorspellingCpu.text = viewModel.geefcpu(datum)
+                    c.setTimeInMillis(datum.getTime())
                 },
                 year,
                 month,
@@ -72,7 +73,7 @@ class VoorspellingFragment : Fragment() {
            c.set(minYear, minMonth, minDay)
            datePickerDialog.datePicker.minDate = c.timeInMillis
 
-           val maxDay = 26
+           val maxDay = 27
            val maxMonth = 11
            val maxYear = 2022
            c.set(maxYear, maxMonth, maxDay)
@@ -88,6 +89,11 @@ class VoorspellingFragment : Fragment() {
 
         return binding.root
 
+    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
     }
 
     //TODO
