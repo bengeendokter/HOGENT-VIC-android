@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import be.hogent.vic.R
 import be.hogent.vic.databinding.FragmentVoorspellingBinding
@@ -26,6 +27,8 @@ class VoorspellingFragment : Fragment() {
 
     }
 
+
+
     lateinit var viewModel : VoorspellingViewModel
     //TODO
     //-localDate gebruiken en day, month en year gebruiken voor de parse
@@ -39,7 +42,7 @@ class VoorspellingFragment : Fragment() {
          var binding: FragmentVoorspellingBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_voorspelling, container, false
         )
-        viewModel = ViewModelProvider(this).get(VoorspellingViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(VoorspellingViewModel::class.java)
 
         binding.setLifecycleOwner (this)
 
@@ -59,8 +62,7 @@ class VoorspellingFragment : Fragment() {
                     binding.voorspellingDatum.text = (dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year)
                     datum = SimpleDateFormat("dd/MM/yyyy").parse("${dayOfMonth}/${monthOfYear}/${year}")
                     //binding.voorspellingCpu.text = "${SimpleDateFormat("yyyy/MM/dd").parse("${year}/${monthOfYear}/${dayOfMonth}")}"
-                    binding.voorspellingCpu.text = viewModel.geefcpu(datum)
-                    c.setTimeInMillis(datum.getTime())
+                    viewModel.geefcpu(datum)
                 },
                 year,
                 month,
@@ -85,16 +87,27 @@ class VoorspellingFragment : Fragment() {
 
         //initeel iets tonen
         binding.voorspellingDatum.text =  SimpleDateFormat("dd/MM/yyyy").format(datum).toString()
-        binding.voorspellingCpu.text = viewModel.geefcpu(datum)
+        viewModel.geefcpu(datum)
+
+        viewModel.totaalCPU.observe(viewLifecycleOwner, Observer {
+            newCPU -> binding.voorspellingTotaalCpu.text = newCPU.toString()
+        })
+
+        viewModel.vrijCPU.observe(viewLifecycleOwner, Observer {
+                newCPU -> binding.voorspellingVrijCpu.text = newCPU.toString()
+        })
+
+        viewModel.gebruikCPU.observe(viewLifecycleOwner, Observer {
+                newCPU -> binding.voorspellingGebruikCpu.text = newCPU.toString()
+        })
+
+
 
         return binding.root
 
     }
 
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-    }
 
     //TODO
     //functies voor voorspelling
