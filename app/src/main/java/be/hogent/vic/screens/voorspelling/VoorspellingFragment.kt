@@ -42,15 +42,12 @@ class VoorspellingFragment : Fragment() {
          var binding: FragmentVoorspellingBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_voorspelling, container, false
         )
-        viewModel = ViewModelProvider(requireActivity()).get(VoorspellingViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(VoorspellingViewModel::class.java)
 
         binding.setLifecycleOwner (this)
 
        binding.voorspellingBtnDatum.setOnClickListener {
             var c = Calendar.getInstance()
-
-
-            //c.setTimeInMillis(datum.getTime())
 
             var year = c.get(Calendar.YEAR)
             var month = c.get(Calendar.MONTH)
@@ -69,15 +66,15 @@ class VoorspellingFragment : Fragment() {
                 day
             )
 
-           val minDay = 25
-           val minMonth = 11
-           val minYear = 2022
+           val minDay = c.get(Calendar.DAY_OF_MONTH)
+           val minMonth = c.get(Calendar.MONTH)
+           val minYear = c.get(Calendar.YEAR)
            c.set(minYear, minMonth, minDay)
            datePickerDialog.datePicker.minDate = c.timeInMillis
 
-           val maxDay = 27
-           val maxMonth = 11
-           val maxYear = 2022
+           val maxDay = c.get(Calendar.DAY_OF_MONTH)
+           val maxMonth = c.get(Calendar.MONTH)
+           val maxYear = c.get(Calendar.YEAR).plus(1)
            c.set(maxYear, maxMonth, maxDay)
            datePickerDialog.datePicker.maxDate = c.timeInMillis
 
