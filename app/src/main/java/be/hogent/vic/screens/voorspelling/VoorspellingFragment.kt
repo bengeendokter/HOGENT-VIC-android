@@ -89,6 +89,7 @@ class VoorspellingFragment : Fragment() {
         binding.voorspellingDatum.text =  SimpleDateFormat("dd/MM/yyyy").format(datum).toString()
         viewModel.geefcpu(datum)
 
+        //cpu
         viewModel.totaalCPU.observe(viewLifecycleOwner, Observer {
             newCPU -> binding.voorspellingTotaalCpu.text = newCPU.toString()
         })
@@ -101,18 +102,36 @@ class VoorspellingFragment : Fragment() {
                 newCPU -> binding.voorspellingGebruikCpu.text = newCPU.toString()
         })
 
+        //ram
+        viewModel.totaalRAM.observe(viewLifecycleOwner, Observer {
+                newRAM -> binding.voorspellingTotaalRam.text = newRAM.toString()
+        })
+
+        viewModel.vrijRAM.observe(viewLifecycleOwner, Observer {
+                newRAM -> binding.voorspellingVrijRam.text = newRAM.toString()
+        })
+
+        viewModel.gebruikRAM.observe(viewLifecycleOwner, Observer {
+                newRAM -> binding.voorspellingGebruikRam.text = newRAM.toString()
+        })
+
+        //storage
+        viewModel.totaalStorage.observe(viewLifecycleOwner, Observer {
+                newStorage -> binding.voorspellingTotaalStorage.text = newStorage.toString()
+        })
+
+        viewModel.vrijStorage.observe(viewLifecycleOwner, Observer {
+                newStorage -> binding.voorspellingVrijStorage.text = newStorage.toString()
+        })
+
+        viewModel.gebruikStorage.observe(viewLifecycleOwner, Observer {
+                newStorage -> binding.voorspellingGebruikStorage.text = newStorage.toString()
+        })
+
 
 
         return binding.root
 
     }
-
-
-
-    //TODO
-    //functies voor voorspelling
-    //-viewmodel voorspelling
-    //databinding voor functie variabele
-    //3 delen tonen (cpu, ram, opslag)
 
 }

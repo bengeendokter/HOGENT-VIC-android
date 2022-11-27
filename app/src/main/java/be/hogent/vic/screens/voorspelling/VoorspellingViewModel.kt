@@ -60,35 +60,75 @@ class VoorspellingViewModel: ViewModel() {
     val gebruikCPU: LiveData<String>
         get() = _gebruikCPU
 
+    private var _totaalRAM = MutableLiveData<String>()
+    val totaalRAM: LiveData<String>
+        get() = _totaalRAM
+
+    private var _vrijRAM = MutableLiveData<String>()
+    val vrijRAM: LiveData<String>
+        get() = _vrijRAM
+
+    private var _gebruikRAM = MutableLiveData<String>()
+    val gebruikRAM: LiveData<String>
+        get() = _gebruikRAM
+
+    private var _totaalStorage = MutableLiveData<String>()
+    val totaalStorage: LiveData<String>
+        get() = _totaalStorage
+
+    private var _vrijStorage = MutableLiveData<String>()
+    val vrijStorage: LiveData<String>
+        get() = _vrijStorage
+
+    private var _gebruikStorage = MutableLiveData<String>()
+    val gebruikStorage: LiveData<String>
+        get() = _gebruikStorage
+
     init {
         _totaalCPU.value = "0"
         _vrijCPU.value = "0"
         _gebruikCPU.value = "0"
+
+        _totaalRAM.value = "0"
+        _vrijRAM.value = "0"
+        _gebruikRAM.value = "0"
+
+        _totaalStorage.value = "0"
+        _vrijStorage.value = "0"
+        _gebruikStorage.value = "0"
     }
 
     fun geefcpu(datum: Date): Unit{
-        var cal: Calendar = Calendar.getInstance()
-        cal.setTimeInMillis(datum.getTime())
-        //var num = (cal.get(Calendar.DAY_OF_MONTH))
-        //return num.toString()
-        var num2 = totaalVMCPU(datum)
-        /*var num3 = num2
-        return num3.toString()*/
-        _totaalCPU.value = definitieftotaalCPUfunc(datum).toString() //"0"
-        _vrijCPU.value = definitiefvrijCPUfunc(datum).toString()  //"0"
-        _gebruikCPU.value = definitiefgebruikCPUfunc(datum).toString() //"0"
+        _totaalCPU.value = definitieftotaalCPUfunc(datum).toString()
+        _vrijCPU.value = definitiefvrijCPUfunc(datum).toString()
+        _gebruikCPU.value = definitiefgebruikCPUfunc(datum).toString()
+
+        _totaalRAM.value = definitieftotaalRAMfunc(datum).toString()
+        _vrijRAM.value = definitiefvrijRAMfunc(datum).toString()
+        _gebruikRAM.value = definitiefgebruikRAMfunc(datum).toString()
+
+        _totaalStorage.value = definitieftotaalStoragefunc(datum).toString()
+        _vrijStorage.value = definitiefvrijStoragefunc(datum).toString()
+        _gebruikStorage.value = definitiefgebruikStoragefunc(datum).toString()
     }
 
     fun definitieftotaalCPUfunc(datum: Date): Int { return totaalVMCPU(datum); }
     fun definitiefvrijCPUfunc(datum: Date): Int { return vrijVMS(datum)[0]; }
     fun definitiefgebruikCPUfunc(datum: Date): Int { return (totaalVMCPU(datum) - vrijVMS(datum)[0]); }
 
+    fun definitieftotaalRAMfunc(datum: Date): Int { return totaalVMRAM(datum); }
+    fun definitiefvrijRAMfunc(datum: Date): Int { return vrijVMS(datum)[1]; }
+    fun definitiefgebruikRAMfunc(datum: Date): Int { return (totaalVMRAM(datum) - vrijVMS(datum)[1]); }
+
+    fun definitieftotaalStoragefunc(datum: Date): Int { return totaalVMStorage(datum);}
+    fun definitiefvrijStoragefunc(datum: Date): Int { return vrijVMS(datum)[2]; }
+    fun definitiefgebruikStoragefunc(datum: Date): Int { return (totaalVMStorage(datum) - vrijVMS(datum)[2]); }
+
 
     //totaal
     fun totaalVMCPU(datum: Date): Int { return vms.filter{ it.startDate <= datum }.fold(0){ acc, v -> acc + v.cpu}}
-    //return vms.filter(v => (v.StartDate <= datum)).ToList().Aggregate(0, (acc, v) => acc + v.CPU);
-    /*private int TotaalVMRAM(DateTime datum) { return _vms.Where(v => (v.StartDate <= datum)).ToList().Aggregate(0, (acc, v) => acc + v.RAM); }
-    private int TotaalVMStorage(DateTime datum) { return _vms.Where(v => (v.StartDate <= datum)).ToList().Aggregate(0, (acc, v) => acc + v.Storage); }*/
+    fun totaalVMRAM(datum: Date): Int { return vms.filter{ it.startDate <= datum }.fold(0){ acc, v -> acc + v.ram}}
+    fun totaalVMStorage(datum: Date): Int { return vms.filter{ it.startDate <= datum }.fold(0){ acc, v -> acc + v.storage}}
 
     fun vrijVMS(datum: Date): IntArray
     {
