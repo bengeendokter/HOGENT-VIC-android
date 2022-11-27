@@ -42,7 +42,8 @@ class VoorspellingFragment : Fragment() {
          var binding: FragmentVoorspellingBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_voorspelling, container, false
         )
-        viewModel = ViewModelProvider(this).get(VoorspellingViewModel::class.java)
+        //of this
+        viewModel = ViewModelProvider(requireActivity()).get(VoorspellingViewModel::class.java)
 
         binding.setLifecycleOwner (this)
 
@@ -56,9 +57,8 @@ class VoorspellingFragment : Fragment() {
             val datePickerDialog = DatePickerDialog(
                 requireActivity(),
                 { view, year, monthOfYear, dayOfMonth ->
-                    binding.voorspellingDatum.text = (dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year)
-                    datum = SimpleDateFormat("dd/MM/yyyy").parse("${dayOfMonth}/${monthOfYear}/${year}")
-                    //binding.voorspellingCpu.text = "${SimpleDateFormat("yyyy/MM/dd").parse("${year}/${monthOfYear}/${dayOfMonth}")}"
+                    datum = SimpleDateFormat("dd/MM/yyyy").parse("${dayOfMonth}/${monthOfYear+1}/${year}")
+                    binding.voorspellingDatum.text = SimpleDateFormat("dd/MM/yyyy").format(datum)
                     viewModel.geefcpu(datum)
                 },
                 year,
