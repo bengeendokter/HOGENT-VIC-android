@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -8,157 +9,231 @@
             type="be.hogent.vic.screens.voorspelling.VoorspellingViewModel" />
     </data>
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".screens.voorspelling.VoorspellingFragment">
 
         <TextView
             android:id="@+id/voorspelling_datum"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="datum"
-            tools:text="27/12/2022"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="27/12/2022" />
 
         <Button
             android:id="@+id/voorspelling_btn_datum"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
             android:text="Kies een datum"
-            tools:text="Kies een datum"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/voorspelling_datum"
+            tools:text="Kies een datum" />
 
         <TextView
             android:id="@+id/voorspelling_totaal_cpu"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="90dp"
-            android:layout_marginTop="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="112dp"
             android:background="#BC6A6A"
-            android:text="@{voorspelling.totaalCPU}"
+            android:text="@{`Totaal:\n` + voorspelling.totaalCPU}"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/voorspelling_vrij_cpu"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="10000" />
 
         <TextView
             android:id="@+id/voorspelling_vrij_cpu"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="112dp"
             android:background="#BC6A6A"
-            android:text="@{voorspelling.vrijCPU}"
+            android:text="@{`Resterend:\n` + voorspelling.vrijCPU}"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/voorspelling_gebruik_cpu"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/voorspelling_totaal_cpu"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="10000" />
 
         <TextView
             android:id="@+id/voorspelling_gebruik_cpu"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="250dp"
-            android:layout_marginTop="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="112dp"
             android:background="#BC6A6A"
-            android:text="@{voorspelling.gebruikCPU}"
-            tools:text="10000"
+            android:text="@{`Verbruik:\n` + voorspelling.gebruikCPU}"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/voorspelling_vrij_cpu"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="10000" />
 
         <TextView
             android:id="@+id/voorspelling_totaal_ram"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="90dp"
-            android:layout_marginTop="300dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="44dp"
             android:background="#288AD8"
-            android:text="@{voorspelling.totaalRAM}"
+            android:text="@{`Totaal:\n` + voorspelling.totaalRAM}"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/voorspelling_vrij_ram"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             tools:text="10000" />
 
         <TextView
             android:id="@+id/voorspelling_vrij_ram"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="300dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="44dp"
             android:background="#288AD8"
-            android:text="@{voorspelling.vrijRAM}"
+            android:text="@{`Resterend:\n` + voorspelling.vrijRAM}"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/voorspelling_gebruik_ram"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/voorspelling_totaal_ram"
             tools:text="10000" />
 
         <TextView
             android:id="@+id/voorspelling_gebruik_ram"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="250dp"
-            android:layout_marginTop="300dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="44dp"
             android:background="#288AD8"
-            android:text="@{voorspelling.gebruikRAM}"
-            tools:text="10000"
+            android:text="@{`Verbruik:\n` + voorspelling.gebruikRAM}"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/voorspelling_vrij_ram"
+            tools:text="10000" />
 
         <TextView
             android:id="@+id/voorspelling_totaal_storage"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="90dp"
-            android:layout_marginTop="400dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#4CAF50"
-            android:text="@{voorspelling.totaalStorage}"
+            android:text="@{`Totaal:\n` + voorspelling.totaalStorage}"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/voorspelling_totaal_ram"
+            app:layout_constraintEnd_toStartOf="@+id/voorspelling_vrij_storage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/voorspelling_totaal_cpu"
+            app:layout_constraintVertical_bias="0.52"
             tools:text="10000" />
 
         <TextView
             android:id="@+id/voorspelling_vrij_storage"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="400dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#4CAF50"
-            android:text="@{voorspelling.vrijStorage}"
+            android:text="@{`Resterend:\n` + voorspelling.vrijStorage}"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/voorspelling_vrij_ram"
+            app:layout_constraintEnd_toStartOf="@+id/voorspelling_gebruik_storage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/voorspelling_totaal_storage"
+            app:layout_constraintTop_toBottomOf="@+id/voorspelling_vrij_cpu"
+            app:layout_constraintVertical_bias="0.52"
             tools:text="10000" />
 
         <TextView
             android:id="@+id/voorspelling_gebruik_storage"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="250dp"
-            android:layout_marginTop="400dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#4CAF50"
-            android:text="@{voorspelling.gebruikStorage}"
-            tools:text="10000"
+            android:text="@{`Verbruik:\n` + voorspelling.gebruikStorage}"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
-    </FrameLayout>
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/voorspelling_gebruik_ram"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/voorspelling_vrij_storage"
+            app:layout_constraintTop_toBottomOf="@+id/voorspelling_gebruik_cpu"
+            app:layout_constraintVertical_bias="0.52"
+            tools:text="10000" />
+
+        <TextView
+            android:id="@+id/info_cpu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E19E9E"
+            android:text="Capaciteit CPU in Cores"
+            app:layout_constraintBottom_toTopOf="@+id/voorspelling_vrij_cpu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/voorspelling_btn_datum"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/info_ram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#4CAF50"
+            android:text="Capaciteit RAM in GB"
+            app:layout_constraintBottom_toTopOf="@+id/voorspelling_vrij_storage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/voorspelling_vrij_cpu"
+            app:layout_constraintVertical_bias="0.652" />
+
+        <TextView
+            android:id="@+id/info_storage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00BCD4"
+            android:text="Capaciteit Opslag in GB"
+            app:layout_constraintBottom_toTopOf="@+id/voorspelling_vrij_ram"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/voorspelling_vrij_storage"
+            app:layout_constraintVertical_bias="0.859" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
