@@ -16,41 +16,23 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 
-/**
- * A simple [Fragment] subclass.
- * Use the [VoorspellingFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class VoorspellingFragment : Fragment() {
     private lateinit var binding: FragmentVoorspellingBinding
     private lateinit var viewModel: VoorspellingViewModel
 
-    /*override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }*/
-
-    //TODO
-    //-localDate gebruiken en day, month en year gebruiken voor de parse
     var datum: Date = Date()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-         /*binding: FragmentVoorspellingBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_voorspelling, container, false
-        )*/
         binding = FragmentVoorspellingBinding.inflate(inflater)
-        //of this => opgelost
         viewModel = ViewModelProvider(this).get(VoorspellingViewModel::class.java)
 
         binding.voorspelling = viewModel
-        //binding.setLifecycleOwner (this)
         binding.lifecycleOwner = this
 
-       binding.voorspellingBtnDatum.setOnClickListener {
+        binding.voorspellingBtnDatum.setOnClickListener {
             var c = Calendar.getInstance()
 
             var year = c.get(Calendar.YEAR)
@@ -85,53 +67,10 @@ class VoorspellingFragment : Fragment() {
 
         }
 
-        //initeel iets tonen
         binding.voorspellingDatum.text =  SimpleDateFormat("dd/MM/yyyy").format(datum).toString()
         viewModel.geefcpu(datum)
 
-        //cpu
-        /*viewModel.totaalCPU.observe(viewLifecycleOwner, Observer {
-            newCPU -> binding.voorspellingTotaalCpu.text = newCPU.toString()
-        })
-
-        viewModel.vrijCPU.observe(viewLifecycleOwner, Observer {
-                newCPU -> binding.voorspellingVrijCpu.text = newCPU.toString()
-        })
-
-        viewModel.gebruikCPU.observe(viewLifecycleOwner, Observer {
-                newCPU -> binding.voorspellingGebruikCpu.text = newCPU.toString()
-        })
-
-        //ram
-        viewModel.totaalRAM.observe(viewLifecycleOwner, Observer {
-                newRAM -> binding.voorspellingTotaalRam.text = newRAM.toString()
-        })
-
-        viewModel.vrijRAM.observe(viewLifecycleOwner, Observer {
-                newRAM -> binding.voorspellingVrijRam.text = newRAM.toString()
-        })
-
-        viewModel.gebruikRAM.observe(viewLifecycleOwner, Observer {
-                newRAM -> binding.voorspellingGebruikRam.text = newRAM.toString()
-        })
-
-        //storage
-        viewModel.totaalStorage.observe(viewLifecycleOwner, Observer {
-                newStorage -> binding.voorspellingTotaalStorage.text = newStorage.toString()
-        })
-
-        viewModel.vrijStorage.observe(viewLifecycleOwner, Observer {
-                newStorage -> binding.voorspellingVrijStorage.text = newStorage.toString()
-        })
-
-        viewModel.gebruikStorage.observe(viewLifecycleOwner, Observer {
-                newStorage -> binding.voorspellingGebruikStorage.text = newStorage.toString()
-        })*/
-
-
-
         return binding.root
-
     }
 
 }
