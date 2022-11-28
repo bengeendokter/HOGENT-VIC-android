@@ -22,14 +22,14 @@ import java.util.Date
  * create an instance of this fragment.
  */
 class VoorspellingFragment : Fragment() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+    private lateinit var binding: FragmentVoorspellingBinding
+    private lateinit var viewModel: VoorspellingViewModel
+
+    /*override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-    }
+    }*/
 
-
-
-    lateinit var viewModel : VoorspellingViewModel
     //TODO
     //-localDate gebruiken en day, month en year gebruiken voor de parse
     var datum: Date = Date()
@@ -39,13 +39,16 @@ class VoorspellingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-         var binding: FragmentVoorspellingBinding = DataBindingUtil.inflate(
+         /*binding: FragmentVoorspellingBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_voorspelling, container, false
-        )
-        //of this
-        viewModel = ViewModelProvider(requireActivity()).get(VoorspellingViewModel::class.java)
+        )*/
+        binding = FragmentVoorspellingBinding.inflate(inflater)
+        //of this => opgelost
+        viewModel = ViewModelProvider(this).get(VoorspellingViewModel::class.java)
 
-        binding.setLifecycleOwner (this)
+        binding.voorspelling = viewModel
+        //binding.setLifecycleOwner (this)
+        binding.lifecycleOwner = this
 
        binding.voorspellingBtnDatum.setOnClickListener {
             var c = Calendar.getInstance()
@@ -87,7 +90,7 @@ class VoorspellingFragment : Fragment() {
         viewModel.geefcpu(datum)
 
         //cpu
-        viewModel.totaalCPU.observe(viewLifecycleOwner, Observer {
+        /*viewModel.totaalCPU.observe(viewLifecycleOwner, Observer {
             newCPU -> binding.voorspellingTotaalCpu.text = newCPU.toString()
         })
 
@@ -123,7 +126,7 @@ class VoorspellingFragment : Fragment() {
 
         viewModel.gebruikStorage.observe(viewLifecycleOwner, Observer {
                 newStorage -> binding.voorspellingGebruikStorage.text = newStorage.toString()
-        })
+        })*/
 
 
 
