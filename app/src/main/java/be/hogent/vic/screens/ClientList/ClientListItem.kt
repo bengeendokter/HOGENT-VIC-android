@@ -1,4 +1,4 @@
-package be.hogent.vic.screens.Client
+package be.hogent.vic.screens.ClientList
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,4 +1,4 @@
-package be.hogent.vic.screens.Client
+package be.hogent.vic.screens.ClientList
 
 import android.view.View
 import android.view.ViewGroup

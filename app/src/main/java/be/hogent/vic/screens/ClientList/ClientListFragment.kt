@@ -1,4 +1,4 @@
-package be.hogent.vic.screens.Client
+package be.hogent.vic.screens.ClientList
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import be.hogent.vic.R
 import be.hogent.vic.databinding.FragmentClientListBinding
-import be.hogent.vic.databinding.FragmentVmListBinding
-import be.hogent.vic.screens.VMList.VMAdapter
+
 /**
  * A simple [Fragment] subclass.
  * Use the [ClientListFragment.newInstance] factory method to
