@@ -2,20 +2,39 @@ package be.hogent.vic.screens.Client
 
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import java.util.*
-import android.view.LayoutInflater
 import android.widget.TextView
-import androidx.navigation.findNavController
-import be.hogent.vic.R
-import be.hogent.vic.domain.VirtualMachine
-import be.hogent.vic.screens.VMList.VMListFragmentDirections
-import java.text.SimpleDateFormat
-import androidx.navigation.findNavController
-import java.util.Date
+import androidx.recyclerview.widget.RecyclerView
+import be.hogent.vic.domain.Client
+import be.hogent.vic.screens.VMList.VMAdapter.ViewHolder.Companion.from
 
 class ClientAdapter: RecyclerView.Adapter<ClientAdapter.ViewHolder>() {
-    var data = null;
+
+    var data = listOf<Client>(
+        Client(
+            1,
+            "Bob",
+            "De Smet",
+            "+32 123 45 67 89",
+            "external",
+            "VOKA",
+            "bobdesmet@voka.be",
+            "bartdewolf@voka.be",
+            "",
+            "Manager"
+        ),
+        Client(
+            2,
+            "Bart",
+            "De Wolf",
+            "+32 012 34 56 78",
+            "external",
+            "VOKA",
+            "bartdewolf@voka.be",
+            "bobdesmet@voka.be",
+            "",
+            "CEO"
+        ),
+    )
 
     set(value) {
     field = value
@@ -34,12 +53,11 @@ class ClientAdapter: RecyclerView.Adapter<ClientAdapter.ViewHolder>() {
     }
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-
+        val Name: TextView = itemView.findViewById()
+        // TODO
     }
 
 }
-
-//class VMAdapter: RecyclerView.Adapter<VMAdapter.ViewHolder>() {
 
 //    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 //        val clientName: TextView = itemView.findViewById(R.id.vmli_txt_clientName)
@@ -78,5 +96,3 @@ class ClientAdapter: RecyclerView.Adapter<ClientAdapter.ViewHolder>() {
 //            }
 //        }
 //    }
-//
-//}
