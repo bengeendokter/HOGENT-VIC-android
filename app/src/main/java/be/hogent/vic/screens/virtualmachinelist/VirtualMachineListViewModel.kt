@@ -1,11 +1,9 @@
 package be.hogent.vic.screens.virtualmachinelist
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import be.hogent.vic.database.getDatabase
+import be.hogent.vic.domain.VirtualMachine
 import be.hogent.vic.repository.VirtualMachineRepository
 import kotlinx.coroutines.launch
 
@@ -14,10 +12,22 @@ class VirtualMachineListViewModel(application: Application) : AndroidViewModel(a
     private val virtualMachineRepository = VirtualMachineRepository(database)
     val virtualMachines = virtualMachineRepository.virtualMachines
 
+    private val _navigateToDetails = MutableLiveData<Int?>()
+    val navigateToDetails: LiveData<Int?>
+        get() = _navigateToDetails
+
     init {
         viewModelScope.launch {
             virtualMachineRepository.refreshVirtualMachines()
         }
+    }
+
+    fun displayDetails(vm: VirtualMachine) {
+        _navigateToDetails.value = vm.id
+    }
+
+    fun displayDetailsComplete() {
+        _navigateToDetails.value = null
     }
 
     class Factory(val app: Application) : ViewModelProvider.Factory {
