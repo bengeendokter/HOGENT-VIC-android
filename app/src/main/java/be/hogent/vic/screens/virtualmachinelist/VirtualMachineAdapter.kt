@@ -1,5 +1,6 @@
 package be.hogent.vic.screens.virtualmachinelist
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,22 +37,19 @@ class VirtualMachineAdapter: RecyclerView.Adapter<VirtualMachineAdapter.ViewHold
         val vCpu: TextView = itemView.findViewById(R.id.vmli_txt_vCPU)
         val ram: TextView = itemView.findViewById(R.id.vmli_txt_ram)
         val storage: TextView = itemView.findViewById(R.id.vmli_txt_storage)
-        val mode: TextView = itemView.findViewById(R.id.vmli_txt_mode)
 
         fun bind(
-            item: VirtualMachine
+            vm: VirtualMachine
         ) {
-            clientName.text = "Unizo 1" // !TODO
-            vmName.text = item.name
+            clientName.text = vm.client ?: "Geen klant"
+            vmName.text = vm.name
             startEndDate.text = "%s - %s".format(
-                SimpleDateFormat("dd/MM/yyyy").format(item.startDate),
-                SimpleDateFormat("dd/MM/yyyy").format(item.endDate)
+                SimpleDateFormat("dd/MM/yyyy").format(vm.startDate),
+                SimpleDateFormat("dd/MM/yyyy").format(vm.endDate)
             )
-            vCpu.text = item.cpu.toString()
-            ram.text = "%d GB".format(item.ram)
-            storage.text = "%d GB".format(item.storage)
-            mode.text = "" // item.mode
-
+            vCpu.text = "%d Cores".format(vm.cpu)
+            ram.text = "%d GB".format(vm.ram)
+            storage.text = "%d GB".format(vm.storage)
         }
 
         companion object {
