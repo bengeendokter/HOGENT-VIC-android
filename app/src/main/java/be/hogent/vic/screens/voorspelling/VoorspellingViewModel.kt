@@ -91,34 +91,4 @@ class VoorspellingViewModel: ViewModel() {
         }
         return lijst
     }
-
-    /*fun totaalVMS(datum: Date): IntArray {
-        var lijst = IntArray(3) { 0 }
-
-        vms.filter{ it.startDate <= datum }.forEach{ v ->
-            var tempCPU: Int = lijst[0]
-            var tempRAM: Int = lijst[1]
-            var tempStorage: Int = lijst[2]
-
-            lijst[0] = tempCPU + v.cpu;
-            lijst[1] = tempRAM + v.ram;
-            lijst[2] = tempStorage + v.storage;
-        }
-        return lijst
-    }*/
-
-    /*fun vrijVMS(datum: Date): IntArray
-    {
-        var lijst = IntArray(3) { 0 }
-        vms.filter {it.startDate <= datum && it.endDate <= datum }.forEach{ v ->
-            var tempCPU: Int = lijst[0]
-            var tempRAM: Int = lijst[1]
-            var tempStorage: Int = lijst[2]
-
-            lijst[0] = tempCPU + v.cpu;
-            lijst[1] = tempRAM + v.ram;
-            lijst[2] = tempStorage + v.storage;
-        }
-        return lijst
-    }*/
 }
