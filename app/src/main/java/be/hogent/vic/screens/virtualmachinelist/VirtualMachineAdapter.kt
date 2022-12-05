@@ -1,4 +1,4 @@
-package be.hogent.vic.screens.VMList
+package be.hogent.vic.screens.virtualmachinelist
 
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +10,7 @@ import be.hogent.vic.R
 import be.hogent.vic.domain.VirtualMachine
 import java.text.SimpleDateFormat
 
-class VMAdapter: RecyclerView.Adapter<VMAdapter.ViewHolder>() {
+class VirtualMachineAdapter: RecyclerView.Adapter<VirtualMachineAdapter.ViewHolder>() {
     var virtualMachines: List<VirtualMachine> = emptyList()
         set(value) {
             field = value
@@ -59,7 +59,7 @@ class VMAdapter: RecyclerView.Adapter<VMAdapter.ViewHolder>() {
                 val view = LayoutInflater.from(parent.context)
                     .inflate(R.layout.fragment_vm_list_item, parent, false)
                 view.setOnClickListener { view: View ->
-                    view.findNavController().navigate(VMListFragmentDirections.actionVMListFragmentToVirtualMachineFragment())
+                    view.findNavController().navigate(VirtualMachineListFragmentDirections.actionVMListFragmentToVirtualMachineFragment())
                 }
                 return ViewHolder(view)
             }

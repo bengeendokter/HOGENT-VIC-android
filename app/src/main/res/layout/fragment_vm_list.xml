@@ -7,14 +7,14 @@
     <data>
         <variable
             name="viewModel"
-            type="be.hogent.vic.screens.VMList.VMListViewModel" />
+            type="be.hogent.vic.screens.virtualmachinelist.VirtualMachineListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background"
-        tools:context=".screens.VMList.VMListFragment">
+        tools:context=".screens.virtualmachinelist.VirtualMachineListFragment">
 
         <ImageView
             android:id="@+id/hogent_logo2"

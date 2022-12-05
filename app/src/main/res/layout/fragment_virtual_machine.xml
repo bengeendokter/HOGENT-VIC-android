@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/background"
         android:orientation="vertical"
-        tools:context=".screens.VirtualMachine.VirtualMachineFragment">
+        tools:context=".screens.virtualmachine.VirtualMachineFragment">
 
         <TextView
             android:id="@+id/txt_virtualMachine"

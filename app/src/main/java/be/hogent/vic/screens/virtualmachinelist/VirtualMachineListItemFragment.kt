@@ -1,4 +1,4 @@
-package be.hogent.vic.screens.VMList
+package be.hogent.vic.screens.virtualmachinelist
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,16 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.RecyclerView
 import be.hogent.vic.R
 import be.hogent.vic.databinding.FragmentVmListItemBinding
 
 /**
  * A simple [Fragment] subclass.
- * Use the [VMListItemFragment.newInstance] factory method to
+ * Use the [VirtualMachineListItemFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class VMListItemFragment : Fragment() {
+class VirtualMachineListItemFragment : Fragment() {
 
     private lateinit var binding: FragmentVmListItemBinding
 

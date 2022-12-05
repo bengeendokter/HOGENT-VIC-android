@@ -1,4 +1,4 @@
-package be.hogent.vic.screens.VMList
+package be.hogent.vic.screens.virtualmachinelist
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,24 +8,23 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import be.hogent.vic.R
 import be.hogent.vic.databinding.FragmentVmListBinding
 import be.hogent.vic.domain.VirtualMachine
 
-class VMListFragment : Fragment() {
-    private val viewModel: VMListViewModel by lazy {
+class VirtualMachineListFragment : Fragment() {
+    private val viewModel: VirtualMachineListViewModel by lazy {
         val activity = requireNotNull(this.activity) {
             "You can only access the viewModel after onViewCreated()"
         }
 
         ViewModelProvider(
             this,
-            VMListViewModel.Factory(activity.application)
-        ).get(VMListViewModel::class.java)
+            VirtualMachineListViewModel.Factory(activity.application)
+        ).get(VirtualMachineListViewModel::class.java)
     }
 
-    private var viewModelAdapter: VMAdapter? = null
+    private var viewModelAdapter: VirtualMachineAdapter? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -50,7 +49,7 @@ class VMListFragment : Fragment() {
         )
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
-        viewModelAdapter = VMAdapter()
+        viewModelAdapter = VirtualMachineAdapter()
         binding.vmList.adapter = viewModelAdapter
 
         return binding.root
