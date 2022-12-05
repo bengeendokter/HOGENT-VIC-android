@@ -54,7 +54,7 @@ class VoorspellingViewModel: ViewModel() {
         get() = _voorspelling
 
     init {
-        _voorspelling.value = Voorspelling( Array(3) { "" }, Array(3) { "" }, Array(3) { "" })
+        _voorspelling.value = Voorspelling( Array(3) { "0" }, Array(3) { "0" })
     }
 
     fun doeVoorspelling(datum: Date): Unit{
@@ -64,16 +64,16 @@ class VoorspellingViewModel: ViewModel() {
         _voorspelling.value =  Voorspelling(
             tot.map { it.toString() }.toTypedArray(),
             vrij.map { it.toString() }.toTypedArray(),
-            tot.zip(vrij).map { (x1, x2)->
+            /*tot.zip(vrij).map { (x1, x2)->
                 x1 - x2
-            }.map { it.toString() }.toTypedArray()
+            }.map { it.toString() }.toTypedArray()*/
         );
     }
 
     fun berekenVoorspelling(datum: Date, totaal: Boolean): IntArray {
         var lijst = IntArray(3) { 0 }
 
-        var vmlijst = vms
+        var vmlijst: List<VirtualMachine>
         if (totaal) {
             vmlijst = vms.filter{ it.startDate <= datum }.toList()
         } else {
