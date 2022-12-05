@@ -25,7 +25,7 @@ data class VirtualMachineDatabaseDto constructor(
     val fqdn: String? = null,
     val host: String? = null,
     val ports: String? = null,
-    val client: Client? = null,
+    val client: String? = null,
     val availability: Day? = null,
     val mode: Mode? = null,
     val createdAt: Date? = null

@@ -49,7 +49,7 @@ fun VirtualMachineNetworkDtoContainer.asDomainModel(): List<VirtualMachine> {
             fqdn = it.fqdn,
             host = it.host,
             ports = it.ports,
-            client = it.client,
+            client = it.client?.name,
             availability = it.availability,
             mode = it.mode,
             createdAt = it.createdAt
@@ -75,7 +75,7 @@ fun VirtualMachineNetworkDtoContainer.asDatabaseModel(): Array<VirtualMachineDat
             fqdn = it.fqdn,
             host = it.host,
             ports = it.ports,
-            client = it.client,
+            client = it.client?.name,
             availability = it.availability,
             mode = it.mode,
             createdAt = it.createdAt
