@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import be.hogent.vic.databinding.VmListItemBinding
 import be.hogent.vic.domain.VirtualMachine
 
-class VirtualMachineAdapter(private val onClickListener: OnClickListener): ListAdapter<VirtualMachine, VirtualMachineAdapter.VirtualMachineViewHolder>(DiffCallback) {
-    class VirtualMachineViewHolder(private var binding: VmListItemBinding): RecyclerView.ViewHolder(binding.root) {
+class VirtualMachineAdapter(private val onClickListener: OnClickListener) :
+    ListAdapter<VirtualMachine, VirtualMachineAdapter.VirtualMachineViewHolder>(DiffCallback) {
+    class VirtualMachineViewHolder(private var binding: VmListItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(virtualMachine: VirtualMachine) {
             binding.vm = virtualMachine
             binding.executePendingBindings()
@@ -20,7 +22,7 @@ class VirtualMachineAdapter(private val onClickListener: OnClickListener): ListA
         fun onClick(virtualMachine: VirtualMachine) = clickListener(virtualMachine)
     }
 
-    companion object DiffCallback: DiffUtil.ItemCallback<VirtualMachine>() {
+    companion object DiffCallback : DiffUtil.ItemCallback<VirtualMachine>() {
         override fun areItemsTheSame(oldItem: VirtualMachine, newItem: VirtualMachine): Boolean {
             return oldItem === newItem
         }
@@ -31,7 +33,13 @@ class VirtualMachineAdapter(private val onClickListener: OnClickListener): ListA
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VirtualMachineViewHolder {
-        return VirtualMachineViewHolder(VmListItemBinding.inflate(LayoutInflater.from(parent.context)))
+        return VirtualMachineViewHolder(
+            VmListItemBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: VirtualMachineViewHolder, position: Int) {
