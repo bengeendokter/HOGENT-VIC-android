@@ -44,7 +44,7 @@ class VoorspellingFragment : Fragment() {
                 { view, year, monthOfYear, dayOfMonth ->
                     datum = SimpleDateFormat("dd/MM/yyyy").parse("${dayOfMonth}/${monthOfYear+1}/${year}")
                     binding.voorspellingDatum.text = SimpleDateFormat("dd/MM/yyyy").format(datum)
-                    viewModel.geefcpu(datum)
+                    viewModel.doeVoorspelling(datum)
                 },
                 year,
                 month,
@@ -68,7 +68,7 @@ class VoorspellingFragment : Fragment() {
         }
 
         binding.voorspellingDatum.text =  SimpleDateFormat("dd/MM/yyyy").format(datum).toString()
-        viewModel.geefcpu(datum)
+        viewModel.doeVoorspelling(datum)
 
         return binding.root
     }

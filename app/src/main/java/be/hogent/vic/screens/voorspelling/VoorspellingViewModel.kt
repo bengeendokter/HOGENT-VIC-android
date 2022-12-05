@@ -57,9 +57,9 @@ class VoorspellingViewModel: ViewModel() {
         _voorspelling.value = Voorspelling( Array(3) { "" }, Array(3) { "" }, Array(3) { "" })
     }
 
-    fun geefcpu(datum: Date): Unit{
-        val tot = berekenVMS(datum, true)
-        val vrij = berekenVMS(datum, false)
+    fun doeVoorspelling(datum: Date): Unit{
+        val tot = berekenVoorspelling(datum, true)
+        val vrij = berekenVoorspelling(datum, false)
 
         _voorspelling.value =  Voorspelling(
             tot.map { it.toString() }.toTypedArray(),
@@ -70,7 +70,7 @@ class VoorspellingViewModel: ViewModel() {
         );
     }
 
-    fun berekenVMS(datum: Date, totaal: Boolean): IntArray {
+    fun berekenVoorspelling(datum: Date, totaal: Boolean): IntArray {
         var lijst = IntArray(3) { 0 }
 
         var vmlijst = vms
