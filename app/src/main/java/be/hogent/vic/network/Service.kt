@@ -1,6 +1,11 @@
 package be.hogent.vic.network
 
+import be.hogent.vic.domain.BackupFrequency
+import be.hogent.vic.domain.Day
+import be.hogent.vic.domain.Mode
+import be.hogent.vic.domain.Template
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.adapters.EnumJsonAdapter
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.coroutines.Deferred
@@ -11,12 +16,16 @@ import java.util.*
 
 interface VicService {
     @GET("virtualmachine")
-    suspend fun getVirtualMachines(): VirtualMachineNetworkDtoContainer
+    suspend fun getVirtualMachines(): List<VirtualMachineNetworkDto>
 }
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
     .add(Date::class.java, Rfc3339DateJsonAdapter().nullSafe())
+    .add(createEnumJsonAdapter<Mode>())
+    .add(createEnumJsonAdapter<Template>())
+    .add(createEnumJsonAdapter<Day>())
+    .add(createEnumJsonAdapter<BackupFrequency>())
     .build()
 
 object Network {

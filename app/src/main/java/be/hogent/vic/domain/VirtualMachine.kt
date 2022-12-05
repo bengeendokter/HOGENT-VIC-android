@@ -1,5 +1,6 @@
 package be.hogent.vic.domain
 
+import be.hogent.vic.network.IEnumValue
 import java.util.Date
 
 data class VirtualMachine(
@@ -29,10 +30,24 @@ data class VirtualMachine(
 
 }
 
-enum class Template { ARTIFICIAL_INTELLIGENCE, DATABASE, MACHINE_LEARNING }
-enum class BackupFrequency { DAILY, WEEKLY }
-enum class Mode { IAAS, PAAS, SAAS }
-enum class Day(val value: Int) {
+enum class Template(override val value: Int) : IEnumValue {
+    ARTIFICIAL_INTELLIGENCE(0),
+    DATABASE(1),
+    MACHINE_LEARNING(2)
+}
+
+enum class BackupFrequency(override val value: Int) : IEnumValue {
+    DAILY(0),
+    WEEKLY(1)
+}
+
+enum class Mode(override val value: Int) : IEnumValue {
+    IAAS(0),
+    PAAS(1),
+    SAAS(2)
+}
+
+enum class Day(override val value: Int) : IEnumValue {
     MONDAY(1),
     TUESDAY(2),
     WEDNESDAY(4),

@@ -6,9 +6,6 @@ import com.squareup.moshi.JsonClass
 import java.util.*
 
 @JsonClass(generateAdapter = true)
-data class VirtualMachineNetworkDtoContainer(val virtualMachines: List<VirtualMachineNetworkDto>)
-
-@JsonClass(generateAdapter = true)
 data class VirtualMachineNetworkDto(
     val id: Int,
     val name: String,
@@ -31,8 +28,8 @@ data class VirtualMachineNetworkDto(
     val createdAt: Date? = null
 )
 
-fun VirtualMachineNetworkDtoContainer.asDomainModel(): List<VirtualMachine> {
-    return virtualMachines.map {
+fun List<VirtualMachineNetworkDto>.asDomainModel(): List<VirtualMachine> {
+    return map {
         VirtualMachine(
             id = it.id,
             name = it.name,
@@ -57,8 +54,8 @@ fun VirtualMachineNetworkDtoContainer.asDomainModel(): List<VirtualMachine> {
     }
 }
 
-fun VirtualMachineNetworkDtoContainer.asDatabaseModel(): Array<VirtualMachineDatabaseDto> {
-    return virtualMachines.map {
+fun List<VirtualMachineNetworkDto>.asDatabaseModel(): Array<VirtualMachineDatabaseDto> {
+    return map {
         VirtualMachineDatabaseDto (
             id = it.id,
             name = it.name,
