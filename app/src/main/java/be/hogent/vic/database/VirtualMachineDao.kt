@@ -9,7 +9,7 @@ import androidx.room.Query
 @Dao
 interface VirtualMachineDao {
     @Query("SELECT * FROM virtual_machines")
-    fun getVideos(): LiveData<List<VirtualMachineDatabaseDto>>
+    fun getVirtualMachines(): LiveData<List<VirtualMachineDatabaseDto>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(vararg virtualMachines: VirtualMachineDatabaseDto)
