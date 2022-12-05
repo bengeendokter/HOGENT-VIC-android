@@ -6,34 +6,52 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import be.hogent.vic.R
 import be.hogent.vic.databinding.FragmentVmListBinding
+import be.hogent.vic.domain.VirtualMachine
 
-/**
- * A simple [Fragment] subclass.
- * Use the [VMListFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class VMListFragment : Fragment() {
+    private val viewModel: VMListViewModel by lazy {
+        val activity = requireNotNull(this.activity) {
+            "You can only access the viewModel after onViewCreated()"
+        }
+
+        ViewModelProvider(
+            this,
+            VMListViewModel.Factory(activity.application)
+        ).get(VMListViewModel::class.java)
+    }
+
+    private var viewModelAdapter: VMAdapter? = null
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.virtualMachines.observe(
+            viewLifecycleOwner,
+            Observer<List<VirtualMachine>> { virtualMachines ->
+                virtualMachines?.apply {
+                    viewModelAdapter?.virtualMachines = virtualMachines
+                }
+            })
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val binding: FragmentVmListBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_vm_list, container, false
+            inflater,
+            R.layout.fragment_vm_list,
+            container,
+            false
         )
-
-//        binding.fragmentContainerView.setOnClickListener { view: View ->
-//            view.findNavController().navigate(VMListFragmentDirections.actionVMListFragmentToVirtualMachineFragment())
-//        }
-
-        val adapter = VMAdapter()
-        binding.vmList.adapter = adapter
-
         binding.lifecycleOwner = viewLifecycleOwner
+        binding.viewModel = viewModel
+        viewModelAdapter = VMAdapter()
+        binding.vmList.adapter = viewModelAdapter
 
         return binding.root
     }
