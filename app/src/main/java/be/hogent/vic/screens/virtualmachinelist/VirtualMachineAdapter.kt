@@ -1,6 +1,5 @@
 package be.hogent.vic.screens.virtualmachinelist
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -55,7 +54,7 @@ class VirtualMachineAdapter: RecyclerView.Adapter<VirtualMachineAdapter.ViewHold
         companion object {
             fun from(parent: ViewGroup): ViewHolder {
                 val view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.fragment_vm_list_item, parent, false)
+                    .inflate(R.layout.vm_list_item, parent, false)
                 view.setOnClickListener { view: View ->
                     view.findNavController().navigate(VirtualMachineListFragmentDirections.actionVMListFragmentToVirtualMachineFragment())
                 }

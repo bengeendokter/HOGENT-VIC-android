@@ -30,6 +30,8 @@ class VirtualMachineFragment : Fragment() {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_virtual_machine, container, false
         )
+        // TODO: De id van de geselecteerde vm, detail ophalen van api
+        val selectedId = VirtualMachineFragmentArgs.fromBundle(requireArguments()).selectedId
         setTexts()
         return binding.root
     }

@@ -26,5 +26,9 @@
     <fragment
         android:id="@+id/virtualMachineFragment"
         android:name="be.hogent.vic.screens.virtualmachine.VirtualMachineFragment"
-        android:label="VirtualMachineFragment" />
+        android:label="VirtualMachineFragment" >
+        <argument
+            android:name="selectedId"
+            app:argType="integer" />
+    </fragment>
 </navigation>
