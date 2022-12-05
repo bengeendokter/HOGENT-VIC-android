@@ -1,9 +1,5 @@
 package be.hogent.vic.screens.VMList
 
-/*
-zal nodig zijn voor recyclerview
- */
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,51 +9,22 @@ import androidx.recyclerview.widget.RecyclerView
 import be.hogent.vic.R
 import be.hogent.vic.domain.VirtualMachine
 import java.text.SimpleDateFormat
-import java.util.Date
 
 class VMAdapter: RecyclerView.Adapter<VMAdapter.ViewHolder>() {
+    var virtualMachines: List<VirtualMachine> = emptyList()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
-    var data = listOf<VirtualMachine>(
-        VirtualMachine(
-            1,
-            "VM-IT-1",
-            "VM_JN58CE_2354",
-            "vik1",
-            "TBD",
-            4,
-            3,
-            950,
-            "IaaS",
-            Date(2022, 1, 15),
-            Date(2023, 4, 14),
-        ),
-        VirtualMachine(
-            2,
-            "VM-IT-2",
-            "VM_GH35ZR_5436",
-            "vik1",
-            "TBD",
-            2,
-            5,
-            920,
-            "IaaS",
-            Date(2022, 2, 16),
-            Date(2023, 3, 17),
-        )
-    )
-    set(value) {
-        field = value
-        notifyDataSetChanged()
-    }
-
-    override fun getItemCount() = data.size
+    override fun getItemCount() = virtualMachines.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(parent);
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = data[position]
+        val item = virtualMachines[position]
         holder.bind(item)
     }
 
@@ -75,7 +42,7 @@ class VMAdapter: RecyclerView.Adapter<VMAdapter.ViewHolder>() {
             item: VirtualMachine
         ) {
             clientName.text = "Unizo 1" // !TODO
-            vmName.text = item.Name
+            vmName.text = item.name
             startEndDate.text = "%s - %s".format(
                 SimpleDateFormat("dd/MM/yyyy").format(item.startDate),
                 SimpleDateFormat("dd/MM/yyyy").format(item.endDate)
@@ -83,7 +50,7 @@ class VMAdapter: RecyclerView.Adapter<VMAdapter.ViewHolder>() {
             vCpu.text = item.cpu.toString()
             ram.text = "%d GB".format(item.ram)
             storage.text = "%d GB".format(item.storage)
-            mode.text = item.mode
+            mode.text = "" // item.mode
 
         }
 
