@@ -18,7 +18,7 @@ class VirtualMachineRepository(private val database: VicDatabase) {
 
     suspend fun refreshVirtualMachines() {
         withContext(Dispatchers.IO) {
-            val virtualMachines = Network.vic.getVirtualMachines().await()
+            val virtualMachines = Network.vic.getVirtualMachines()
             database.virtualMachineDao.insertAll(*virtualMachines.asDatabaseModel())
         }
     }

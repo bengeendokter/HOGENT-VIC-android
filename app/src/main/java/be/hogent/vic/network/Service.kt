@@ -1,6 +1,5 @@
 package be.hogent.vic.network
 
-import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -11,8 +10,8 @@ import retrofit2.http.GET
 import java.util.*
 
 interface VicService {
-    @GET("/virtualmachine")
-    fun getVirtualMachines(): Deferred<VirtualMachineNetworkDtoContainer>
+    @GET("virtualmachine")
+    suspend fun getVirtualMachines(): VirtualMachineNetworkDtoContainer
 }
 
 private val moshi = Moshi.Builder()
@@ -25,7 +24,6 @@ object Network {
     private val retrofit = Retrofit.Builder()
         .baseUrl("https://localhost:7257/api/") // TODO: change to hosted API
         .addConverterFactory(MoshiConverterFactory.create(moshi))
-        .addCallAdapterFactory(CoroutineCallAdapterFactory())
         .build()
 
     val vic = retrofit.create(VicService::class.java)
