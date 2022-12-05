@@ -9,8 +9,8 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
 interface VicService {
-//    @GET("devbytes.json")
-//    fun getPlaylist(): Deferred<NetworkVideoContainer>
+    @GET("/virtualmachine")
+    fun getVirtualMachines(): Deferred<VirtualMachineNetworkDtoContainer>
 }
 
 private val moshi = Moshi.Builder()
