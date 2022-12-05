@@ -22,7 +22,7 @@ private val moshi = Moshi.Builder()
 object Network {
     // Configure retrofit to parse JSON and use coroutines
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://10.0.2.2:7257/api/") // TODO: change to hosted API
+        .baseUrl("http://10.0.2.2:5129/api/") // TODO: change to hosted API
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
 
