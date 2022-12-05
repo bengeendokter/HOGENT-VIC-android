@@ -1,9 +1,9 @@
 package be.hogent.vic.domain
 
-import java.time.DateTimeException
 import java.util.Date
 
 data class VirtualMachine(
+    // From index dto
     val id: Int,
     val name: String,
     val cpu: Int,
@@ -16,47 +16,15 @@ data class VirtualMachine(
     // val template: String,
     // val backupFrequency: String,
 
-    val hostName: String?,
-    val fqdn: String?,
-    val host: String?,
-    val ports: String?,
-    // val client: String?,
-    // val availability: String?,
-    // val mode: String?,
-    val createdAt: Date?
+    // From detail dto
+    val hostName: String? = null,
+    val fqdn: String? = null,
+    val host: String? = null,
+    val ports: String? = null,
+    // val client: String? = null,
+    // val availability: String? = null,
+    // val mode: String? = null,
+    val createdAt: Date? = null
 ) {
-    // From index dto
-    constructor(
-        id: Int,
-        name: String,
-        cpu: Int,
-        ram: Int,
-        storage: Int,
-        startDate: Date,
-        endDate: Date,
-        isActive: Boolean,
-        isHighlyAvailable: Boolean /*, template: String, backupFrequency: String */
-    ) : this(
-        id,
-        name,
-        cpu,
-        ram,
-        storage,
-        startDate,
-        endDate,
-        isActive,
-        isHighlyAvailable,
-        // template,
-        // backupFrequency,
-        null,
-        null,
-        null,
-        null,
-        // null,
-        // null,
-        // null,
-        null
-    ) {
 
-    }
 }
