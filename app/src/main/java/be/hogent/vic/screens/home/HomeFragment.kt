@@ -33,7 +33,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.navBtnVoorspelling.setOnClickListener { view: View ->
-            view.findNavController().navigate(be.hogent.vic.screens.Home.HomeFragmentDirections.actionHomeFragmentToVoorspellingFragment())
+            view.findNavController().navigate(be.hogent.vic.screens.home.HomeFragmentDirections.actionHomeFragmentToVoorspellingFragment())
         }
 
         binding.dayNightSwitch.setOnCheckedChangeListener { buttonView, isChecked ->

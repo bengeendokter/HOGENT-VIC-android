@@ -3,6 +3,8 @@ package be.hogent.vic.screens.voorspelling
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import be.hogent.vic.domain.BackupFrequency
+import be.hogent.vic.domain.Template
 import be.hogent.vic.domain.VirtualMachine
 import be.hogent.vic.domain.Voorspelling
 import java.text.SimpleDateFormat
@@ -11,40 +13,46 @@ import java.util.*
 class VoorspellingViewModel: ViewModel() {
     private val vms = listOf(
         VirtualMachine(
-            1, "VM-IT-1", "VM_JN58CE_2354", "host123pt-45f", "TBD",
-            4, 3, 950, "IaaS",
+            1, "VM-IT-1",
+            4, 3, 950,
             SimpleDateFormat("yyyy/MM/dd").parse("2022/11/01"),
-            SimpleDateFormat("yyyy/MM/dd").parse("2022/11/02")
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/11/02"),
+            true, true, Template.DATABASE, BackupFrequency.WEEKLY
         ),
         VirtualMachine(
-            2, "VM-IT-2", "VM_JN58CE_2354", "host123pt-45f", "TBD",
-            2, 5, 920, "IaaS",
+            2, "VM-IT-2",
+            2, 5, 920,
             SimpleDateFormat("yyyy/MM/dd").parse("2022/12/01"),
-            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/02")
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/02"),
+            true, true, Template.DATABASE, BackupFrequency.WEEKLY
         ),
         VirtualMachine(
-            3, "VM-IT-3", "VM_JN58CE_2354", "host123pt-45f", "TBD",
-            4, 3, 950, "IaaS",
+            3, "VM-IT-3",
+            4, 3, 950,
             SimpleDateFormat("yyyy/MM/dd").parse("2022/12/03"),
-            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/06")
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/06"),
+            true, true, Template.DATABASE, BackupFrequency.WEEKLY
         ),
         VirtualMachine(
-            4, "VM-IT-4", "VM_JN58CE_2354", "host123pt-45f", "TBD",
-            2, 5, 920, "IaaS",
+            4, "VM-IT-4",
+            2, 5, 920,
             SimpleDateFormat("yyyy/MM/dd").parse("2022/12/20"),
-            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/21")
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/21"),
+            true, true, Template.DATABASE, BackupFrequency.WEEKLY
         ),
         VirtualMachine(
-            5, "VM-IT-5", "VM_JN58CE_2354", "host123pt-45f", "TBD",
-            4, 3, 950, "IaaS",
+            5, "VM-IT-5",
+            4, 3, 950,
             SimpleDateFormat("yyyy/MM/dd").parse("2022/12/22"),
-            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/23")
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/23"),
+            true, true, Template.DATABASE, BackupFrequency.WEEKLY
         ),
         VirtualMachine(
-            6, "VM-IT-6", "VM_JN58CE_2354", "host123pt-45f", "TBD",
-            2, 5, 920, "IaaS",
+            6, "VM-IT-6",
+            2, 5, 920,
             SimpleDateFormat("yyyy/MM/dd").parse("2022/12/24"),
-            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/25")
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/25"),
+            true, true, Template.DATABASE, BackupFrequency.WEEKLY
         )
 
     )
@@ -64,9 +72,6 @@ class VoorspellingViewModel: ViewModel() {
         _voorspelling.value =  Voorspelling(
             tot.map { it.toString() }.toTypedArray(),
             vrij.map { it.toString() }.toTypedArray(),
-            /*tot.zip(vrij).map { (x1, x2)->
-                x1 - x2
-            }.map { it.toString() }.toTypedArray()*/
         );
     }
 

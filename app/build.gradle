@@ -53,9 +53,18 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
-    //Room
+    // Room
     kapt "androidx.room:room-compiler:2.4.3"
     implementation 'androidx.room:room-common:2.4.3'
     implementation 'androidx.room:room-ktx:2.4.3'
     testImplementation "androidx.room:room-testing:2.4.3"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
+    implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
+
+    // Moshi for parsing the JSON format
+    implementation "com.squareup.moshi:moshi:$version_moshi"
+    implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
+    implementation "com.squareup.moshi:moshi-adapters:$version_moshi"
 }
