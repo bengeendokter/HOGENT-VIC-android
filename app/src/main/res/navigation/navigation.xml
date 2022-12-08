@@ -7,16 +7,19 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="be.hogent.vic.screens.home.HomeFragment"
+        android:name="be.hogent.vic.screens.Home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_VMListFragment"
             app:destination="@id/VMListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_voorspellingFragment"
+            app:destination="@id/voorspellingFragment" />
     </fragment>
     <fragment
         android:id="@+id/VMListFragment"
-        android:name="be.hogent.vic.screens.virtualmachinelist.VirtualMachineListFragment"
+        android:name="be.hogent.vic.screens.VMList.VMListFragment"
         android:label="VMListFragment"
         tools:layout="@layout/fragment_vm_list">
         <action
@@ -25,10 +28,11 @@
     </fragment>
     <fragment
         android:id="@+id/virtualMachineFragment"
-        android:name="be.hogent.vic.screens.virtualmachine.VirtualMachineFragment"
-        android:label="VirtualMachineFragment" >
-        <argument
-            android:name="selectedId"
-            app:argType="integer" />
-    </fragment>
+        android:name="be.hogent.vic.screens.VirtualMachine.VirtualMachineFragment"
+        android:label="VirtualMachineFragment" />
+    <fragment
+        android:id="@+id/voorspellingFragment"
+        android:name="be.hogent.vic.screens.voorspelling.VoorspellingFragment"
+        android:label="fragment_voorspelling"
+        tools:layout="@layout/fragment_voorspelling" />
 </navigation>

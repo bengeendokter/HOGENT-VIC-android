@@ -10,6 +10,21 @@
         android:background="@drawable/background"
         tools:context=".screens.home.HomeFragment">
 
+        <Button
+            android:id="@+id/nav_btn_voorspelling"
+            style="@style/NavButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_voorspelling"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/nav_btn_klanten"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/nav_btn_klanten"
+            app:layout_constraintTop_toBottomOf="@+id/nav_btn_klanten"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="TextContrastCheck" />
+
         <ImageView
             android:id="@+id/hogent_logo"
             android:layout_width="wrap_content"
@@ -31,9 +46,9 @@
             app:cornerRadius="20dp"
             app:layout_constraintBottom_toTopOf="@+id/nav_btn_aanvragen"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hogent_logo"
-            app:layout_constraintVertical_bias="0.388"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
             tools:ignore="TextContrastCheck" />
 
@@ -57,12 +72,13 @@
             style="@style/NavButton"
             android:layout_width="480dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:text="@string/txt_klanten"
             app:cornerRadius="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/nav_btn_virtualMachines"
+            app:layout_constraintBottom_toTopOf="@+id/nav_btn_voorspelling"
+            app:layout_constraintEnd_toEndOf="@+id/nav_btn_aanvragen"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/nav_btn_virtualMachines"
+            app:layout_constraintStart_toStartOf="@+id/nav_btn_aanvragen"
             app:layout_constraintTop_toBottomOf="@+id/nav_btn_aanvragen"
             tools:ignore="TextContrastCheck" />
 
@@ -87,8 +103,9 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:contentDescription="@string/desc_ic_logout"
-            app:layout_constraintBottom_toBottomOf="@+id/nav_btn_klanten"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btn_profile"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/btn_profile"
             app:layout_constraintTop_toBottomOf="@+id/btn_profile"
             app:srcCompat="@drawable/ic_logout"

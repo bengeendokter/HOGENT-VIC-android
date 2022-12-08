@@ -10,6 +10,25 @@
         android:background="@drawable/background"
         tools:context=".screens.home.HomeFragment">
 
+        <Button
+            android:id="@+id/nav_btn_voorspelling"
+            style="@style/NavButton"
+            android:layout_width="0dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/txt_voorspelling"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nav_btn_klanten"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:ignore="TextContrastCheck" />
+
         <ImageView
             android:id="@+id/hogent_logo"
             android:layout_width="wrap_content"

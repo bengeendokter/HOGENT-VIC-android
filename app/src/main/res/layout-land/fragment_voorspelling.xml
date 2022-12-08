@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="voorspelling"
+            type="be.hogent.vic.screens.voorspelling.VoorspellingViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <TextView
+            android:id="@+id/voorspelling_datum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="datum"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.243"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/voorspelling_btn_datum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Kies een datum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.591"
+            app:layout_constraintStart_toEndOf="@+id/voorspelling_datum"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="510dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="@color/secondary"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/voorspelling_btn_datum">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageCPU"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="-10dp"
+                    android:elevation="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraint1"
+                    app:layout_constraintEnd_toEndOf="@+id/constraint1"
+                    app:layout_constraintHorizontal_bias="0.064"
+                    app:layout_constraintStart_toStartOf="@+id/constraint1"
+                    app:layout_constraintTop_toTopOf="@+id/constraint1"
+                    app:layout_constraintVertical_bias="0.488"
+                    app:srcCompat="@drawable/cpu"
+                    tools:srcCompat="@drawable/cpu" />
+
+                <TextView
+                    android:id="@+id/textCPU"
+                    android:layout_width="66dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="CPU"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraint1"
+                    app:layout_constraintStart_toEndOf="@+id/imageCPU"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6" />
+
+                <TextView
+                    android:id="@+id/textEenheidCPU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="in Cores"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraint1"
+                    app:layout_constraintEnd_toStartOf="@+id/vrijCPU"
+                    app:layout_constraintHorizontal_bias="0.179"
+                    app:layout_constraintStart_toEndOf="@+id/textCPU"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.508" />
+
+                <TextView
+                    android:id="@+id/resterend1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resterend"
+                    android:textColor="@color/CTA"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraint1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.7"
+                    app:layout_constraintStart_toEndOf="@+id/imageCPU"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.083" />
+
+                <TextView
+                    android:id="@+id/vrijCPU"
+                    android:layout_width="100dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@{voorspelling.voorspelling.vrij[0]}"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.555"
+                    app:layout_constraintStart_toEndOf="@+id/imageCPU"
+                    app:layout_constraintTop_toBottomOf="@+id/resterend1" />
+
+                <TextView
+                    android:id="@+id/totaalCPU"
+                    android:layout_width="109dp"
+                    android:layout_height="21dp"
+                    android:text="@{`van ` + voorspelling.voorspelling.totaal[0]}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vrijCPU"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.71000004" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="510dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="@color/secondary"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageRAM"
+                    android:layout_width="83dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="-8dp"
+                    android:elevation="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraint2"
+                    app:layout_constraintEnd_toEndOf="@+id/constraint2"
+                    app:layout_constraintHorizontal_bias="0.037"
+                    app:layout_constraintStart_toStartOf="@+id/constraint2"
+                    app:layout_constraintTop_toTopOf="@+id/constraint2"
+                    app:srcCompat="@drawable/ram"
+                    tools:srcCompat="@drawable/ram" />
+
+                <TextView
+                    android:id="@+id/textRAM"
+                    android:layout_width="71dp"
+                    android:layout_height="33dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="RAM"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraint2"
+                    app:layout_constraintEnd_toStartOf="@+id/vrijRAM"
+                    app:layout_constraintHorizontal_bias="0.04"
+                    app:layout_constraintStart_toEndOf="@+id/imageRAM"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.774" />
+
+                <TextView
+                    android:id="@+id/textEenheidRAM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="in GB"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraint2"
+                    app:layout_constraintEnd_toStartOf="@+id/vrijRAM"
+                    app:layout_constraintHorizontal_bias="0.111"
+                    app:layout_constraintStart_toEndOf="@+id/textRAM"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.596" />
+
+                <TextView
+                    android:id="@+id/resterend2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resterend"
+                    android:textColor="@color/CTA"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraint2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.695"
+                    app:layout_constraintStart_toEndOf="@+id/imageRAM"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.081" />
+
+                <TextView
+                    android:id="@+id/vrijRAM"
+                    android:layout_width="100dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@{voorspelling.voorspelling.vrij[1]}"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.542"
+                    app:layout_constraintStart_toEndOf="@+id/imageRAM"
+                    app:layout_constraintTop_toBottomOf="@+id/resterend2" />
+
+                <TextView
+                    android:id="@+id/totaalRAM"
+                    android:layout_width="109dp"
+                    android:layout_height="21dp"
+                    android:text="@{`van ` + voorspelling.voorspelling.totaal[1]}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vrijRAM"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.68" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="510dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@color/secondary"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2"
+            app:layout_constraintVertical_bias="0.060000002">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageStorage"
+                    android:layout_width="67dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="-10dp"
+                    android:elevation="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraint3"
+                    app:layout_constraintEnd_toEndOf="@+id/constraint3"
+                    app:layout_constraintHorizontal_bias="0.056"
+                    app:layout_constraintStart_toStartOf="@+id/constraint3"
+                    app:layout_constraintTop_toTopOf="@+id/constraint3"
+                    app:layout_constraintVertical_bias="0.533"
+                    app:srcCompat="@drawable/storage"
+                    tools:srcCompat="@drawable/storage" />
+
+                <TextView
+                    android:id="@+id/textStorage"
+                    android:layout_width="102dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="-4dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Opslag"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraint3"
+                    app:layout_constraintEnd_toStartOf="@+id/vrijStorage"
+                    app:layout_constraintHorizontal_bias="0.18"
+                    app:layout_constraintStart_toEndOf="@+id/imageStorage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.84" />
+
+                <TextView
+                    android:id="@+id/textEenheidStorage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="in GB"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraint3"
+                    app:layout_constraintEnd_toStartOf="@+id/vrijStorage"
+                    app:layout_constraintHorizontal_bias="0.225"
+                    app:layout_constraintStart_toEndOf="@+id/textStorage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.649" />
+
+                <TextView
+                    android:id="@+id/resterend3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resterend"
+                    android:textColor="@color/CTA"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraint3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.705"
+                    app:layout_constraintStart_toEndOf="@+id/imageStorage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.147" />
+
+                <TextView
+                    android:id="@+id/vrijStorage"
+                    android:layout_width="100dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@{voorspelling.voorspelling.vrij[2]}"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.559"
+                    app:layout_constraintStart_toEndOf="@+id/imageStorage"
+                    app:layout_constraintTop_toBottomOf="@+id/resterend3" />
+
+                <TextView
+                    android:id="@+id/totaalStorage"
+                    android:layout_width="109dp"
+                    android:layout_height="21dp"
+                    android:text="@{`van ` + voorspelling.voorspelling.totaal[2]}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vrijStorage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.77" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
