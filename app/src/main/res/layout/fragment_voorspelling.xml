@@ -61,13 +61,14 @@
                     android:id="@+id/imageCPU"
                     android:layout_width="83dp"
                     android:layout_height="82dp"
+                    android:layout_marginStart="-10dp"
                     android:elevation="3dp"
                     app:layout_constraintBottom_toBottomOf="@+id/constraint1"
                     app:layout_constraintEnd_toEndOf="@+id/constraint1"
-                    app:layout_constraintHorizontal_bias="0.064"
+                    app:layout_constraintHorizontal_bias="0.097"
                     app:layout_constraintStart_toStartOf="@+id/constraint1"
                     app:layout_constraintTop_toTopOf="@+id/constraint1"
-                    app:layout_constraintVertical_bias="0.488"
+                    app:layout_constraintVertical_bias="0.428"
                     app:srcCompat="@drawable/cpu"
                     tools:srcCompat="@drawable/cpu" />
 
@@ -94,15 +95,16 @@
                     android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="@+id/constraint1"
                     app:layout_constraintEnd_toStartOf="@+id/vrijCPU"
-                    app:layout_constraintHorizontal_bias="0.13"
+                    app:layout_constraintHorizontal_bias="0.135"
                     app:layout_constraintStart_toEndOf="@+id/imageCPU"
                     app:layout_constraintTop_toBottomOf="@+id/textCPU"
-                    app:layout_constraintVertical_bias="0.166" />
+                    app:layout_constraintVertical_bias="0.2" />
 
                 <TextView
                     android:id="@+id/resterend1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
                     android:text="Resterend"
                     android:textColor="@color/CTA"
                     app:layout_constraintBottom_toBottomOf="@+id/constraint1"
@@ -120,7 +122,7 @@
                     android:textSize="30sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.92"
+                    app:layout_constraintHorizontal_bias="0.916"
                     app:layout_constraintStart_toEndOf="@+id/imageCPU"
                     app:layout_constraintTop_toBottomOf="@+id/resterend1" />
 
@@ -158,15 +160,16 @@
 
                 <ImageView
                     android:id="@+id/imageRAM"
-                    android:layout_width="83dp"
-                    android:layout_height="82dp"
+                    android:layout_width="102dp"
+                    android:layout_height="97dp"
+                    android:layout_marginStart="-10dp"
                     android:elevation="3dp"
                     app:layout_constraintBottom_toBottomOf="@+id/constraint2"
                     app:layout_constraintEnd_toEndOf="@+id/constraint2"
-                    app:layout_constraintHorizontal_bias="0.064"
+                    app:layout_constraintHorizontal_bias="0.061"
                     app:layout_constraintStart_toStartOf="@+id/constraint2"
                     app:layout_constraintTop_toTopOf="@+id/constraint2"
-                    app:layout_constraintVertical_bias="0.488"
+                    app:layout_constraintVertical_bias="0.538"
                     app:srcCompat="@drawable/ram"
                     tools:srcCompat="@drawable/ram" />
 
@@ -174,13 +177,14 @@
                     android:id="@+id/textRAM"
                     android:layout_width="71dp"
                     android:layout_height="33dp"
+                    android:layout_marginStart="1dp"
                     android:layout_marginBottom="16dp"
                     android:text="RAM"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/constraint2"
                     app:layout_constraintEnd_toStartOf="@+id/vrijRAM"
-                    app:layout_constraintHorizontal_bias="0.204"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/imageRAM"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.54" />
@@ -193,15 +197,17 @@
                     android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="@+id/constraint2"
                     app:layout_constraintEnd_toStartOf="@+id/vrijRAM"
-                    app:layout_constraintHorizontal_bias="0.13"
+                    app:layout_constraintHorizontal_bias="0.027"
                     app:layout_constraintStart_toEndOf="@+id/imageRAM"
                     app:layout_constraintTop_toBottomOf="@+id/textRAM"
-                    app:layout_constraintVertical_bias="0.166" />
+                    app:layout_constraintVertical_bias="0.238" />
 
                 <TextView
                     android:id="@+id/resterend2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="-5dp"
+                    android:layout_marginTop="-5dp"
                     android:text="Resterend"
                     android:textColor="@color/CTA"
                     app:layout_constraintBottom_toBottomOf="@+id/constraint2"
@@ -230,10 +236,10 @@
                     android:text="@{`van ` + voorspelling.voorspelling.totaal[1]}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintHorizontal_bias="0.991"
                     app:layout_constraintStart_toEndOf="@+id/imageRAM"
                     app:layout_constraintTop_toBottomOf="@+id/vrijRAM"
-                    app:layout_constraintVertical_bias="0.263" />
+                    app:layout_constraintVertical_bias="0.28" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -260,15 +266,15 @@
 
                 <ImageView
                     android:id="@+id/imageStorage"
-                    android:layout_width="83dp"
-                    android:layout_height="82dp"
+                    android:layout_width="96dp"
+                    android:layout_height="89dp"
+                    android:layout_marginStart="-10dp"
                     android:elevation="3dp"
                     app:layout_constraintBottom_toBottomOf="@+id/constraint3"
                     app:layout_constraintEnd_toEndOf="@+id/constraint3"
-                    app:layout_constraintHorizontal_bias="0.064"
+                    app:layout_constraintHorizontal_bias="0.068"
                     app:layout_constraintStart_toStartOf="@+id/constraint3"
                     app:layout_constraintTop_toTopOf="@+id/constraint3"
-                    app:layout_constraintVertical_bias="0.488"
                     app:srcCompat="@drawable/storage"
                     tools:srcCompat="@drawable/storage" />
 
@@ -282,7 +288,7 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/constraint3"
                     app:layout_constraintEnd_toStartOf="@+id/vrijStorage"
-                    app:layout_constraintHorizontal_bias="0.555"
+                    app:layout_constraintHorizontal_bias="0.285"
                     app:layout_constraintStart_toEndOf="@+id/imageStorage"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.483" />
@@ -295,23 +301,25 @@
                     android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="@+id/constraint3"
                     app:layout_constraintEnd_toStartOf="@+id/vrijStorage"
-                    app:layout_constraintHorizontal_bias="0.13"
+                    app:layout_constraintHorizontal_bias="0.053"
                     app:layout_constraintStart_toEndOf="@+id/imageStorage"
                     app:layout_constraintTop_toBottomOf="@+id/textStorage"
-                    app:layout_constraintVertical_bias="0.166" />
+                    app:layout_constraintVertical_bias="0.208" />
 
                 <TextView
                     android:id="@+id/resterend3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="-5dp"
                     android:text="Resterend"
                     android:textColor="@color/CTA"
                     app:layout_constraintBottom_toBottomOf="@+id/constraint3"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.718"
+                    app:layout_constraintHorizontal_bias="0.694"
                     app:layout_constraintStart_toEndOf="@+id/imageStorage"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.153" />
+                    app:layout_constraintVertical_bias="0.156" />
 
                 <TextView
                     android:id="@+id/vrijStorage"
@@ -321,7 +329,7 @@
                     android:textSize="30sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.92"
+                    app:layout_constraintHorizontal_bias="0.913"
                     app:layout_constraintStart_toEndOf="@+id/imageStorage"
                     app:layout_constraintTop_toBottomOf="@+id/resterend3" />
 
