@@ -166,8 +166,8 @@
                     app:layout_constraintStart_toStartOf="@+id/constraint2"
                     app:layout_constraintTop_toTopOf="@+id/constraint2"
                     app:layout_constraintVertical_bias="0.488"
-                    app:srcCompat="@drawable/cpu"
-                    tools:srcCompat="@drawable/cpu" />
+                    app:srcCompat="@drawable/ram"
+                    tools:srcCompat="@drawable/ram" />
 
                 <TextView
                     android:id="@+id/textRAM"
@@ -267,8 +267,8 @@
                     app:layout_constraintStart_toStartOf="@+id/constraint3"
                     app:layout_constraintTop_toTopOf="@+id/constraint3"
                     app:layout_constraintVertical_bias="0.488"
-                    app:srcCompat="@drawable/cpu"
-                    tools:srcCompat="@drawable/cpu" />
+                    app:srcCompat="@drawable/storage"
+                    tools:srcCompat="@drawable/storage" />
 
                 <TextView
                     android:id="@+id/textStorage"
