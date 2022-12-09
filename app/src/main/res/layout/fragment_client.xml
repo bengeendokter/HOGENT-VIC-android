@@ -1,14 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screens.Client.ClientFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@drawable/background"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:id="@+id/CardName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/LabelName"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Naam" />
+
+            <TextView
+                android:id="@+id/TxtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Bob De Smet" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardClientType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/LabelClientType"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Extern/Intern" />
+
+            <TextView
+                android:id="@+id/TxtClientType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Extern" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardClientOrganisation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/LabelClientOrganisation"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bedrijf" />
+
+            <TextView
+                android:id="@+id/TxtClientOrganisation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="VOKA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardExternalType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/LabelExternalType"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rol" />
+
+            <TextView
+                android:id="@+id/TxtExternalType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Manager" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/education"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="198dp"
+            tools:layout_editor_absoluteY="603dp"
+            tools:text="hide Bio Wetenschappen" />
+
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="208dp"
+            tools:layout_editor_absoluteY="43dp"
+            tools:text="+32 123 45 67 89" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="533dp"
+            tools:text="bobdesmet@voka.be" />
+
+        <TextView
+            android:id="@+id/backupContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="171dp"
+            tools:layout_editor_absoluteY="573dp"
+            tools:text="bartdewolf@voka.be" />
+
+    </LinearLayout>
+
+</layout>
