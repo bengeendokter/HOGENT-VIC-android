@@ -41,8 +41,9 @@ class ClientListFragment : Fragment() {
             inflater, R.layout.fragment_client_list, container, false
         )
 
-        val adapter = ClientAdapter()
-        binding.clientList.adapter = adapter
+    // TODO uncomment?
+//        val adapter = ClientAdapter()
+//        binding.clientList.adapter = adapter
 
         binding.lifecycleOwner = viewLifecycleOwner
 
