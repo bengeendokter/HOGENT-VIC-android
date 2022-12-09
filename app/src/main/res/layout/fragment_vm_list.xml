@@ -4,11 +4,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="be.hogent.vic.screens.virtualmachinelist.VirtualMachineListViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background"
-        tools:context=".screens.VMList.VMListFragment">
+        tools:context=".screens.virtualmachinelist.VirtualMachineListFragment">
 
         <ImageView
             android:id="@+id/hogent_logo2"
@@ -25,11 +31,18 @@
             android:id="@+id/vmList"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:listData="@{viewModel.virtualMachines}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hogent_logo2" />
+            app:layout_constraintTop_toBottomOf="@+id/hogent_logo2"
+            tools:listitem="@layout/vm_list_item"
+            tools:itemCount="12" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

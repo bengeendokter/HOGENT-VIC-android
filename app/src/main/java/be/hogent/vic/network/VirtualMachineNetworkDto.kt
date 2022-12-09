@@ -1,13 +1,12 @@
-package be.hogent.vic.database
+package be.hogent.vic.network
 
-import androidx.room.*
+import be.hogent.vic.database.VirtualMachineDatabaseDto
 import be.hogent.vic.domain.*
+import com.squareup.moshi.JsonClass
 import java.util.*
 
-@Entity(tableName = "virtual_machines")
-data class VirtualMachineDatabaseDto constructor(
-    // From index dto
-    @PrimaryKey
+@JsonClass(generateAdapter = true)
+data class VirtualMachineNetworkDto(
     val id: Int,
     val name: String,
     val cpu: Int,
@@ -19,19 +18,17 @@ data class VirtualMachineDatabaseDto constructor(
     val isHighlyAvailable: Boolean,
     val template: Template,
     val backupFrequency: BackupFrequency,
-
-    // From detail dto
     val hostName: String? = null,
     val fqdn: String? = null,
     val host: String? = null,
     val ports: String? = null,
-    val client: String? = null,
+    val client: Client? = null,
     val availability: Day? = null,
     val mode: Mode? = null,
     val createdAt: Date? = null
 )
 
-fun List<VirtualMachineDatabaseDto>.asDomainModel(): List<VirtualMachine> {
+fun List<VirtualMachineNetworkDto>.asDomainModel(): List<VirtualMachine> {
     return map {
         VirtualMachine(
             id = it.id,
@@ -49,10 +46,36 @@ fun List<VirtualMachineDatabaseDto>.asDomainModel(): List<VirtualMachine> {
             fqdn = it.fqdn,
             host = it.host,
             ports = it.ports,
-            client = it.client,
+            client = it.client?.name,
             availability = it.availability,
             mode = it.mode,
             createdAt = it.createdAt
         )
     }
+}
+
+fun List<VirtualMachineNetworkDto>.asDatabaseModel(): Array<VirtualMachineDatabaseDto> {
+    return map {
+        VirtualMachineDatabaseDto (
+            id = it.id,
+            name = it.name,
+            cpu = it.cpu,
+            ram = it.ram,
+            storage = it.storage,
+            startDate = it.startDate,
+            endDate = it.endDate,
+            isActive = it.isActive,
+            isHighlyAvailable = it.isHighlyAvailable,
+            template = it.template,
+            backupFrequency = it.backupFrequency,
+            hostName = it.hostName,
+            fqdn = it.fqdn,
+            host = it.host,
+            ports = it.ports,
+            client = it.client?.name,
+            availability = it.availability,
+            mode = it.mode,
+            createdAt = it.createdAt
+        )
+    }.toTypedArray()
 }

@@ -5,6 +5,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" >
 
+    <data>
+        <variable
+            name="vm"
+            type="be.hogent.vic.domain.VirtualMachine" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,12 +24,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Unizo 1"
             android:textSize="24sp"
             android:textStyle="bold"
+            app:client="@{vm.client}"
             app:layout_constraintBottom_toTopOf="@+id/vmli_txt_vmName"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Unizo 1" />
 
         <TextView
             android:id="@+id/vmli_txt_vmName"
@@ -32,11 +39,12 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="unizo1.vichogent.be"
+            android:text="@{vm.name}"
             app:layout_constraintBottom_toTopOf="@+id/vmli_txt_startEndDate"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vmli_txt_clientName"
-            app:layout_constraintVertical_bias="0.50" />
+            app:layout_constraintVertical_bias="0.50"
+            tools:text="unizo1.vichogent.be" />
 
         <ImageView
             android:id="@+id/img_vmIcon"
@@ -44,6 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:scaleType="fitEnd"
+            android:src="@drawable/ic_vm"
             app:layout_constraintBottom_toBottomOf="@+id/vmli_txt_startEndDate"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -57,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="16dp"
-            android:text="%s - %s"
+            app:dateRange="@{vm}"
             app:layout_constraintBottom_toTopOf="@+id/vmli_txt_storage"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vmli_txt_vmName"
@@ -67,48 +76,40 @@
             android:id="@+id/vmli_txt_storage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="TextView"
             android:textColor="@color/green"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/vmli_txt_ram"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vmli_txt_startEndDate" />
+            app:capacity="@{vm.storage}"
+            app:layout_constraintBottom_toBottomOf="@+id/vmli_txt_ram"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/vmli_txt_ram"
+            app:layout_constraintTop_toTopOf="@+id/vmli_txt_ram"
+            tools:text="256 GB" />
 
         <TextView
             android:id="@+id/vmli_txt_ram"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
             android:textColor="@color/green"
-            app:layout_constraintBottom_toBottomOf="@+id/vmli_txt_storage"
-            app:layout_constraintEnd_toStartOf="@+id/vmli_txt_vCPU"
-            app:layout_constraintStart_toEndOf="@+id/vmli_txt_storage"
-            app:layout_constraintTop_toTopOf="@+id/vmli_txt_storage" />
+            app:capacity="@{vm.ram}"
+            app:layout_constraintBottom_toBottomOf="@+id/vmli_txt_vCPU"
+            app:layout_constraintEnd_toStartOf="@+id/vmli_txt_storage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/vmli_txt_vCPU"
+            app:layout_constraintTop_toTopOf="@+id/vmli_txt_vCPU"
+            tools:text="4 GB" />
 
         <TextView
             android:id="@+id/vmli_txt_vCPU"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_marginStart="16dp"
             android:textColor="@color/green"
-            app:layout_constraintBottom_toBottomOf="@+id/vmli_txt_ram"
-            app:layout_constraintEnd_toStartOf="@+id/vmli_txt_mode"
-            app:layout_constraintStart_toEndOf="@+id/vmli_txt_ram"
-            app:layout_constraintTop_toTopOf="@+id/vmli_txt_ram" />
-
-        <TextView
-            android:id="@+id/vmli_txt_mode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="TextView"
-            android:textColor="@color/green"
-            app:layout_constraintBottom_toBottomOf="@+id/vmli_txt_vCPU"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/vmli_txt_vCPU"
-            app:layout_constraintTop_toTopOf="@+id/vmli_txt_vCPU" />
+            app:cores="@{vm.cpu}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vmli_txt_ram"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="2 Cores" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

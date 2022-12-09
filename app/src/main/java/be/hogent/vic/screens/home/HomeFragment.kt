@@ -1,4 +1,4 @@
-package be.hogent.vic.screens.Home
+package be.hogent.vic.screens.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -29,7 +29,11 @@ class HomeFragment : Fragment() {
             inflater, R.layout.fragment_home, container, false
         )
         binding.navBtnVirtualMachines.setOnClickListener { view: View ->
-            view.findNavController().navigate(be.hogent.vic.screens.Home.HomeFragmentDirections.actionHomeFragmentToVMListFragment())
+            view.findNavController().navigate(be.hogent.vic.screens.home.HomeFragmentDirections.actionHomeFragmentToVMListFragment())
+        }
+
+        binding.navBtnVoorspelling.setOnClickListener { view: View ->
+            view.findNavController().navigate(be.hogent.vic.screens.home.HomeFragmentDirections.actionHomeFragmentToVoorspellingFragment())
         }
 
         binding.dayNightSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
