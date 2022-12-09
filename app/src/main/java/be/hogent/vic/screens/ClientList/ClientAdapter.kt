@@ -1,5 +1,4 @@
-//package be.hogent.vic.screens.ClientList
-//
+package be.hogent.vic.screens.ClientList
 //import android.view.View
 //import android.view.ViewGroup
 //import android.widget.TextView
