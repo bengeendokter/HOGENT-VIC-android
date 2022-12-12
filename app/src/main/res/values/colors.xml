@@ -11,6 +11,7 @@
     <color name="secondary">#FFFFFF</color>
     <color name="CTA">#38BDF8</color>
     <color name="green">#36BD7C</color>
+    <color name="red">#FA738C</color>
 
     <!-- Colors for icons -->
     <color name="ic_hogent">#504F4F</color>

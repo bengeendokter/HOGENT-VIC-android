@@ -3,6 +3,8 @@ package be.hogent.vic.util
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
+import be.hogent.vic.R
+import be.hogent.vic.domain.BackupFrequency
 import be.hogent.vic.domain.VirtualMachine
 import be.hogent.vic.screens.virtualmachinelist.VirtualMachineAdapter
 import java.text.SimpleDateFormat
@@ -18,6 +20,21 @@ fun bindClient(textView: TextView, client: String?) {
     textView.text = client ?: "Geen klant"
 }
 
+@BindingAdapter("status")
+fun bindStatus(textView: TextView, status: Boolean?) {
+    textView.setTextColor(textView.context.getColor(if (status == true) R.color.green else R.color.red))
+    textView.text = if (status == true) "Aan" else "Uit"
+}
+
+@BindingAdapter("backup")
+fun bindBackup(textView: TextView, backupFrequency: BackupFrequency?) {
+    textView.text = when (backupFrequency) {
+        BackupFrequency.WEEKLY -> "Wekelijkse backup"
+        BackupFrequency.DAILY -> "Dagelijkse backup"
+        null -> ""
+    }
+}
+
 @BindingAdapter("capacity")
 fun bindCapacity(textView: TextView, amount: Int?) {
     textView.text = "%d GB".format(amount ?: 0)
@@ -25,7 +42,7 @@ fun bindCapacity(textView: TextView, amount: Int?) {
 
 @BindingAdapter("cores")
 fun bindCores(textView: TextView, amount: Int?) {
-    textView.text = "%d Cores".format(amount ?: 0)
+    textView.text = "%d vCPU".format(amount ?: 0)
 }
 
 @BindingAdapter("dateRange")
