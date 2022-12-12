@@ -29,9 +29,8 @@ private val moshi = Moshi.Builder()
     .build()
 
 object Network {
-    // Configure retrofit to parse JSON and use coroutines
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://10.0.2.2:5129/api/") // TODO: change to hosted API
+        .baseUrl("https://devopsg04.westeurope.cloudapp.azure.com/api/")
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
 
