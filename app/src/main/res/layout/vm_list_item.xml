@@ -16,33 +16,34 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:background="@drawable/bg_vm_list_item"
+        android:paddingStart="8dp"
         android:paddingTop="16dp"
+        android:paddingEnd="8dp"
         android:paddingBottom="16dp">
-
-        <TextView
-            android:id="@+id/vmli_txt_clientName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:client="@{vm.client}"
-            app:layout_constraintBottom_toTopOf="@+id/vmli_txt_vmName"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Unizo 1" />
 
         <TextView
             android:id="@+id/vmli_txt_vmName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:text="@{vm.name}"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Unizo 1" />
+
+        <TextView
+            android:id="@+id/vmli_txt_clientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="@{vm.name}"
+            app:client="@{vm.client}"
             app:layout_constraintBottom_toTopOf="@+id/vmli_txt_startEndDate"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vmli_txt_clientName"
+            app:layout_constraintTop_toBottomOf="@+id/vmli_txt_vmName"
             app:layout_constraintVertical_bias="0.50"
             tools:text="unizo1.vichogent.be" />
 
@@ -73,17 +74,41 @@
             tools:text="01/01/2023 - 01/02/2023" />
 
         <TextView
+            android:id="@+id/vmli_txt_backup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:backup="@{vm.backupFrequency}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vmli_txt_startEndDate"
+            tools:text="Weekly backup" />
+
+        <TextView
             android:id="@+id/vmli_txt_storage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/green"
             app:capacity="@{vm.storage}"
             app:layout_constraintBottom_toBottomOf="@+id/vmli_txt_ram"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vmli_txt_status"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/vmli_txt_ram"
             app:layout_constraintTop_toTopOf="@+id/vmli_txt_ram"
+            app:layout_constraintVertical_bias="0.0"
             tools:text="256 GB" />
+
+        <TextView
+            android:id="@+id/vmli_txt_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/vmli_txt_storage"
+            app:layout_constraintEnd_toEndOf="@+id/img_vmIcon"
+            app:layout_constraintStart_toEndOf="@+id/vmli_txt_storage"
+            app:layout_constraintTop_toTopOf="@+id/vmli_txt_storage"
+            app:status="@{vm.isActive}"
+            tools:text="Aan" />
 
         <TextView
             android:id="@+id/vmli_txt_ram"
@@ -108,7 +133,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/vmli_txt_ram"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="2 Cores" />
     </androidx.constraintlayout.widget.ConstraintLayout>
