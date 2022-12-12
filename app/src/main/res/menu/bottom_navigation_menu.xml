@@ -14,6 +14,6 @@
         android:id="@+id/voorspellingFragment"
         android:enabled="true"
         android:icon="@drawable/cpu"
-        android:title="Voorspelling"/>
+        android:title="@string/txt_voorspelling"/>
 
 </menu>

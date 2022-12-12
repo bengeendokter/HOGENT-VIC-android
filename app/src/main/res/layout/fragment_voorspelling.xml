@@ -107,7 +107,7 @@
                         android:id="@+id/textEenheidCPU"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="in Cores"
+                        android:text="in vCPU"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />

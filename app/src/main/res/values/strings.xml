@@ -20,5 +20,5 @@
     <string name="txt_gebruiker">Gebruiker</string>
     <string name="txt_begindatum">Begindatum</string>
     <string name="txt_einddatum">Einddatum</string>
-    <string name="txt_voorspelling">Voorspelling</string>
+    <string name="txt_voorspelling">Resource Planner</string>
 </resources>
