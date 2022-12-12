@@ -37,8 +37,6 @@ class VoorspellingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentVoorspellingBinding.inflate(inflater)
-        //viewModel = ViewModelProvider(this).get(VoorspellingViewModel::class.java)
-
         binding.voorspelling = viewModel
         binding.lifecycleOwner = this
 
@@ -72,17 +70,11 @@ class VoorspellingFragment : Fragment() {
             val maxYear = c.get(Calendar.YEAR).plus(3)
             c.set(maxYear, maxMonth, maxDay)
             datePickerDialog.datePicker.maxDate = c.timeInMillis
-
             datePickerDialog.show()
-
         }
 
         binding.voorspellingDatum.text =  SimpleDateFormat("dd/MM/yyyy").format(datum).toString()
-        //viewModel.doeVoorspelling(datum)
-
-        viewModel.vms.observe(viewLifecycleOwner, Observer {
-            //lijst -> binding.vie  = lijst
-        })
+        viewModel.vms.observe(viewLifecycleOwner, Observer {})
 
         return binding.root
     }
