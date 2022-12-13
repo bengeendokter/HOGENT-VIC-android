@@ -3,17 +3,17 @@
     <item
         android:id="@+id/homeFragment"
         android:enabled="true"
-        android:icon="@drawable/hogent_logo"
+        android:icon="@drawable/home"
         android:title="Home"/>
     <item
         android:id="@+id/VMListFragment"
         android:enabled="true"
-        android:icon="@drawable/ram"
+        android:icon="@drawable/vmlijst"
         android:title="VM's"/>
     <item
         android:id="@+id/voorspellingFragment"
         android:enabled="true"
-        android:icon="@drawable/cpu"
+        android:icon="@drawable/datum"
         android:title="@string/txt_voorspelling"/>
 
 </menu>
