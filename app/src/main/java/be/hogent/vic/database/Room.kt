@@ -4,10 +4,11 @@ import android.content.Context
 import androidx.room.*
 import be.hogent.vic.util.Converters
 
-@Database(entities = [VirtualMachineDatabaseDto::class], version = 1)
+@Database(entities = [VirtualMachineDatabaseDto::class, VirtualMachineRequestDatabaseDto::class], version = 1)
 @TypeConverters(Converters::class)
 abstract class VicDatabase: RoomDatabase() {
     abstract val virtualMachineDao: VirtualMachineDao
+    abstract val virtualMachineRequestDao: VirtualMachineRequestDao
 }
 
 private lateinit var INSTANCE: VicDatabase
