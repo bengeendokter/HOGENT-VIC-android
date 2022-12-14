@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 class VirtualMachineRequestListViewModel(application: Application): AndroidViewModel(application) {
     private val database = getDatabase(application)
     private val virtualMachineRequestRepository = VirtualMachineRequestRepository(database)
-    val virtualMachineRequest = virtualMachineRequestRepository.virtualMachineRequests
+    val virtualMachineRequests = virtualMachineRequestRepository.virtualMachineRequests
 
     private val _navigateToDetails = MutableLiveData<Int?>()
     val navigateToDetails: LiveData<Int?>

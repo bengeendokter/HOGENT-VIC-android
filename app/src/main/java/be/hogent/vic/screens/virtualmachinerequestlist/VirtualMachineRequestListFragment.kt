@@ -5,7 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import be.hogent.vic.databinding.FragmentVmRequestListBinding
 import be.hogent.vic.screens.virtualmachinelist.VirtualMachineAdapter
 
 class VirtualMachineRequestListFragment : Fragment(){
@@ -22,10 +25,24 @@ class VirtualMachineRequestListFragment : Fragment(){
 
     private var viewModelAdapter: VirtualMachineRequestAdapter? = null
 
-//    override fun onCreateView(
-//        inflater: LayoutInflater,
-//        container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//    }
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val binding = FragmentVmRequestListBinding.inflate(inflater)
+        binding.lifecycleOwner = viewLifecycleOwner
+        viewModelAdapter = VirtualMachineRequestAdapter(VirtualMachineRequestAdapter.OnClickListener{
+            viewModel.displayDetails(it)
+        })
+        binding.vmRequestList.adapter = viewModelAdapter
+        binding.viewModel = viewModel
+
+//        viewModel.navigateToDetails.observe(viewLifecycleOwner, Observer {
+//            if (it != null){
+//                this.findNavController().navigate()
+//            }
+//        })
+        return binding.root
+    }
 }

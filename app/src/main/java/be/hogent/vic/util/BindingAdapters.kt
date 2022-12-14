@@ -4,7 +4,9 @@ import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import be.hogent.vic.domain.VirtualMachine
+import be.hogent.vic.domain.VirtualMachineRequest
 import be.hogent.vic.screens.virtualmachinelist.VirtualMachineAdapter
+import be.hogent.vic.screens.virtualmachinerequestlist.VirtualMachineRequestAdapter
 import java.text.SimpleDateFormat
 
 @BindingAdapter("listData")
@@ -12,6 +14,13 @@ fun bindRecyclerView(recyclerView: RecyclerView, data: List<VirtualMachine>?) {
     val adapter = recyclerView.adapter as VirtualMachineAdapter
     adapter.submitList(data)
 }
+
+@BindingAdapter("requestListData")
+fun bindRecyclerViewRequests(recyclerView: RecyclerView, data: List<VirtualMachineRequest>?) {
+    val adapter = recyclerView.adapter as VirtualMachineRequestAdapter
+    adapter.submitList(data)
+}
+
 
 @BindingAdapter("client")
 fun bindClient(textView: TextView, client: String?) {
