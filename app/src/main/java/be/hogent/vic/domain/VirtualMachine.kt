@@ -24,7 +24,7 @@ data class VirtualMachine(
     val ports: String? = null,
     val client: String? = null,
     val availability: Day? = null,
-    val mode: Mode? = null,
+    val software: Software? = null,
     val createdAt: Date? = null
 ) {
 
@@ -41,10 +41,12 @@ enum class BackupFrequency(override val value: Int) : IEnumValue {
     WEEKLY(1)
 }
 
-enum class Mode(override val value: Int) : IEnumValue {
-    IAAS(0),
-    PAAS(1),
-    SAAS(2)
+enum class Software(override val value: Int) : IEnumValue {
+    WINDOWS(1),
+    LINUX(2),
+    MYSQL(4),
+    MONGODB(8),
+    DOCKER(16),
 }
 
 enum class Day(override val value: Int) : IEnumValue {
