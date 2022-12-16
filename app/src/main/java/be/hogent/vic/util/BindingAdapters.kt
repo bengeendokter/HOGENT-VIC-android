@@ -55,7 +55,7 @@ fun bindCores(textView: TextView, amount: Int?) {
     textView.text = "%d vCPU".format(amount ?: 0)
 }
 
-@BindingAdapter("startDate", "endDate")
+@BindingAdapter(value = ["startDate", "endDate"], requireAll = false)
 fun bindDate(textView: TextView, startDate: Date, endDate: Date?) {
     if (endDate == null)
     {
