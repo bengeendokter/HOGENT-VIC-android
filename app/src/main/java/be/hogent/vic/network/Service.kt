@@ -2,10 +2,8 @@ package be.hogent.vic.network
 
 import be.hogent.vic.domain.*
 import com.squareup.moshi.Moshi
-import com.squareup.moshi.adapters.EnumJsonAdapter
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import kotlinx.coroutines.Deferred
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
@@ -21,7 +19,7 @@ interface VicService {
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
     .add(Date::class.java, Rfc3339DateJsonAdapter().nullSafe())
-    .add(createEnumJsonAdapter<Mode>())
+    .add(createEnumJsonAdapter<Software>())
     .add(createEnumJsonAdapter<Template>())
     .add(createEnumJsonAdapter<Day>())
     .add(createEnumJsonAdapter<BackupFrequency>())

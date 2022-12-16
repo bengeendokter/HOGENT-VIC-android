@@ -24,7 +24,7 @@ data class VirtualMachineNetworkDto(
     val ports: String? = null,
     val client: Client? = null,
     val availability: Day? = null,
-    val mode: Mode? = null,
+    val software: Software? = null,
     val createdAt: Date? = null
 )
 
@@ -48,7 +48,7 @@ fun List<VirtualMachineNetworkDto>.asDomainModel(): List<VirtualMachine> {
             ports = it.ports,
             client = it.client?.name,
             availability = it.availability,
-            mode = it.mode,
+            software = it.software,
             createdAt = it.createdAt
         )
     }
@@ -74,7 +74,7 @@ fun List<VirtualMachineNetworkDto>.asDatabaseModel(): Array<VirtualMachineDataba
             ports = it.ports,
             client = it.client?.name,
             availability = it.availability,
-            mode = it.mode,
+            software = it.software,
             createdAt = it.createdAt
         )
     }.toTypedArray()
