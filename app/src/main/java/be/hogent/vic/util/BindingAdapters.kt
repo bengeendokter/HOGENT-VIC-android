@@ -10,6 +10,7 @@ import be.hogent.vic.domain.VirtualMachineRequest
 import be.hogent.vic.screens.virtualmachinelist.VirtualMachineAdapter
 import be.hogent.vic.screens.virtualmachinerequestlist.VirtualMachineRequestAdapter
 import java.text.SimpleDateFormat
+import java.util.Date
 
 @BindingAdapter("listData")
 fun bindRecyclerView(recyclerView: RecyclerView, data: List<VirtualMachine>?) {
@@ -54,11 +55,15 @@ fun bindCores(textView: TextView, amount: Int?) {
     textView.text = "%d vCPU".format(amount ?: 0)
 }
 
-@BindingAdapter("dateRange")
-fun bindDateRange(textView: TextView, vm: VirtualMachine?) {
-    vm ?: return
+@BindingAdapter("startDate", "endDate")
+fun bindDate(textView: TextView, startDate: Date, endDate: Date?) {
+    if (endDate == null)
+    {
+        textView.text = SimpleDateFormat("dd/MM/yyyy").format(startDate)
+        return
+    }
     textView.text = "%s - %s".format(
-        SimpleDateFormat("dd/MM/yyyy").format(vm.startDate),
-        SimpleDateFormat("dd/MM/yyyy").format(vm.endDate)
+        SimpleDateFormat("dd/MM/yyyy").format(startDate),
+        SimpleDateFormat("dd/MM/yyyy").format(endDate)
     )
 }

@@ -1,6 +1,7 @@
 package be.hogent.vic.network
 
 import be.hogent.vic.database.VirtualMachineRequestDatabaseDto
+import be.hogent.vic.domain.Client
 import be.hogent.vic.domain.Status
 import be.hogent.vic.domain.VirtualMachineRequest
 import com.squareup.moshi.JsonClass
@@ -12,7 +13,7 @@ data class VirtualMachineRequestNetworkDto(
     val projectName: String,
     val date: Date,
     val startDate: Date,
-    val client: String? = null,
+    val client: Client? = null,
     val virtualMachineId: Int? = null,
     val status: Status,
 
@@ -27,7 +28,7 @@ fun List<VirtualMachineRequestNetworkDto>.asDomainModel(): List<VirtualMachineRe
             projectName = it.projectName,
             date = it.date,
             startDate = it.startDate,
-            client = it.client,
+            client = it.client?.name + " " + it.client?.surname,
             virtualMachineId = it.virtualMachineId,
             status = it.status,
             endDate = it.endDate,
@@ -43,7 +44,7 @@ fun List<VirtualMachineRequestNetworkDto>.asDatabaseModel(): Array<VirtualMachin
             projectName = it.projectName,
             date = it.date,
             startDate = it.startDate,
-            client = it.client,
+            client = it.client?.name + " " + it.client?.surname,
             virtualMachineId = it.virtualMachineId,
             status = it.status,
             endDate = it.endDate,

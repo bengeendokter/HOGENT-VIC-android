@@ -20,5 +20,5 @@ enum class Status(override val value: Int): IEnumValue{
     ACCEPTED(0),
     DENIED(1),
     HANDLED(2),
-    REQUESTED(4)
+    REQUESTED(3)
 }

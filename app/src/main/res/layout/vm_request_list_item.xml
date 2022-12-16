@@ -29,7 +29,8 @@
             app:layout_constraintBottom_toTopOf="@+id/requestli_txt_clientEmail"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Project DevOps" />
+            tools:text="Project DevOps"
+            android:text="@{request.projectName}"/>
 
         <TextView
             android:id="@+id/requestli_txt_clientEmail"
@@ -42,7 +43,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/requestli_txt_projectName"
             app:layout_constraintVertical_bias="0.50"
-            tools:text="bert.harold@student.be" />
+            android:text="@{request.client}" />
 
         <TextView
             android:id="@+id/requestli_txt_requestDateTxt"
@@ -61,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="01/01/2023"
+            android:text="01/01/2022"
             app:layout_constraintStart_toEndOf="@+id/requestli_txt_requestDateTxt"
             app:layout_constraintTop_toBottomOf="@+id/requestli_txt_clientEmail" />
 
@@ -86,14 +87,14 @@
             app:layout_constraintTop_toBottomOf="@+id/requestli_txt_clientEmail" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/requestli_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:background="@color/material_dynamic_neutral80"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:text="Accepted"
+            android:text="@{request.status.toString()}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/requestli_txt_projectName" />
 
