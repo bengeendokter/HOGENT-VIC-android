@@ -10,10 +10,10 @@ import androidx.room.Update
 @Dao
 interface VirtualMachineDao {
     @Query("SELECT * FROM virtual_machines")
-    fun getVirtualMachines(): LiveData<List<VirtualMachineDatabaseDto>>
+    fun getAll(): LiveData<List<VirtualMachineDatabaseDto>>
 
     @Query("SELECT * FROM virtual_machines WHERE id = :id")
-    fun getVirtualMachine(id: Int): VirtualMachineDatabaseDto?
+    fun getById(id: Int): VirtualMachineDatabaseDto?
 
     @Update
     fun update(vm: VirtualMachineDatabaseDto)
