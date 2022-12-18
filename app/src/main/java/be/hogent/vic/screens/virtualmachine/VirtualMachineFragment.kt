@@ -22,7 +22,7 @@ class VirtualMachineFragment : Fragment() {
 
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel;
-        
+
         return binding.root
     }
 }
