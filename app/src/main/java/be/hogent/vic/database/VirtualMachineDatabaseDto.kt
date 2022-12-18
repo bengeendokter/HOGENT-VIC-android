@@ -31,28 +31,32 @@ data class VirtualMachineDatabaseDto constructor(
     val createdAt: Date? = null
 )
 
+fun VirtualMachineDatabaseDto.asDomainModel(): VirtualMachine {
+    return VirtualMachine(
+        id = id,
+        name = name,
+        cpu = cpu,
+        ram = ram,
+        storage = storage,
+        startDate = startDate,
+        endDate = endDate,
+        isActive = isActive,
+        isHighlyAvailable = isHighlyAvailable,
+        template = template,
+        backupFrequency = backupFrequency,
+        hostName = hostName,
+        fqdn = fqdn,
+        host = host,
+        ports = ports,
+        client = client,
+        availability = availability,
+        software = software,
+        createdAt = createdAt
+    )
+}
+
 fun List<VirtualMachineDatabaseDto>.asDomainModel(): List<VirtualMachine> {
     return map {
-        VirtualMachine(
-            id = it.id,
-            name = it.name,
-            cpu = it.cpu,
-            ram = it.ram,
-            storage = it.storage,
-            startDate = it.startDate,
-            endDate = it.endDate,
-            isActive = it.isActive,
-            isHighlyAvailable = it.isHighlyAvailable,
-            template = it.template,
-            backupFrequency = it.backupFrequency,
-            hostName = it.hostName,
-            fqdn = it.fqdn,
-            host = it.host,
-            ports = it.ports,
-            client = it.client,
-            availability = it.availability,
-            software = it.software,
-            createdAt = it.createdAt
-        )
+        it.asDomainModel()
     }
 }
