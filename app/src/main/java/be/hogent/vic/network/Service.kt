@@ -7,11 +7,14 @@ import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 import java.util.*
 
 interface VicService {
     @GET("virtualmachine")
     suspend fun getVirtualMachines(): List<VirtualMachineNetworkDto>
+    @GET("virtualmachine/{id}")
+    suspend fun getVirtualMachine(@Path("id") id: Int): VirtualMachineNetworkDto
     @GET("virtualmachinerequest")
     suspend fun getVirtualMachineRequests(): List<VirtualMachineRequestNetworkDto>
 }
