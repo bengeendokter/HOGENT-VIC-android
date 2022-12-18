@@ -25,57 +25,35 @@ data class VirtualMachineNetworkDto(
     val client: Client? = null,
     val availability: Day? = null,
     val software: Software? = null,
-    val createdAt: Date? = null
+    val createdAt: String? = null // temp
 )
 
-fun List<VirtualMachineNetworkDto>.asDomainModel(): List<VirtualMachine> {
-    return map {
-        VirtualMachine(
-            id = it.id,
-            name = it.name,
-            cpu = it.cpu,
-            ram = it.ram,
-            storage = it.storage,
-            startDate = it.startDate,
-            endDate = it.endDate,
-            isActive = it.isActive,
-            isHighlyAvailable = it.isHighlyAvailable,
-            template = it.template,
-            backupFrequency = it.backupFrequency,
-            hostName = it.hostName,
-            fqdn = it.fqdn,
-            host = it.host,
-            ports = it.ports,
-            client = it.client?.name,
-            availability = it.availability,
-            software = it.software,
-            createdAt = it.createdAt
-        )
-    }
+fun VirtualMachineNetworkDto.asDatabaseModel(): VirtualMachineDatabaseDto {
+    return VirtualMachineDatabaseDto(
+        id = id,
+        name = name,
+        cpu = cpu,
+        ram = ram,
+        storage = storage,
+        startDate = startDate,
+        endDate = endDate,
+        isActive = isActive,
+        isHighlyAvailable = isHighlyAvailable,
+        template = template,
+        backupFrequency = backupFrequency,
+        hostName = hostName,
+        fqdn = fqdn,
+        host = host,
+        ports = ports,
+        client = client?.name,
+        availability = availability,
+        software = software,
+        createdAt = Date() //createdAt
+    )
 }
 
 fun List<VirtualMachineNetworkDto>.asDatabaseModel(): Array<VirtualMachineDatabaseDto> {
     return map {
-        VirtualMachineDatabaseDto (
-            id = it.id,
-            name = it.name,
-            cpu = it.cpu,
-            ram = it.ram,
-            storage = it.storage,
-            startDate = it.startDate,
-            endDate = it.endDate,
-            isActive = it.isActive,
-            isHighlyAvailable = it.isHighlyAvailable,
-            template = it.template,
-            backupFrequency = it.backupFrequency,
-            hostName = it.hostName,
-            fqdn = it.fqdn,
-            host = it.host,
-            ports = it.ports,
-            client = it.client?.name,
-            availability = it.availability,
-            software = it.software,
-            createdAt = it.createdAt
-        )
+        it.asDatabaseModel()
     }.toTypedArray()
 }
