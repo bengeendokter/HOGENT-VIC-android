@@ -140,6 +140,7 @@
                         android:id="@+id/vm_txt_storage_in"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        app:capacity="@{vm.storage}"
                         tools:text="20 GB" />
 
                     <TextView
@@ -153,6 +154,7 @@
                         android:id="@+id/vm_txt_memory_in"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        app:capacity="@{vm.ram}"
                         tools:text="2 GB" />
 
                     <TextView
@@ -166,6 +168,7 @@
                         android:id="@+id/vm_txt_cpuCores_in"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="@{vm.cpu}"
                         tools:text="4" />
 
                     <TextView
