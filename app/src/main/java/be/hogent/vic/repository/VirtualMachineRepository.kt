@@ -17,7 +17,7 @@ class VirtualMachineRepository(private val database: VicDatabase) {
         it?.asDomainModel()
     }
 
-    val virtualMachines = Transformations.map(database.virtualMachineDao.getVirtualMachines()) {
+    val virtualMachines = Transformations.map(database.virtualMachineDao.getAll()) {
         it.asDomainModel()
     }
 
@@ -34,7 +34,7 @@ class VirtualMachineRepository(private val database: VicDatabase) {
         withContext(Dispatchers.IO) {
             val virtualMachine = Network.vic.getVirtualMachine(id)
             database.virtualMachineDao.update(virtualMachine.asDatabaseModel())
-            value = database.virtualMachineDao.getVirtualMachine(id)
+            value = database.virtualMachineDao.getById(id)
         }
 
         _virtualMachine.value = value
