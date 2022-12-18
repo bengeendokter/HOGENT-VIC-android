@@ -31,9 +31,10 @@ data class VirtualMachine(
 }
 
 enum class Template(override val value: Int) : IEnumValue {
-    ARTIFICIAL_INTELLIGENCE(0),
-    DATABASE(1),
-    MACHINE_LEARNING(2)
+    MYSQL_DATABASE(0),
+    MONGODB(1),
+    DOCKER_LINUX(2),
+    DOCKER_WINDOWS(3)
 }
 
 enum class BackupFrequency(override val value: Int) : IEnumValue {
