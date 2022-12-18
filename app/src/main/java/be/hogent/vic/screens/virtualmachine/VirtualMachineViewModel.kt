@@ -9,7 +9,7 @@ import be.hogent.vic.database.getDatabase
 import be.hogent.vic.repository.VirtualMachineRepository
 import kotlinx.coroutines.launch
 
-class VirtualMachineViewModel(application: Application, val vmId: Int) : AndroidViewModel(application) {
+class VirtualMachineViewModel(application: Application, private val vmId: Int) : AndroidViewModel(application) {
     private val database = getDatabase(application)
     private val virtualMachineRepository = VirtualMachineRepository(database)
     val virtualMachine = virtualMachineRepository.virtualMachine
@@ -20,7 +20,7 @@ class VirtualMachineViewModel(application: Application, val vmId: Int) : Android
         }
     }
 
-    class Factory(val app: Application, val vmId: Int) : ViewModelProvider.Factory {
+    class Factory(val app: Application, private val vmId: Int) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(VirtualMachineViewModel::class.java)) {
                 @Suppress("UNCHECKED_CAST")

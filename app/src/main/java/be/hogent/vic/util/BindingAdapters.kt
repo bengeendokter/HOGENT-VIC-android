@@ -24,7 +24,6 @@ fun bindRecyclerViewRequests(recyclerView: RecyclerView, data: List<VirtualMachi
     adapter.submitList(data)
 }
 
-
 @BindingAdapter("client")
 fun bindClient(textView: TextView, client: String?) {
     textView.text = client ?: "Geen klant"
@@ -55,15 +54,17 @@ fun bindCores(textView: TextView, amount: Int?) {
     textView.text = "%d vCPU".format(amount ?: 0)
 }
 
-@BindingAdapter(value = ["startDate", "endDate"], requireAll = false)
-fun bindDate(textView: TextView, startDate: Date, endDate: Date?) {
+@BindingAdapter(value = ["date", "endDate"], requireAll = false)
+fun bindDate(textView: TextView, date: Date?, endDate: Date?) {
+    date ?: return
+
     if (endDate == null)
     {
-        textView.text = SimpleDateFormat("dd/MM/yyyy").format(startDate)
+        textView.text = SimpleDateFormat("dd/MM/yyyy").format(date)
         return
     }
     textView.text = "%s - %s".format(
-        SimpleDateFormat("dd/MM/yyyy").format(startDate),
+        SimpleDateFormat("dd/MM/yyyy").format(date),
         SimpleDateFormat("dd/MM/yyyy").format(endDate)
     )
 }

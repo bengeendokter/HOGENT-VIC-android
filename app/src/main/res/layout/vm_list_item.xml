@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="16dp"
-            app:startDate="@{vm.startDate}"
+            app:date="@{vm.startDate}"
             app:endDate="@{vm.endDate}"
             app:layout_constraintBottom_toTopOf="@+id/vmli_txt_storage"
             app:layout_constraintStart_toStartOf="parent"

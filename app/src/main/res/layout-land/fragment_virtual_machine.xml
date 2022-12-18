@@ -6,8 +6,8 @@
 
     <data>
         <variable
-            name="viewModel"
-            type="be.hogent.vic.screens.virtualmachine.VirtualMachineViewModel" />
+            name="vm"
+            type="be.hogent.vic.domain.VirtualMachine" />
     </data>
 
     <LinearLayout

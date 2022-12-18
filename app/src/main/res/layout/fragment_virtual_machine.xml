@@ -6,8 +6,8 @@
 
     <data>
         <variable
-            name="viewModel"
-            type="be.hogent.vic.screens.virtualmachine.VirtualMachineViewModel" />
+            name="vm"
+            type="be.hogent.vic.domain.VirtualMachine" />
     </data>
 
     <LinearLayout
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Virtual Machine"
+            android:text="@{vm.name}"
             android:textAlignment="center"
             android:textColor="@color/CTA"
             android:textSize="24sp"
@@ -31,6 +31,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            tools:text="Virtual Machine"
             tools:ignore="TextContrastCheck" />
 
         <ScrollView
@@ -77,6 +78,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingBottom="8dp"
+                        app:client="@{vm.client}"
                         tools:text="Marc Asselberg" />
 
                     <TextView
@@ -91,6 +93,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingBottom="8dp"
+                        app:date="@{vm.startDate}"
                         tools:text="01/01/2023" />
 
                     <TextView
@@ -105,6 +108,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingBottom="8dp"
+                        app:date="@{vm.endDate}"
                         tools:text="01/02/2023" />
                 </LinearLayout>
 

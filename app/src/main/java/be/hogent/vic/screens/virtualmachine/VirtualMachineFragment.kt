@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import be.hogent.vic.databinding.FragmentVirtualMachineBinding
 
@@ -21,7 +22,12 @@ class VirtualMachineFragment : Fragment() {
         ).get(VirtualMachineViewModel::class.java)
 
         binding.lifecycleOwner = viewLifecycleOwner
-        binding.viewModel = viewModel;
+
+        viewModel.virtualMachine.observe(viewLifecycleOwner, Observer {
+            if (it != null) {
+                binding.vm = it
+            }
+        })
 
         return binding.root
     }

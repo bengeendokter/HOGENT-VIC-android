@@ -63,7 +63,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             tools:text="01/01/2022"
-            app:startDate="@{request.date}"
+            app:date="@{request.date}"
             app:layout_constraintStart_toEndOf="@+id/requestli_txt_requestDateTxt"
             app:layout_constraintTop_toBottomOf="@+id/requestli_txt_clientEmail" />
 
@@ -74,7 +74,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             tools:text="01/01/2023"
-            app:startDate="@{request.startDate}"
+            app:date="@{request.startDate}"
             app:layout_constraintStart_toEndOf="@+id/requestli_txt_startDateTxt"
             app:layout_constraintTop_toBottomOf="@+id/requestli_txt_clientEmail" />
 
