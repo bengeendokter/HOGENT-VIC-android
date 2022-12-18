@@ -31,6 +31,7 @@ private val moshi = Moshi.Builder()
 
 object Network {
     private val retrofit = Retrofit.Builder()
+        //.baseUrl("http://10.0.2.2:5129/api/")
         .baseUrl("https://devopsg04.westeurope.cloudapp.azure.com/api/")
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
