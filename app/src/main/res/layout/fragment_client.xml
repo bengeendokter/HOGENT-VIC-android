@@ -103,32 +103,97 @@
                 tools:text="Manager" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/education"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/CardEducation"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="198dp"
-            tools:layout_editor_absoluteY="603dp"
-            tools:text="hide Bio Wetenschappen" />
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/phoneNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="208dp"
-            tools:layout_editor_absoluteY="43dp"
-            tools:text="+32 123 45 67 89" />
+            <TextView
+                android:id="@+id/LabelEducation"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Departement" />
 
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/TxtEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Bio Wetenschappen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardPhoneNumber"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="133dp"
-            tools:layout_editor_absoluteY="533dp"
-            tools:text="bobdesmet@voka.be" />
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/LabelPhoneNumber"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefoon nummer" />
+
+            <TextView
+                android:id="@+id/TxtPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="+32 123 45 67 89" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/LabelEmail"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email" />
+
+            <TextView
+                android:id="@+id/TxtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="bobdesmet@voka.be" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/LabelEmail"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email backup contact" />
+
+            <TextView
+                android:id="@+id/TxtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="bobdesmet@voka.be" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/backupContact"
