@@ -56,4 +56,28 @@ class HomeFragmentTest {
         //TODO
         //op switch klikken en kijken naar kleurverandering
     }
+
+    @Test
+    fun specifiekUIButtonAanvragen() {
+        onView(withId(R.id.nav_btn_aanvragen)).check(matches(isDisplayed()))
+        onView(withId(R.id.nav_btn_aanvragen)).check(matches(isClickable()))
+        onView(withId(R.id.nav_btn_aanvragen)).check(matches(withText(containsString("Aanvragen"))))
+        onView(withId(R.id.nav_btn_aanvragen)).check(matches(withText("Aanvragen")))
+    }
+
+    @Test
+    fun specifiekUIButtonKlanten() {
+        onView(withId(R.id.nav_btn_klanten)).check(matches(isDisplayed()))
+        onView(withId(R.id.nav_btn_klanten)).check(matches(isClickable()))
+        onView(withId(R.id.nav_btn_klanten)).check(matches(withText(containsString("Klanten"))))
+        onView(withId(R.id.nav_btn_klanten)).check(matches(withText("Klanten")))
+    }
+
+    @Test
+    fun specifiekUIButtonResourcePlanner() {
+        onView(withId(R.id.nav_btn_voorspelling)).check(matches(isDisplayed()))
+        onView(withId(R.id.nav_btn_voorspelling)).check(matches(isClickable()))
+        onView(withId(R.id.nav_btn_voorspelling)).check(matches(withText(containsString("Resource"))))
+        onView(withId(R.id.nav_btn_voorspelling)).check(matches(withText("Resource Planner")))
+    }
 }
