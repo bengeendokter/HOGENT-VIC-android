@@ -13,8 +13,10 @@ import java.util.*
 interface VicService {
     @GET("virtualmachine")
     suspend fun getVirtualMachines(): List<VirtualMachineNetworkDto>
+
     @GET("virtualmachine/{id}")
     suspend fun getVirtualMachine(@Path("id") id: Int): VirtualMachineNetworkDto
+
     @GET("virtualmachinerequest")
     suspend fun getVirtualMachineRequests(): List<VirtualMachineRequestNetworkDto>
 }
@@ -31,7 +33,7 @@ private val moshi = Moshi.Builder()
 
 object Network {
     private val retrofit = Retrofit.Builder()
-        //.baseUrl("http://10.0.2.2:5129/api/")
+        // .baseUrl("http://10.0.2.2:5129/api/")
         .baseUrl("https://devopsg04.westeurope.cloudapp.azure.com/api/")
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
