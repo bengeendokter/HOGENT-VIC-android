@@ -337,7 +337,7 @@
                             android:id="@+id/vm_txt_software_in"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            app:availability="@{vm.software}"
+                            app:software="@{vm.software}"
                             tools:text="MySQL, MongoDB" />
                     </LinearLayout>
 
