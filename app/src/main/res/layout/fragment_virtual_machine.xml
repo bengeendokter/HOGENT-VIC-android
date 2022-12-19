@@ -293,6 +293,29 @@
                             tools:text="Standaard" />
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:id="@+id/ll_vmAvailability"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_vm_list_item"
+                        android:orientation="vertical"
+                        android:padding="16dp" >
+
+                        <TextView
+                            android:id="@+id/vm_txt_availability"
+                            style="@style/boldBlue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_availability" />
+
+                        <TextView
+                            android:id="@+id/vm_txt_availability_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:availability="@{vm.availability}"
+                            tools:text="Mon, Tues, Wed" />
+                    </LinearLayout>
 
                 </LinearLayout>
 

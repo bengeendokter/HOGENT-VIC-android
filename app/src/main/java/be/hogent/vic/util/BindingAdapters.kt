@@ -4,13 +4,23 @@ import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import be.hogent.vic.R
-import be.hogent.vic.domain.BackupFrequency
-import be.hogent.vic.domain.VirtualMachine
-import be.hogent.vic.domain.VirtualMachineRequest
+import be.hogent.vic.domain.*
 import be.hogent.vic.screens.virtualmachinelist.VirtualMachineAdapter
 import be.hogent.vic.screens.virtualmachinerequestlist.VirtualMachineRequestAdapter
 import java.text.SimpleDateFormat
 import java.util.Date
+import java.util.EnumMap
+import java.util.EnumSet
+
+val dayMap = EnumMap(mapOf(
+    Day.MONDAY to "Mon",
+    Day.TUESDAY to "Tues",
+    Day.WEDNESDAY to "Wed",
+    Day.THURSDAY to "Thurs",
+    Day.FRIDAY to "Fri",
+    Day.SATURDAY to "Sat",
+    Day.SUNDAY to "Sun"
+))
 
 @BindingAdapter("listData")
 fun bindRecyclerView(recyclerView: RecyclerView, data: List<VirtualMachine>?) {
@@ -54,6 +64,18 @@ fun bindCores(textView: TextView, amount: Int?) {
     textView.text = "%d vCPU".format(amount ?: 0)
 }
 
+@BindingAdapter("availability")
+fun bindAvailability(textView: TextView, availability: Int?) {
+    availability ?: return
+    var textList = listOf<String>()
+
+    Day.values().filter { availability.hasFlag(it.value) }.forEach {
+        textList = textList.plus(dayMap[it] ?: "")
+    }
+
+    textView.text = textList.joinToString(", ")
+}
+
 @BindingAdapter(value = ["date", "endDate"], requireAll = false)
 fun bindDate(textView: TextView, date: Date?, endDate: Date?) {
     date ?: return
@@ -67,4 +89,9 @@ fun bindDate(textView: TextView, date: Date?, endDate: Date?) {
         SimpleDateFormat("dd/MM/yyyy").format(date),
         SimpleDateFormat("dd/MM/yyyy").format(endDate)
     )
+}
+
+fun Int.hasFlag(flag: Int): Boolean
+{
+    return ((this and flag) == flag)
 }
