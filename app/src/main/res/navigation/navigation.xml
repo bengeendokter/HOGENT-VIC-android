@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="be.hogent.vic.screens.home.HomeFragment"
-        android:label="HomeFragment"
+        android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_VMListFragment"
@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_voorspellingFragment"
             app:destination="@id/voorspellingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_virtualMachineRequestListFragment"
+            app:destination="@id/virtualMachineRequestListFragment" />
     </fragment>
     <fragment
         android:id="@+id/VMListFragment"
@@ -39,4 +42,8 @@
         android:name="be.hogent.vic.screens.voorspelling.VoorspellingFragment"
         android:label="fragment_voorspelling"
         tools:layout="@layout/fragment_voorspelling" />
+    <fragment
+        android:id="@+id/virtualMachineRequestListFragment"
+        android:name="be.hogent.vic.screens.virtualmachinerequestlist.VirtualMachineRequestListFragment"
+        android:label="VirtualMachineRequestListFragment" />
 </navigation>

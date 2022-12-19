@@ -27,32 +27,36 @@ data class VirtualMachineDatabaseDto constructor(
     val ports: String? = null,
     val client: String? = null,
     val availability: Day? = null,
-    val mode: Mode? = null,
+    val software: Software? = null,
     val createdAt: Date? = null
 )
 
+fun VirtualMachineDatabaseDto.asDomainModel(): VirtualMachine {
+    return VirtualMachine(
+        id = id,
+        name = name,
+        cpu = cpu,
+        ram = ram,
+        storage = storage,
+        startDate = startDate,
+        endDate = endDate,
+        isActive = isActive,
+        isHighlyAvailable = isHighlyAvailable,
+        template = template,
+        backupFrequency = backupFrequency,
+        hostName = hostName,
+        fqdn = fqdn,
+        host = host,
+        ports = ports,
+        client = client,
+        availability = availability,
+        software = software,
+        createdAt = createdAt
+    )
+}
+
 fun List<VirtualMachineDatabaseDto>.asDomainModel(): List<VirtualMachine> {
     return map {
-        VirtualMachine(
-            id = it.id,
-            name = it.name,
-            cpu = it.cpu,
-            ram = it.ram,
-            storage = it.storage,
-            startDate = it.startDate,
-            endDate = it.endDate,
-            isActive = it.isActive,
-            isHighlyAvailable = it.isHighlyAvailable,
-            template = it.template,
-            backupFrequency = it.backupFrequency,
-            hostName = it.hostName,
-            fqdn = it.fqdn,
-            host = it.host,
-            ports = it.ports,
-            client = it.client,
-            availability = it.availability,
-            mode = it.mode,
-            createdAt = it.createdAt
-        )
+        it.asDomainModel()
     }
 }

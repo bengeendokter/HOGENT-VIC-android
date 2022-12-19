@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import be.hogent.vic.R
 import be.hogent.vic.databinding.FragmentVoorspellingBinding
+import be.hogent.vic.screens.virtualmachinelist.VirtualMachineListViewModel
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -18,7 +19,16 @@ import java.util.Date
 
 class VoorspellingFragment : Fragment() {
     private lateinit var binding: FragmentVoorspellingBinding
-    private lateinit var viewModel: VoorspellingViewModel
+    private val viewModel: VoorspellingViewModel by lazy {
+        val activity = requireNotNull(this.activity) {
+            "You can only access the viewModel after onViewCreated()"
+        }
+
+        ViewModelProvider(
+            this,
+            VoorspellingViewModel.Factory(activity.application)
+        ).get(VoorspellingViewModel::class.java)
+    }
 
     var datum: Date = Date()
 
@@ -27,8 +37,6 @@ class VoorspellingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentVoorspellingBinding.inflate(inflater)
-        viewModel = ViewModelProvider(this).get(VoorspellingViewModel::class.java)
-
         binding.voorspelling = viewModel
         binding.lifecycleOwner = this
 
@@ -51,24 +59,22 @@ class VoorspellingFragment : Fragment() {
                 day
             )
 
-           val minDay = c.get(Calendar.DAY_OF_MONTH)
-           val minMonth = c.get(Calendar.MONTH)
-           val minYear = c.get(Calendar.YEAR)
-           c.set(minYear, minMonth, minDay)
-           datePickerDialog.datePicker.minDate = c.timeInMillis
+            val minDay = c.get(Calendar.DAY_OF_MONTH)
+            val minMonth = c.get(Calendar.MONTH)
+            val minYear = c.get(Calendar.YEAR)
+            c.set(minYear, minMonth, minDay)
+            datePickerDialog.datePicker.minDate = c.timeInMillis
 
-           val maxDay = c.get(Calendar.DAY_OF_MONTH)
-           val maxMonth = c.get(Calendar.MONTH)
-           val maxYear = c.get(Calendar.YEAR).plus(1)
-           c.set(maxYear, maxMonth, maxDay)
-           datePickerDialog.datePicker.maxDate = c.timeInMillis
-
-           datePickerDialog.show()
-
+            val maxDay = c.get(Calendar.DAY_OF_MONTH)
+            val maxMonth = c.get(Calendar.MONTH)
+            val maxYear = c.get(Calendar.YEAR).plus(3)
+            c.set(maxYear, maxMonth, maxDay)
+            datePickerDialog.datePicker.maxDate = c.timeInMillis
+            datePickerDialog.show()
         }
 
         binding.voorspellingDatum.text =  SimpleDateFormat("dd/MM/yyyy").format(datum).toString()
-        viewModel.doeVoorspelling(datum)
+        viewModel.vms.observe(viewLifecycleOwner, Observer {})
 
         return binding.root
     }

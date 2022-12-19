@@ -4,6 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="vm"
+            type="be.hogent.vic.domain.VirtualMachine" />
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Virtual Machine"
+            android:text="@{vm.name}"
             android:textAlignment="center"
             android:textColor="@color/CTA"
             android:textSize="24sp"
@@ -26,6 +31,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            tools:text="Virtual Machine"
             tools:ignore="TextContrastCheck" />
 
         <ScrollView
@@ -72,6 +78,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingBottom="8dp"
+                        app:client="@{vm.client}"
                         tools:text="Marc Asselberg" />
 
                     <TextView
@@ -86,6 +93,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingBottom="8dp"
+                        app:date="@{vm.startDate}"
                         tools:text="01/01/2023" />
 
                     <TextView
@@ -100,6 +108,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingBottom="8dp"
+                        app:date="@{vm.endDate}"
                         tools:text="01/02/2023" />
                 </LinearLayout>
 
@@ -131,6 +140,7 @@
                         android:id="@+id/vm_txt_storage_in"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        app:capacity="@{vm.storage}"
                         tools:text="20 GB" />
 
                     <TextView
@@ -144,6 +154,7 @@
                         android:id="@+id/vm_txt_memory_in"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        app:capacity="@{vm.ram}"
                         tools:text="2 GB" />
 
                     <TextView
@@ -157,6 +168,7 @@
                         android:id="@+id/vm_txt_cpuCores_in"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="@{vm.cpu}"
                         tools:text="4" />
 
                     <TextView
