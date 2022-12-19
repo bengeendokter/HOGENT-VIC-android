@@ -217,6 +217,7 @@
                             android:id="@+id/vm_txt_name_in"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="@{vm.name}"
                             tools:text="virtual-machine-hogent-1" />
                     </LinearLayout>
 
@@ -240,6 +241,7 @@
                             android:id="@+id/vm_txt_hostname_in"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="@{vm.hostName}"
                             tools:text="vik1" />
                     </LinearLayout>
 
@@ -263,6 +265,7 @@
                             android:id="@+id/vm_txt_FQDN_in"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="@{vm.fqdn}"
                             tools:text="devops-proj1.vichogent.be" />
                     </LinearLayout>
 
@@ -286,6 +289,7 @@
                             android:id="@+id/vm_txt_template_in"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="@{String.valueOf(vm.template)}"
                             tools:text="Standaard" />
                     </LinearLayout>
 
