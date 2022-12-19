@@ -109,4 +109,28 @@ class  VoorspellingLiveDataTest {
         //Assert.assertArrayEquals(result, IntArray(3) {0})
         //Assert.assertEquals(4, 2 + 2)
     }
+
+    @Test
+    fun doeResourcesBerekening_metVMLijst_geeftLiveDataMetJuisteArray(){
+        voorspellingViewModel.vms = MutableLiveData<List<VirtualMachine>>(lijstvms)
+
+        val result = voorspellingViewModel.doeVoorspelling(
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/19")
+        )
+
+        //vs2
+        var voorspelling = Voorspelling(
+            arrayOf<String>("10", "11", "2820"),
+            arrayOf<String>("10", "11", "2820")
+        );
+
+
+        var value = voorspellingViewModel.voorspelling.getOrAwaitValue()
+        assertThat(value, not(nullValue()))
+        assertEquals(
+            value.vrij.joinToString(),
+            voorspelling.vrij.joinToString()
+        )
+        //Assert.assertArrayEquals(value.vrij, voorspelling.vrij)
+    }
 }
