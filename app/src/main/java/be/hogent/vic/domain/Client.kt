@@ -12,7 +12,5 @@ data class Client(
     var email: String = "",
     var backupContact: String = "",
     var education: String = "",
-    var externalType: String = "",
-) {
-
-}
+    var externalType: String = ""
+)

@@ -2,8 +2,8 @@ package be.hogent.vic.repository
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
+import be.hogent.vic.database.ClientDatabaseDto
 import be.hogent.vic.database.VicDatabase
-import be.hogent.vic.database.VirtualMachineDatabaseDto
 import be.hogent.vic.database.asDomainModel
 import be.hogent.vic.network.Network
 import be.hogent.vic.network.asDatabaseModel

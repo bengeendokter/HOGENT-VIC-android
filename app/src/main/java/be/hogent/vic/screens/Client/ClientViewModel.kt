@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import be.hogent.vic.database.getDatabase
+import be.hogent.vic.repository.ClientRepository
 import kotlinx.coroutines.launch
 
 class ClientViewModel(application: Application, private val clientId: Int) : AndroidViewModel(application) {
