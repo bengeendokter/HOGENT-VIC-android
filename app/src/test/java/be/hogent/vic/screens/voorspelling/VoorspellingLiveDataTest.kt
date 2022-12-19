@@ -3,16 +3,10 @@ package be.hogent.vic.screens.voorspelling
 import android.app.Application
 import android.content.Context
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.test.core.app.ApplicationProvider
-//import androidx.test.core.app.ApplicationProvider
 import be.hogent.vic.domain.BackupFrequency
 import be.hogent.vic.domain.Template
 import be.hogent.vic.domain.VirtualMachine
-import org.hamcrest.CoreMatchers
-import org.hamcrest.MatcherAssert
-import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -22,7 +16,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import be.hogent.vic.domain.Voorspelling
 import junit.framework.Assert.assertEquals
-import junit.framework.Assert.assertSame
 import org.hamcrest.CoreMatchers.not
 import org.hamcrest.CoreMatchers.nullValue
 import org.hamcrest.MatcherAssert.assertThat
@@ -81,7 +74,6 @@ class  VoorspellingLiveDataTest {
 
     @Before
     fun setUp() {
-        //context = ApplicationProvider.getApplicationContext()
         context = InstrumentationRegistry.getInstrumentation().targetContext
         voorspellingViewModel = VoorspellingViewModel(context as Application)
     }
@@ -90,7 +82,6 @@ class  VoorspellingLiveDataTest {
     fun doeResourcesBerekening_metLegeLijst_geeftLiveDataMetNulArray(){
         voorspellingViewModel.vms = MutableLiveData<List<VirtualMachine>>(listOf())
 
-        //vs1
         var voorspelling = Voorspelling(
             arrayOf<String>("0", "0", "0"),
             arrayOf<String>("0", "0", "0"),
@@ -102,12 +93,6 @@ class  VoorspellingLiveDataTest {
             value.vrij.joinToString(),
             voorspelling.vrij.joinToString()
         )
-        //Assert.assertArrayEquals(value.vrij, voorspelling.vrij)
-
-        // Then the percentages are 100 and 0
-        //Assert.assertArrayEquals(result, intArrayOf(10, 11, 2820))
-        //Assert.assertArrayEquals(result, IntArray(3) {0})
-        //Assert.assertEquals(4, 2 + 2)
     }
 
     @Test
@@ -118,7 +103,6 @@ class  VoorspellingLiveDataTest {
             SimpleDateFormat("yyyy/MM/dd").parse("2022/12/19")
         )
 
-        //vs2
         var voorspelling = Voorspelling(
             arrayOf<String>("10", "11", "2820"),
             arrayOf<String>("10", "11", "2820")
@@ -131,6 +115,5 @@ class  VoorspellingLiveDataTest {
             value.vrij.joinToString(),
             voorspelling.vrij.joinToString()
         )
-        //Assert.assertArrayEquals(value.vrij, voorspelling.vrij)
     }
 }

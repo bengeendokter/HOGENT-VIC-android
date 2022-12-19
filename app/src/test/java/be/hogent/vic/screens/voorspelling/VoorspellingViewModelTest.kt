@@ -3,15 +3,10 @@ package be.hogent.vic.screens.voorspelling
 import android.app.Application
 import android.content.Context
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.test.core.app.ApplicationProvider
-//import androidx.test.core.app.ApplicationProvider
 import be.hogent.vic.domain.BackupFrequency
 import be.hogent.vic.domain.Template
 import be.hogent.vic.domain.VirtualMachine
-import org.hamcrest.CoreMatchers
-import org.hamcrest.MatcherAssert
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule
@@ -53,7 +48,6 @@ class VoorspellingViewModelTest {
 
     @Before
     fun setUp() {
-        //context = ApplicationProvider.getApplicationContext()
         context = InstrumentationRegistry.getInstrumentation().targetContext
         voorspellingViewModel = VoorspellingViewModel(context as Application)
     }
@@ -72,10 +66,8 @@ class VoorspellingViewModelTest {
             false
         )
 
-        //Assert.assertArrayEquals(result, intArrayOf(10, 11, 2820))
         Assert.assertArrayEquals(totaal, IntArray(3) {0})
         Assert.assertArrayEquals(vrij, IntArray(3) {0})
-        //Assert.assertEquals(4, 2 + 2)
     }
 
     @Test
@@ -92,7 +84,6 @@ class VoorspellingViewModelTest {
             false
         )
 
-        //Assert.assertArrayEquals(result, intArrayOf(10, 11, 2820))
         Assert.assertArrayEquals(totaal, IntArray(3) {0})
         Assert.assertArrayEquals(vrij, IntArray(3) {0})
     }
