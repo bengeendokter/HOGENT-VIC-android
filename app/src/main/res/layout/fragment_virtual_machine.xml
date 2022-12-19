@@ -168,7 +168,7 @@
                         android:id="@+id/vm_txt_cpuCores_in"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@{vm.cpu}"
+                        android:text="@{String.valueOf(vm.cpu)}"
                         tools:text="4" />
 
                     <TextView

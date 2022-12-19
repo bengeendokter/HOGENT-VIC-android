@@ -8,7 +8,7 @@
     <string name="desc_ic_profile">Profile icon</string>
     <string name="desc_ic_logout">Logout icon</string>
     <string name="txt_memory">Memory</string>
-    <string name="txt_cpuCores">vCPU Cores</string>
+    <string name="txt_cpuCores">vCPU</string>
     <string name="txt_storage">Storage</string>
     <string name="txt_mode">Mode</string>
     <string name="txt_name">Name</string>
