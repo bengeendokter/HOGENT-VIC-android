@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import be.hogent.vic.databinding.FragmentClientBinding
 
@@ -15,7 +16,7 @@ class ClientFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentClientBinding.inflate(inflater)
-        val selectedId = ClientListFragmentArgs.fromBundle(requireArguments()).selectedId
+        val selectedId = ClientFragmentArgs.fromBundle(requireArguments()).selectedId
         val viewModel = ViewModelProvider(
             this,
             ClientViewModel.Factory(requireNotNull(this.activity).application, selectedId)
@@ -23,10 +24,10 @@ class ClientFragment : Fragment() {
 
         binding.lifecycleOwner = viewLifecycleOwner
 
-        binding.client.observe(
+        viewModel.client.observe(
             viewLifecycleOwner,
             Observer {
-                if(it != null){
+                if (it != null) {
                     binding.client = it
                 }
             }

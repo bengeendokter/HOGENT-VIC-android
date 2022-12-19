@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.Client.ClientFragment">
 
+    <data>
+        <variable
+            name="client"
+            type="be.hogent.vic.domain.Client" />
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
