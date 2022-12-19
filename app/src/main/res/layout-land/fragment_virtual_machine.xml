@@ -317,6 +317,30 @@
                             tools:text="Mon, Tues, Wed" />
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:id="@+id/ll_vmSoftware"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_vm_list_item"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/vm_txt_software"
+                            style="@style/boldBlue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_software" />
+
+                        <TextView
+                            android:id="@+id/vm_txt_software_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:availability="@{vm.software}"
+                            tools:text="MySQL, MongoDB" />
+                    </LinearLayout>
+
 
                 </LinearLayout>
 

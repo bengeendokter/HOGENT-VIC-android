@@ -22,7 +22,6 @@ interface VicService {
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
     .add(Date::class.java, Rfc3339DateJsonAdapter().nullSafe())
-    .add(createEnumJsonAdapter<Software>())
     .add(createEnumJsonAdapter<Template>())
     .add(createEnumJsonAdapter<BackupFrequency>())
     .add(createEnumJsonAdapter<Status>())

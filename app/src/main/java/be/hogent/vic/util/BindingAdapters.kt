@@ -10,7 +10,6 @@ import be.hogent.vic.screens.virtualmachinerequestlist.VirtualMachineRequestAdap
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.EnumMap
-import java.util.EnumSet
 
 val dayMap = EnumMap(mapOf(
     Day.MONDAY to "Mon",
@@ -20,6 +19,14 @@ val dayMap = EnumMap(mapOf(
     Day.FRIDAY to "Fri",
     Day.SATURDAY to "Sat",
     Day.SUNDAY to "Sun"
+))
+
+val softwareMap = EnumMap(mapOf(
+    Software.DOCKER to "Docker",
+    Software.LINUX to "Linux",
+    Software.MONGODB to "MongoDB",
+    Software.MYSQL to "MySQL",
+    Software.WINDOWS to "Windows"
 ))
 
 @BindingAdapter("listData")
@@ -71,6 +78,18 @@ fun bindAvailability(textView: TextView, availability: Int?) {
 
     Day.values().filter { availability.hasFlag(it.value) }.forEach {
         textList = textList.plus(dayMap[it] ?: "")
+    }
+
+    textView.text = textList.joinToString(", ")
+}
+
+@BindingAdapter("software")
+fun bindSoftware(textView: TextView, software: Int?) {
+    software ?: return
+    var textList = listOf<String>()
+
+    Software.values().filter { software.hasFlag(it.value) }.forEach {
+        textList = textList.plus(softwareMap[it] ?: "")
     }
 
     textView.text = textList.joinToString(", ")

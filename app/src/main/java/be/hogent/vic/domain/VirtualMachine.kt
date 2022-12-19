@@ -24,7 +24,7 @@ data class VirtualMachine(
     val ports: String? = null,
     val client: String? = null,
     val availability: Int? = null,
-    val software: Software? = null,
+    val software: Int? = null,
     val createdAt: Date? = null
 ) {
 
