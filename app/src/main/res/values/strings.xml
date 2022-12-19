@@ -10,7 +10,7 @@
     <string name="txt_memory">Memory</string>
     <string name="txt_cpuCores">vCPU</string>
     <string name="txt_storage">Storage</string>
-    <string name="txt_mode">Mode</string>
+    <string name="txt_status">Status</string>
     <string name="txt_name">Name</string>
     <string name="txt_hostname">Hostname</string>
     <string name="txt_fqdn">FQDN</string>
