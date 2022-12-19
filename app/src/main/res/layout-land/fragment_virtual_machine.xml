@@ -351,18 +351,42 @@
                         android:padding="16dp">
 
                         <TextView
-                            android:id="@+id/vm_txt_highlyavailable"
+                            android:id="@+id/vm_txt_highlyAvailable"
                             style="@style/boldBlue"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/txt_highlyavailable" />
 
                         <TextView
-                            android:id="@+id/vm_txt_highlyavailable_in"
+                            android:id="@+id/vm_txt_highlyAvailable_in"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:highlyavailable="@{vm.highlyAvailable}"
                             tools:text="Yes" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_vmBackupFrequency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_vm_list_item"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/vm_txt_backupFrequency"
+                            style="@style/boldBlue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_backupfrequency" />
+
+                        <TextView
+                            android:id="@+id/vm_txt_backupFrequency_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:backup="@{vm.backupFrequency}"
+                            tools:text="Wekelijkse backup" />
                     </LinearLayout>
 
 

@@ -15,9 +15,10 @@
     <string name="txt_hostname">Hostname</string>
     <string name="txt_fqdn">FQDN</string>
     <string name="txt_template">Template</string>
-    <string name="txt_availability">Availability</string>
+    <string name="txt_availability">Beschikbaarheid</string>
     <string name="txt_software">Software</string>
-    <string name="txt_highlyavailable">Highly Available</string>
+    <string name="txt_highlyavailable">Hoge Beschikbaarheid</string>
+    <string name="txt_backupfrequency">Backup Frequentie</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="txt_gebruiker">Gebruiker</string>

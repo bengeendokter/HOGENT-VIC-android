@@ -12,13 +12,13 @@ import java.util.Date
 import java.util.EnumMap
 
 val dayMap = EnumMap(mapOf(
-    Day.MONDAY to "Mon",
-    Day.TUESDAY to "Tues",
-    Day.WEDNESDAY to "Wed",
-    Day.THURSDAY to "Thurs",
-    Day.FRIDAY to "Fri",
-    Day.SATURDAY to "Sat",
-    Day.SUNDAY to "Sun"
+    Day.MONDAY to "Ma",
+    Day.TUESDAY to "Di",
+    Day.WEDNESDAY to "Woe",
+    Day.THURSDAY to "Do",
+    Day.FRIDAY to "Vri",
+    Day.SATURDAY to "Za",
+    Day.SUNDAY to "Zo"
 ))
 
 val softwareMap = EnumMap(mapOf(
@@ -98,7 +98,7 @@ fun bindSoftware(textView: TextView, software: Int?) {
 @BindingAdapter("highlyavailable")
 fun bindHighlyAvailable(textView: TextView, highlyAvailable: Boolean?) {
     highlyAvailable ?: return
-    textView.text = if (highlyAvailable) "Yes" else "No"
+    textView.text = if (highlyAvailable) "Ja" else "Nee"
 }
 
 @BindingAdapter(value = ["date", "endDate"], requireAll = false)
