@@ -1,6 +1,6 @@
 package be.hogent.vic.network
 
-import be.hogent.vic.domain.*
+import be.hogent.vic.domain.* // ktlint-disable no-wildcard-imports
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -19,6 +19,12 @@ interface VicService {
 
     @GET("virtualmachinerequest")
     suspend fun getVirtualMachineRequests(): List<VirtualMachineRequestNetworkDto>
+
+    @GET("client")
+    suspend fun getClients(): List<ClientNetworkDto>
+
+    @GET("client/{id}")
+    suspend fun getClient(@Path("id") id: Int): ClientNetworkDto
 }
 
 private val moshi = Moshi.Builder()
