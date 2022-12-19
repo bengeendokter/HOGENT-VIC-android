@@ -132,13 +132,13 @@
                     <TextView
                         android:id="@+id/vm_txt_storage"
                         style="@style/boldGreen"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/txt_storage" />
 
                     <TextView
                         android:id="@+id/vm_txt_storage_in"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:capacity="@{vm.storage}"
                         tools:text="20 GB" />
@@ -146,13 +146,13 @@
                     <TextView
                         android:id="@+id/vm_txt_memory"
                         style="@style/boldGreen"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/txt_memory" />
 
                     <TextView
                         android:id="@+id/vm_txt_memory_in"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:capacity="@{vm.ram}"
                         tools:text="2 GB" />
@@ -166,7 +166,7 @@
 
                     <TextView
                         android:id="@+id/vm_txt_cpuCores_in"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@{String.valueOf(vm.cpu)}"
                         tools:text="4" />
@@ -174,13 +174,13 @@
                     <TextView
                         android:id="@+id/vm_txt_mode"
                         style="@style/boldGreen"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/txt_mode" />
 
                     <TextView
                         android:id="@+id/vm_txt_mode_in"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:text="IaaS" />
 
