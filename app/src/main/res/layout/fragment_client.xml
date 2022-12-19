@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".screens.Client.ClientFragment">
 
     <LinearLayout
@@ -173,7 +171,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/CardEmail"
+            android:id="@+id/CardBackupEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -182,27 +180,18 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/LabelEmail"
+                android:id="@+id/LabelBackupEmail"
                 style="@style/boldBlue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Email backup contact" />
 
             <TextView
-                android:id="@+id/TxtEmail"
+                android:id="@+id/TxtBackupEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="bobdesmet@voka.be" />
+                tools:text="bartdewolf@voka.be" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/backupContact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="171dp"
-            tools:layout_editor_absoluteY="573dp"
-            tools:text="bartdewolf@voka.be" />
 
     </LinearLayout>
 
