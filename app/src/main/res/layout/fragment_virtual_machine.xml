@@ -341,6 +341,30 @@
                             tools:text="MySQL, MongoDB" />
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:id="@+id/ll_vmHighlyAvailable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_vm_list_item"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/vm_txt_highlyavailable"
+                            style="@style/boldBlue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_highlyavailable" />
+
+                        <TextView
+                            android:id="@+id/vm_txt_highlyavailable_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:highlyavailable="@{vm.highlyAvailable}"
+                            tools:text="Yes" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
 

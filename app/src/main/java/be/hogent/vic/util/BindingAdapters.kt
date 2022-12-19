@@ -95,6 +95,12 @@ fun bindSoftware(textView: TextView, software: Int?) {
     textView.text = textList.joinToString(", ")
 }
 
+@BindingAdapter("highlyavailable")
+fun bindHighlyAvailable(textView: TextView, highlyAvailable: Boolean?) {
+    highlyAvailable ?: return
+    textView.text = if (highlyAvailable) "Yes" else "No"
+}
+
 @BindingAdapter(value = ["date", "endDate"], requireAll = false)
 fun bindDate(textView: TextView, date: Date?, endDate: Date?) {
     date ?: return
