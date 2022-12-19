@@ -150,4 +150,22 @@ class VoorspellingViewModelTest {
         Assert.assertArrayEquals(totaal, intArrayOf(10, 11, 2820))
         Assert.assertArrayEquals(vrij, intArrayOf(6, 8, 1870))
     }
+
+    @Test
+    fun berekenResources_metVMLijst_datumNaAlleEinddatums(){
+        voorspellingViewModel.vms = MutableLiveData<List<VirtualMachine>>(lijstvms)
+
+        val totaal = voorspellingViewModel.berekenVoorspelling(
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/07"),
+            true
+        )
+
+        val vrij = voorspellingViewModel.berekenVoorspelling(
+            SimpleDateFormat("yyyy/MM/dd").parse("2022/12/07"),
+            false
+        )
+
+        Assert.assertArrayEquals(totaal, intArrayOf(10, 11, 2820))
+        Assert.assertArrayEquals(vrij, intArrayOf(10, 11, 2820))
+    }
 }
