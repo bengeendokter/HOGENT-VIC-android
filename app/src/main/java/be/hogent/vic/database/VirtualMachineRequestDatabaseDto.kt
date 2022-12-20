@@ -3,6 +3,7 @@ package be.hogent.vic.database
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import be.hogent.vic.domain.Status
+import be.hogent.vic.domain.VirtualMachine
 import be.hogent.vic.domain.VirtualMachineRequest
 import java.util.*
 
@@ -14,6 +15,9 @@ data class VirtualMachineRequestDatabaseDto constructor(
     val date: Date,
     val startDate: Date,
     val client: String? = null,
+    val clientEmail: String? = null,
+    val clientNmr: String? = null,
+    val clientOrg: String? = null,
     val virtualMachineId: Int? = null,
     val status: Status,
 
@@ -21,18 +25,24 @@ data class VirtualMachineRequestDatabaseDto constructor(
     val reason: String? = null
 )
 
-fun List<VirtualMachineRequestDatabaseDto>.asDomainModel(): List<VirtualMachineRequest>{
-    return map{
-        VirtualMachineRequest(
-            id = it.id,
-            projectName = it.projectName,
-            date = it.date,
-            startDate = it.startDate,
-            client = it.client,
-            virtualMachineId = it.virtualMachineId,
-            status = it.status,
-            endDate = it.endDate,
-            reason = it.reason
-        )
+fun VirtualMachineRequestDatabaseDto.asDomainModel(): VirtualMachineRequest {
+    return VirtualMachineRequest(
+        id = id,
+        projectName = projectName,
+        date = date,
+        startDate = startDate,
+        client = client,
+        clientOrg = clientOrg,
+        clientNmr = clientNmr,
+        virtualMachineId = virtualMachineId,
+        status = status,
+        endDate = endDate,
+        reason = reason
+    )
+}
+
+fun List<VirtualMachineRequestDatabaseDto>.asDomainModel(): List<VirtualMachineRequest> {
+    return map {
+        it.asDomainModel()
     }
 }

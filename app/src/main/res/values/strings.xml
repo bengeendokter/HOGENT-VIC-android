@@ -8,18 +8,22 @@
     <string name="desc_ic_profile">Profile icon</string>
     <string name="desc_ic_logout">Logout icon</string>
     <string name="txt_memory">Memory</string>
-    <string name="txt_cpuCores">vCPU Cores</string>
+    <string name="txt_cpuCores">vCPU</string>
     <string name="txt_storage">Storage</string>
-    <string name="txt_mode">Mode</string>
+    <string name="txt_status">Status</string>
     <string name="txt_name">Name</string>
     <string name="txt_hostname">Hostname</string>
     <string name="txt_fqdn">FQDN</string>
     <string name="txt_template">Template</string>
+    <string name="txt_availability">Beschikbaarheid</string>
+    <string name="txt_software">Software</string>
+    <string name="txt_highlyavailable">Hoge Beschikbaarheid</string>
+    <string name="txt_backupfrequency">Backup Frequentie</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="txt_gebruiker">Gebruiker</string>
     <string name="txt_begindatum">Begindatum</string>
     <string name="txt_einddatum">Einddatum</string>
-    <string name="txt_voorspelling">Voorspelling</string>
     <string name="phoneNumberLink"><a href="tel:+32 123 45 67 89">+32 123 45 67 89</a></string>
+    <string name="txt_voorspelling">Resource Planner</string>
 </resources>

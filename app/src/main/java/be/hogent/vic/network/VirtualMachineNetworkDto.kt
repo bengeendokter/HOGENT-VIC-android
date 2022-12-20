@@ -23,8 +23,8 @@ data class VirtualMachineNetworkDto(
     val host: String? = null,
     val ports: String? = null,
     val client: Client? = null,
-    val availability: Day? = null,
-    val software: Software? = null,
+    val availability: Int? = null,
+    val software: Int? = null,
     val createdAt: String? = null // temp
 )
 

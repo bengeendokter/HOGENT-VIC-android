@@ -132,13 +132,13 @@
                     <TextView
                         android:id="@+id/vm_txt_storage"
                         style="@style/boldGreen"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/txt_storage" />
 
                     <TextView
                         android:id="@+id/vm_txt_storage_in"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:capacity="@{vm.storage}"
                         tools:text="20 GB" />
@@ -146,13 +146,13 @@
                     <TextView
                         android:id="@+id/vm_txt_memory"
                         style="@style/boldGreen"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/txt_memory" />
 
                     <TextView
                         android:id="@+id/vm_txt_memory_in"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:capacity="@{vm.ram}"
                         tools:text="2 GB" />
@@ -166,23 +166,24 @@
 
                     <TextView
                         android:id="@+id/vm_txt_cpuCores_in"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@{vm.cpu}"
+                        android:text="@{String.valueOf(vm.cpu)}"
                         tools:text="4" />
 
                     <TextView
-                        android:id="@+id/vm_txt_mode"
+                        android:id="@+id/vm_txt_status"
                         style="@style/boldGreen"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_mode" />
+                        android:text="@string/txt_status" />
 
                     <TextView
-                        android:id="@+id/vm_txt_mode_in"
-                        android:layout_width="match_parent"
+                        android:id="@+id/vm_txt_status_in"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:text="IaaS" />
+                        app:status="@{vm.isActive}"
+                        tools:text="Aan" />
 
                 </LinearLayout>
 
@@ -216,6 +217,7 @@
                             android:id="@+id/TxtName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="@{vm.name}"
                             tools:text="virtual-machine-hogent-1" />
                     </LinearLayout>
 
@@ -239,6 +241,7 @@
                             android:id="@+id/vm_txt_hostname_in"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="@{vm.hostName}"
                             tools:text="vik1" />
                     </LinearLayout>
 
@@ -262,6 +265,7 @@
                             android:id="@+id/vm_txt_FQDN_in"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="@{vm.fqdn}"
                             tools:text="devops-proj1.vichogent.be" />
                     </LinearLayout>
 
@@ -285,9 +289,105 @@
                             android:id="@+id/vm_txt_template_in"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="@{String.valueOf(vm.template)}"
                             tools:text="Standaard" />
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:id="@+id/ll_vmAvailability"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_vm_list_item"
+                        android:orientation="vertical"
+                        android:padding="16dp" >
+
+                        <TextView
+                            android:id="@+id/vm_txt_availability"
+                            style="@style/boldBlue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_availability" />
+
+                        <TextView
+                            android:id="@+id/vm_txt_availability_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:availability="@{vm.availability}"
+                            tools:text="Mon, Tues, Wed" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_vmSoftware"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_vm_list_item"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/vm_txt_software"
+                            style="@style/boldBlue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_software" />
+
+                        <TextView
+                            android:id="@+id/vm_txt_software_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:software="@{vm.software}"
+                            tools:text="MySQL, MongoDB" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_vmHighlyAvailable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_vm_list_item"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/vm_txt_highlyAvailable"
+                            style="@style/boldBlue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_highlyavailable" />
+
+                        <TextView
+                            android:id="@+id/vm_txt_highlyAvailable_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:highlyavailable="@{vm.highlyAvailable}"
+                            tools:text="Yes" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_vmBackupFrequency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_vm_list_item"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/vm_txt_backupFrequency"
+                            style="@style/boldBlue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_backupfrequency" />
+
+                        <TextView
+                            android:id="@+id/vm_txt_backupFrequency_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:backup="@{vm.backupFrequency}"
+                            tools:text="Wekelijkse backup" />
+                    </LinearLayout>
 
                 </LinearLayout>
 

@@ -39,6 +39,9 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    testOptions.unitTests {
+        includeAndroidResources = true
+    }
 }
 
 dependencies {
@@ -67,4 +70,23 @@ dependencies {
     implementation "com.squareup.moshi:moshi:$version_moshi"
     implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
     implementation "com.squareup.moshi:moshi-adapters:$version_moshi"
+
+    // Testing
+    // Dependencies for local unit tests
+    def kotlinVersion = '1.5.31'
+    def fragmentKtxVersion = '1.4.0'
+    def androidXTestExtKotlinRunnerVersion = '1.1.3'
+    def nav_version = '2.5.3'
+
+    implementation 'com.google.ar:core:1.30.0'
+    implementation 'androidx.test.ext:junit-ktx:1.1.4'
+    androidTestImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    androidTestImplementation "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
+    androidTestImplementation 'androidx.test:core-ktx:1.5.0'
+    androidTestImplementation "androidx.test.ext:junit:$androidXTestExtKotlinRunnerVersion"
+    testImplementation "org.robolectric:robolectric:4.9"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation 'androidx.test:core:1.5.0'
+    debugImplementation "androidx.fragment:fragment-testing:$fragmentKtxVersion"
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 }

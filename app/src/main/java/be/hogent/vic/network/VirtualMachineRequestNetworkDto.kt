@@ -1,5 +1,6 @@
 package be.hogent.vic.network
 
+import be.hogent.vic.database.VirtualMachineDatabaseDto
 import be.hogent.vic.database.VirtualMachineRequestDatabaseDto
 import be.hogent.vic.domain.Client
 import be.hogent.vic.domain.Status
@@ -21,34 +22,25 @@ data class VirtualMachineRequestNetworkDto(
     val reason: String? = null
 )
 
-fun List<VirtualMachineRequestNetworkDto>.asDomainModel(): List<VirtualMachineRequest>{
-    return map{
-        VirtualMachineRequest(
-            id = it.id,
-            projectName = it.projectName,
-            date = it.date,
-            startDate = it.startDate,
-            client = it.client?.name + " " + it.client?.surName,
-            virtualMachineId = it.virtualMachineId,
-            status = it.status,
-            endDate = it.endDate,
-            reason = it.reason
-        )
-    }
+
+fun VirtualMachineRequestNetworkDto.asDatabaseModel(): VirtualMachineRequestDatabaseDto {
+    return VirtualMachineRequestDatabaseDto(
+        id = id,
+        projectName = projectName,
+        date = date,
+        startDate = startDate,
+        client = client?.name + " " + client?.surname,
+        clientOrg = client?.clientOrganisation,
+        clientNmr = client?.phoneNumber,
+        virtualMachineId = virtualMachineId,
+        status = status,
+        endDate = endDate,
+        reason = reason
+    )
 }
 
-fun List<VirtualMachineRequestNetworkDto>.asDatabaseModel(): Array<VirtualMachineRequestDatabaseDto>{
-    return map{
-        VirtualMachineRequestDatabaseDto(
-            id = it.id,
-            projectName = it.projectName,
-            date = it.date,
-            startDate = it.startDate,
-            client = it.client?.name + " " + it.client?.surName,
-            virtualMachineId = it.virtualMachineId,
-            status = it.status,
-            endDate = it.endDate,
-            reason = it.reason
-        )
+fun List<VirtualMachineRequestNetworkDto>.asDatabaseModel(): Array<VirtualMachineRequestDatabaseDto> {
+    return map {
+        it.asDatabaseModel()
     }.toTypedArray()
 }

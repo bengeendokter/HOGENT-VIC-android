@@ -9,6 +9,8 @@ data class VirtualMachineRequest(
     val date: Date,
     val startDate: Date,
     val client: String? = null,
+    val clientOrg: String? = null,
+    val clientNmr: String? = null,
     val virtualMachineId: Int? = null,
     val status: Status,
 

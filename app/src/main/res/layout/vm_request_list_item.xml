@@ -56,27 +56,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/requestli_txt_clientEmail" />
 
+
         <TextView
             android:id="@+id/requestli_txt_requestDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            tools:text="01/01/2022"
             app:date="@{request.date}"
             app:layout_constraintStart_toEndOf="@+id/requestli_txt_requestDateTxt"
-            app:layout_constraintTop_toBottomOf="@+id/requestli_txt_clientEmail" />
-
-        <TextView
-            android:id="@+id/requestli_txt_startDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            tools:text="01/01/2023"
-            app:date="@{request.startDate}"
-            app:layout_constraintStart_toEndOf="@+id/requestli_txt_startDateTxt"
-            app:layout_constraintTop_toBottomOf="@+id/requestli_txt_clientEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/requestli_txt_clientEmail"
+            tools:text="01/01/2022" />
 
         <TextView
             android:id="@+id/requestli_txt_startDateTxt"
@@ -84,18 +73,33 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
+            tools:text="01/01/2023"
             android:text="Startdatum:"
             app:layout_constraintStart_toEndOf="@+id/requestli_txt_requestDate"
+            app:layout_constraintTop_toBottomOf="@+id/requestli_txt_clientEmail" />
+
+
+        <TextView
+            android:id="@+id/requestli_txt_startDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            tools:text="01/01/2023"
+            app:date="@{request.startDate}"
+            app:layout_constraintStart_toEndOf="@+id/requestli_txt_startDateTxt"
             app:layout_constraintTop_toBottomOf="@+id/requestli_txt_clientEmail" />
 
         <TextView
             android:id="@+id/requestli_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
             android:layout_marginEnd="16dp"
-            android:background="@color/material_dynamic_neutral80"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
+            tools:text="Requested"
             android:text="@{request.status.toString()}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/requestli_txt_projectName" />
