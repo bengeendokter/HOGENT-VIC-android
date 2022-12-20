@@ -29,7 +29,7 @@ fun VirtualMachineRequestNetworkDto.asDatabaseModel(): VirtualMachineRequestData
         projectName = projectName,
         date = date,
         startDate = startDate,
-        client = client?.name + " " + client?.surname,
+        client = client?.name + " " + client?.surName,
         clientOrg = client?.clientOrganisation,
         clientNmr = client?.phoneNumber,
         virtualMachineId = virtualMachineId,
