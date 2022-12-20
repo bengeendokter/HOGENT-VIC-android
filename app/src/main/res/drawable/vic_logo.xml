@@ -1,0 +1,1381 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="673"
+    android:viewportHeight="181"
+    android:width="673dp"
+    android:height="181dp">
+    <path
+        android:pathData="M1.5 0L29 0.5L1.5 1L1.5 0Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M66.5 0L79 0.5L66.5 1L65.5 2L66.5 0Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M95.5 0L120.5 0L122 1.5L121.5 79L121 1L95.5 1L95 1.5L95 78.5L94 78.5L94 1.5L95.5 0Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M134.5 0L175 0.5L134.5 1L134.5 0Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M210.5 0L283 0.5L210.5 1L210.5 0Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M287 0L313.5 0L315 1.5L313.5 1L288 1L288 46.5L287 46.5L287 0Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M338.5 0L364 0.5L338.5 1L338.5 0Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M400.5 0L427 0.5L400.5 1L399.5 2L400.5 0Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M465.5 0L490.5 0L492 1.5L491.5 58L491 1L465.5 1L465 1.5L465 78.5L464 78.5L464 1.5L465.5 0Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M567.5 0L594 0.5L567.5 1L567.5 0Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M601.5 0L673 0.5L601 1L601 21L623.5 21L624 21.5L624 78.5L623 78.5L623 22L601.5 22L600 20.5L600 1.5L601.5 0Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M160.5 21L161 38.5L160 38.5L160.5 21Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M210.5 21L233 21.5L210.5 22L210.5 21Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M260.5 21L283 21.5L260.5 22L260.5 21Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M650 21L673 21.5L651 22L650.5 79L650 21Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M207.5 26L208 34.5L207 34.5L207.5 26Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M180.5 28L181 32.5L180 32.5L180.5 28Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M314.5 43L315 47.5L314 47.5L314.5 43Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M203.5 45L202.5 47L203.5 45Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M196.5 52L195.5 54L196.5 52Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M317.5 55L319.5 58L317.5 55Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M161.5 59L167 59.5L161 60L160.5 79L160 60.5L161.5 59Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M398.5 65L428 65.5L398.5 66L398.5 65Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M357.5 67L355.5 70L357.5 67Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M352.5 72L351.5 74L352.5 72Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M300.5 73L301.5 75L300.5 73Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M179.5 77L180.5 79L179.5 77Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M317.5 80L320 80.5L317.5 81L317.5 80Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M82.5 99L85 99.5L82.5 100L82.5 99Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M210.5 100L231.5 100L233 101.5L231.5 101L210.5 101L210.5 100Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M282.5 100L304 100.5L282.5 101L281.5 102L282.5 100Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M317.5 100L358 100.5L317 101L316.5 179L316 101.5L317.5 100Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M420.5 100L446.5 100L448 101.5L446.5 101L420.5 101L420.5 100Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M485.5 100L507 100.5L485.5 101L485.5 100Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M537.5 100L563 100.5L537 101L536.5 135L536 101.5L537.5 100Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M569.5 100L593.5 100L595 101.5L593.5 101L569.5 101L569.5 100Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M626.5 100L637 100.5L626.5 101L626.5 100Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M510.5 104L512.5 107L510.5 104Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M376.5 105L377.5 107L376.5 105Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M45.5 107L43.5 110L45.5 107Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M102.5 107L104.5 110L102.5 107Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M127.5 107L126.5 109L127.5 107Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M379.5 107L380.5 109L379.5 107Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M515.5 110L517.5 113L515.5 110Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M383.5 111L385.5 114L383.5 111Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M107.5 112L108.5 114L107.5 112Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M39.5 113L38.5 115L39.5 113Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M120.5 114L119.5 116L120.5 114Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M192.5 115L193.5 117L192.5 115Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M521.5 117L522.5 119L521.5 117Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M72.5 120L79 120.5L72.5 121L72.5 120Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M102.5 120L99.5 124L102.5 120Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M153.5 120L159 120.5L153.5 121L153.5 120Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M343.5 121L344 138.5L343 138.5L343.5 121Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M84.5 122L85.5 124L84.5 122Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M359.5 122L362.5 126L359.5 122Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M64.5 123L60.5 128L64.5 123Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M526.5 123L527.5 125L526.5 123Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M167.5 124L168.5 126L167.5 124Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M88.5 125L92.5 130L88.5 125Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M142.5 127L141.5 129L142.5 127Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M390.5 127L391 132.5L390 132.5L390.5 127Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M363.5 128L364 131.5L363 131.5L363.5 128Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M531.5 129L532.5 131L531.5 129Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M57.5 134L58 136.5L57 136.5L57.5 134Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M200.5 135L201 144.5L200 144.5L200.5 135Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M173.5 137L174 142.5L173 142.5L173.5 137Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M256.5 140L257.5 142L256.5 140Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M279.5 144L280 160.5L279 160.5L279.5 144Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M511.5 144L512.5 146L511.5 144Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M386.5 145L385.5 147L386.5 145Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M595.5 150L596 171.5L595 171.5L595.5 150Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M170.5 151L169.5 153L170.5 151Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M517.5 151L518.5 153L517.5 151Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M95.5 152L98.5 156L95.5 152Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M142.5 152L145.5 156L142.5 152Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M166.5 155L165.5 157L166.5 155Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M522.5 157L523.5 159L522.5 157Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M358.5 159L363 159.5L358.5 160L358.5 159Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M104.5 160L107.5 164L104.5 160Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M343.5 160L344 178.5L343 178.5L343.5 160Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M36.5 162L37.5 164L36.5 162Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M527.5 163L528.5 165L527.5 163Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M192.5 164L189.5 168L192.5 164Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M419.5 165L448 165.5L419.5 166L418.5 167L419.5 165Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M39.5 166L43.5 171L39.5 166Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M121.5 166L125.5 171L121.5 166Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M107.5 167L104.5 171L107.5 167Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M248.5 168L249.5 170L248.5 168Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M187.5 169L185.5 172L187.5 169Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M532.5 169L533.5 171L532.5 169Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M46.5 172L47.5 174L46.5 172Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M101.5 172L100.5 174L101.5 172Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M128.5 172L129.5 174L128.5 172Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M537.5 175L539.5 178L537.5 175Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M66.5 180L69 180.5L66.5 181L66.5 180Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M148.5 180L151 180.5L148.5 181L148.5 180Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M161.5 180L164 180.5L161.5 181L161.5 180Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.2784314"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.2784314"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M79.5 0L92 0.5L79.5 1L79.5 0Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M210.5 1L211 20.5L210 20.5L210.5 1Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M282.5 1L283 20.5L282 20.5L282.5 1Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M567.5 1L568 78.5L567 78.5L567.5 1Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M194.5 6L195.5 8L194.5 6Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M197.5 8L201.5 13L197.5 8Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M233.5 21L234 78.5L233 78.5L233.5 21Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M259.5 21L260 78.5L259 78.5L259.5 21Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M178.5 23L179.5 25L178.5 23Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M179.5 35L177.5 38L179.5 35Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M160.5 39L173 39.5L160.5 40L160.5 39Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M420.5 45L419.5 47L406 46.5L419.5 46L420.5 45Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M201.5 47L197.5 52L201.5 47Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M288.5 50L289 52.5L288 52.5L288.5 50Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M334.5 56L333.5 58L334.5 56Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M491.5 58L525.5 58L527 59.5L526.5 79L526 59L491.5 59L491.5 58Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M167.5 59L168.5 61L167.5 59Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M323.5 59L329 59.5L323.5 60L323.5 59Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M295.5 68L299.5 73L295.5 68Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M174.5 69L175.5 71L174.5 69Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M354.5 70L353.5 72L354.5 70Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M176.5 72L177.5 74L176.5 72Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M178.5 75L179.5 77L178.5 75Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M320.5 80L332 80.5L320.5 81L320.5 80Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M65.5 99L68 99.5L65.5 100L65.5 99Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M147.5 99L150 99.5L147.5 100L147.5 99Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M162.5 99L165 99.5L162.5 100L162.5 99Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M566 100L569 100.5L566.5 102L566 100Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M637.5 100L651 100.5L637.5 101L637.5 100Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M485.5 101L486 178.5L485 178.5L485.5 101Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M507.5 101L509.5 104L507.5 101Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M562.5 101L563 178.5L562 178.5L562.5 101Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M47.5 106L46.5 108L47.5 106Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M100.5 106L101.5 108L100.5 106Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M129.5 106L128.5 108L129.5 106Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M512.5 107L514.5 110L512.5 107Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M185.5 108L191.5 115L185.5 108Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M125.5 109L121.5 114L125.5 109Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M381.5 109L382.5 111L381.5 109Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M42.5 110L40.5 113L42.5 110Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M105.5 110L106.5 112L105.5 110Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M518.5 114L520.5 117L518.5 114Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M106.5 116L103.5 120L106.5 116Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M119.5 116L118.5 118L119.5 116Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M523.5 120L525.5 123L523.5 120Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M86.5 123L87.5 125L86.5 123Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M145.5 123L142.5 127L145.5 123Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M96.5 125L93.5 129L96.5 125Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M169.5 126L170.5 128L169.5 126Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M529.5 127L530.5 129L529.5 127Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M534.5 133L536.5 136L534.5 133Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M173.5 134L174 136.5L173 136.5L173.5 134Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M30.5 135L31 144.5L30 144.5L30.5 135Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M138.5 135L139 143.5L138 143.5L138.5 135Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M362.5 135L360.5 138L362.5 135Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M343.5 139L356 139.5L343.5 140L343.5 139Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M112.5 144L113 146.5L112 146.5L112.5 144Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M426.5 146L441 146.5L426.5 147L426.5 146Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M513.5 146L514.5 148L513.5 146Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M384.5 147L379.5 153L384.5 147Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M92.5 150L93.5 152L92.5 151L88 154.5L92.5 150Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M60.5 152L61.5 154L60.5 152Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M169.5 153L167.5 156L169.5 153Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M377.5 153L376.5 155L377.5 153Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M519.5 153L520.5 155L519.5 153Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M63.5 155L64.5 157L63.5 155Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M85.5 156L84.5 158L85.5 156Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M99.5 156L102.5 160L99.5 156Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M73.5 159L79 159.5L73.5 160L73.5 159Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M153.5 159L159 159.5L153.5 160L153.5 159Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M347.5 159L358 159.5L347.5 160L347.5 159Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M524.5 159L525.5 161L524.5 159Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M117.5 160L118.5 162L117.5 160Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M244.5 161L245.5 163L244.5 161Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M193.5 162L192.5 164L193.5 162Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M119.5 163L120.5 165L119.5 163Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M38.5 164L39.5 166L38.5 164Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M529.5 165L531.5 168L529.5 165Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M44.5 170L45.5 172L44.5 170Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M103.5 170L102.5 172L103.5 170Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M126.5 170L127.5 172L126.5 170Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M184.5 171L183.5 173L184.5 171Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M534.5 171L536.5 174L534.5 171Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M595.5 172L596 178.5L595 178.5L595.5 172Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M99.5 173L98.5 175L99.5 173Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M69.5 180L80 180.5L69.5 181L69.5 180Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M151.5 180L161 180.5L151.5 181L151.5 180Z"
+        android:fillColor="@color/ic_hogent"
+        android:fillAlpha="0.745098"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeAlpha="0.745098"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M0.5 1L27.5 1L29 2.5L44 40.5L47.5 46L66 1L92 1.5L59 79L33.5 79L33 77.5L0.5 1Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M95 1L121 1L121 79L95 79L95 1Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M134 1L178.5 1L187.5 3L193.5 6L203 14.5L207 25.5L207 35.5Q204.4 47.4 195.5 53L193 54.5L209 78.5L181.5 79L167.5 59L160 59L160 79L134 79L134 1ZM160 21L160 40Q171 42 178 38L181 34L180 25L175 21L160 21Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M211 1L281.5 1L282 1.5L282 21L259 21L259 79L234 79L234 21.5L233.5 21L211 21L211 1Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M288 1L314 1L314 49.5Q315.5 56 320.5 59L328.5 60L335 56.5L338 50.5L338 1L364 1L364 48.5L359 64.5L350.5 74Q339.2 82.7 316.5 80Q301.2 77.3 294 66.5L290 58.5L288 49.5L288 1Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M400 1L425.5 1L427 2.5L460 79L433.5 79L433 76.5L427.5 65L398.5 65L397 66.5L393 79L366 78.5L400 1ZM414 27L407 41L406 47L420 47L421 46L414 27Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M465 1L491 1L491 59L526 59L526 79L465 79L465 1Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M568 1L594 1L594 79L568 79L568 1Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M601 1L672.5 1L673 1.5L673 21L650 21L650 79L624 79L624 21.5L623.5 21L601 21L601 1Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M68.5 99L79.5 99L89.5 101Q102 105 109 114.5L92.5 129Q87.2 118.8 70.5 120Q62.6 122.1 59 128.5Q55.1 134.6 57 146.5Q59.3 153.3 64.5 157L68.5 159L78.5 160L84.5 158L92.5 151L108 164.5Q108.5 169.5 104.5 170Q92.1 182.6 64.5 180Q48.8 176.8 40 166.5L32 152.5Q29.3 144.2 31 131.5Q34.5 116 45.5 108L56.5 102L68.5 99Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M150.5 99Q181.3 98.3 193 116.5Q198.1 123.4 200 133.5L200 145.5Q196.7 162.2 185.5 171Q177.6 177.6 165.5 180L146.5 180Q130 176.5 121 165.5L113 149.5L112 135.5Q115.1 117.1 127.5 108L138.5 102L150.5 99ZM153 120L146 123Q140 127 138 136L138 144L141 152Q145 158 154 160Q163 160 168 156Q173 152 174 145Q176 133 171 128L164 121L153 120Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M210 101L231.5 101L233 102.5L256 142L259 140.5L282.5 101L303.5 101L304 101.5L304 179L280 179L280 144.5L278 145.5L263 172L251.5 172L251 170.5L234.5 145L234 179L210.5 179L210 178.5L210 101Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M317 101L361.5 101L376.5 106L386 114.5L390 125.5L390 134.5Q387.8 147.3 378.5 153Q372.5 157.5 363.5 159Q350.5 157.7 343 160L343 179L317 179L317 101ZM343 121L343 140Q354 142 361 138L364 134Q365 126 362 123L358 121L343 121Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M421.5 101L446.5 101L447 102.5L481 178.5L454.5 179L449 165L418.5 165L418 166.5L412.5 179L387.5 179L387 177.5L421.5 101ZM434 127L426 145L427 147L441 147L440 142L434 127Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M486 101L506.5 101L512 106.5L536.5 136L537 101L561.5 101L562 101.5L562 179L541.5 179L537 174.5L511.5 144L511 179L486.5 179L486 178.5L486 101Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M567 101L593.5 101L595 102.5L609.5 127Q611.8 127.8 611 125.5L626.5 101L651 101.5L622 149.5L622 179L596 179L596 150.5L567 101Z"
+        android:fillColor="@color/ic_hogent"
+        android:strokeColor="@color/ic_hogent"
+        android:strokeWidth="1" />
+</vector>

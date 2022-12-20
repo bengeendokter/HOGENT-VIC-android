@@ -16,16 +16,15 @@
             android:layout_width="0dp"
             android:layout_height="62dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="64dp"
             android:text="@string/txt_voorspelling"
             app:cornerRadius="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btn_profile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nav_btn_klanten"
-            app:layout_constraintVertical_bias="0.0"
             app:layout_constraintVertical_chainStyle="packed"
             tools:ignore="TextContrastCheck" />
 
@@ -53,7 +52,6 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hogent_logo"
-            app:layout_constraintVertical_bias="0.25"
             app:layout_constraintVertical_chainStyle="packed"
             tools:ignore="TextContrastCheck" />
 
@@ -76,9 +74,10 @@
             style="@style/NavButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:text="@string/txt_klanten"
             app:cornerRadius="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/nav_btn_voorspelling"
             app:layout_constraintEnd_toEndOf="@+id/nav_btn_aanvragen"
             app:layout_constraintStart_toStartOf="@+id/nav_btn_aanvragen"
             app:layout_constraintTop_toBottomOf="@+id/nav_btn_aanvragen"
@@ -88,31 +87,14 @@
             android:id="@+id/btn_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="48dp"
             android:background="@null"
             android:contentDescription="@string/desc_ic_profile"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_logout"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nav_btn_klanten"
-            app:layout_constraintVertical_bias="0.628"
+            app:layout_constraintTop_toBottomOf="@+id/nav_btn_voorspelling"
             app:srcCompat="@drawable/ic_profile"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageButton
-            android:id="@+id/btn_logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:contentDescription="@string/desc_ic_logout"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_profile"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/btn_profile"
-            app:layout_constraintTop_toTopOf="@+id/btn_profile"
-            app:srcCompat="@drawable/ic_logout"
             tools:ignore="ImageContrastCheck" />
 
         <Switch
