@@ -5,11 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import be.hogent.vic.databinding.FragmentClientListBinding
 import be.hogent.vic.databinding.FragmentClientListItemBinding
 import be.hogent.vic.domain.Client
 
-class ClientAdapter (private val onClickListener: OnClickListener) :
+class ClientAdapter(private val onClickListener: OnClickListener) :
     ListAdapter<Client, ClientAdapter.ClientViewHolder>(DiffCallback) {
     class ClientViewHolder(private var binding: FragmentClientListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
