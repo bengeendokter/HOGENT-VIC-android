@@ -45,5 +45,17 @@
     <fragment
         android:id="@+id/virtualMachineRequestListFragment"
         android:name="be.hogent.vic.screens.virtualmachinerequestlist.VirtualMachineRequestListFragment"
-        android:label="VirtualMachineRequestListFragment" />
+        android:label="VirtualMachineRequestListFragment" >
+        <action
+            android:id="@+id/action_virtualMachineRequestListFragment_to_virtualMachineRequestFragment"
+            app:destination="@id/virtualMachineRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/virtualMachineRequestFragment"
+        android:name="be.hogent.vic.screens.virtualmachinerequest.VirtualMachineRequestFragment"
+        android:label="VirtualMachineRequestFragment" >
+        <argument
+            android:name="selectedId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

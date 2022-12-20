@@ -38,11 +38,12 @@ class VirtualMachineRequestListFragment : Fragment(){
         binding.vmRequestList.adapter = viewModelAdapter
         binding.viewModel = viewModel
 
-//        viewModel.navigateToDetails.observe(viewLifecycleOwner, Observer {
-//            if (it != null){
-//                this.findNavController().navigate()
-//            }
-//        })
+        viewModel.navigateToDetails.observe(viewLifecycleOwner, Observer {
+            if (it != null){
+                this.findNavController().navigate(VirtualMachineRequestListFragmentDirections.actionVirtualMachineRequestListFragmentToVirtualMachineRequestFragment(it))
+                viewModel.displayDetailsComplete()
+            }
+        })
         return binding.root
     }
 }

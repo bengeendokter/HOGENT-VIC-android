@@ -17,6 +17,8 @@ interface VicService {
     suspend fun getVirtualMachine(@Path("id") id: Int): VirtualMachineNetworkDto
     @GET("virtualmachinerequest")
     suspend fun getVirtualMachineRequests(): List<VirtualMachineRequestNetworkDto>
+    @GET("virtualmachinerequest/{id}")
+    suspend fun getVirtualMachineRequest(@Path("id") id: Int): VirtualMachineRequestNetworkDto
 }
 
 private val moshi = Moshi.Builder()

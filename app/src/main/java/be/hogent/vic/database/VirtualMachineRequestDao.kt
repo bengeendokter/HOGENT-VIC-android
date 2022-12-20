@@ -5,12 +5,19 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 import be.hogent.vic.domain.VirtualMachineRequest
 
 @Dao
 interface VirtualMachineRequestDao {
     @Query("SELECT * FROM virtual_machine_requests")
-    fun getVirtualMachineRequests(): LiveData<List<VirtualMachineRequestDatabaseDto>>
+    fun getAll(): LiveData<List<VirtualMachineRequestDatabaseDto>>
+
+    @Query("SELECT * FROM virtual_machine_requests WHERE id = :id")
+    fun getById(id: Int): VirtualMachineRequestDatabaseDto?
+
+    @Update
+    fun update(request: VirtualMachineRequestDatabaseDto)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(vararg virtualMachineRequests: VirtualMachineRequestDatabaseDto)

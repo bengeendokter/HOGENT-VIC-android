@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="request"
+            type="be.hogent.vic.domain.VirtualMachineRequest" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".screens.virtualmachinerequest.VirtualMachineRequestFragment"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Aanvraag"
+            android:textAlignment="center"
+            android:textColor="@color/CTA"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <ScrollView
+            android:id="@+id/scroll_VirtualMachineRequest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_request"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ll_vmRequestInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="48dp"
+                    android:gravity="start|center_vertical"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_vm_list_item"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_vmRequestClientInfo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/request_txt_projectNaam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{request.projectName}"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        tools:text="Projectnaam"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/request_txt_aanvraagTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Aangevragen op:"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/request_txt_projectNaam" />
+
+                    <TextView
+                        android:id="@+id/request_txt_aanvraag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:date="@{request.date}"
+                        app:layout_constraintStart_toEndOf="@+id/request_txt_aanvraagTxt"
+                        app:layout_constraintTop_toTopOf="@+id/request_txt_aanvraagTxt" />
+
+                    <TextView
+                        android:id="@+id/request_txt_startDateTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Start datum:"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/request_txt_aanvraagTxt" />
+
+                    <TextView
+                        android:id="@+id/request_txt_startDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:date="@{request.startDate}"
+                        app:layout_constraintStart_toEndOf="@+id/request_txt_startDateTxt"
+                        app:layout_constraintTop_toTopOf="@+id/request_txt_startDateTxt" />
+
+
+                    <TextView
+                        android:id="@+id/request_txt_endDateTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Eind datum:"
+                        app:layout_constraintEnd_toStartOf="@+id/request_txt_endDate"
+                        app:layout_constraintTop_toTopOf="@+id/request_txt_startDateTxt" />
+
+                    <TextView
+                        android:id="@+id/request_txt_endDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:date="@{request.endDate}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/request_txt_startDateTxt" />
+
+                    <TextView
+                        android:id="@+id/request_txt_reasontxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Reden van aanvraag:"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/request_txt_startDateTxt" />
+
+                    <TextView
+                        android:id="@+id/request_txt_reason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{request.reason}"
+                        tools:text="Lorem ipsum optio eum deserunt italique illum inventore sit ssumendum qui ne."
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/request_txt_reasontxt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_vmRequestClientInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="48dp"
+                    android:background="@drawable/bg_vm_list_item"
+                    android:gravity="start|center_vertical"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ll_vmRequestInfo"
+                    app:layout_constraintStart_toStartOf="@+id/ll_vmRequestInfo"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_vmRequestInfo">
+
+                    <TextView
+                        android:id="@+id/request_txt_clientName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{request.client}"
+                        tools:text="Karel dekining"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/request_txt_clientOrganisation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{request.clientOrg}" />
+
+                    <TextView
+                        android:id="@+id/request_txt_clientNmr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{request.clientNmr}" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>
