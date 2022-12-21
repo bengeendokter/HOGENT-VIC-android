@@ -2,6 +2,7 @@
     <string name="app_name">VIC</string>
     <string name="desc_background_wave">Blauwe golven op de achtergrond</string>
     <string name="desc_hogent_logo">Logo HoGent</string>
+    <string name="desc_VIC_logo">VIC Logo</string>
     <string name="txt_virtual_machines">Virtual Machines</string>
     <string name="txt_aanvragen">Aanvragen</string>
     <string name="txt_klanten">Klanten</string>
@@ -25,4 +26,11 @@
     <string name="txt_begindatum">Begindatum</string>
     <string name="txt_einddatum">Einddatum</string>
     <string name="txt_voorspelling">Resource Planner</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_logout">Logout</string>
+
+    <!-- Auth0 -->
+    <string name="auth_client_id">SmI8qxvt8wVrBNV5kquyPHgXsFO5HjsV</string>
+    <string name="auth_domain">dev-k4byyl302m4qablp.us.auth0.com</string>
+
 </resources>

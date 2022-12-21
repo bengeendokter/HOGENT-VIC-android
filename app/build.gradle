@@ -17,6 +17,7 @@ android {
         versionCode 1
         versionName "1.0"
 
+        manifestPlaceholders = [auth0Domain: "@string/auth_domain", auth0Scheme: "https"]
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -73,6 +74,10 @@ dependencies {
     implementation "com.squareup.moshi:moshi:$version_moshi"
     implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
     implementation "com.squareup.moshi:moshi-adapters:$version_moshi"
+
+    // Auth0
+    implementation 'com.auth0.android:auth0:2.+'
+    implementation 'androidx.security:security-crypto-ktx:1.1.0-alpha02'
 
     // Testing
     // Dependencies for local unit tests

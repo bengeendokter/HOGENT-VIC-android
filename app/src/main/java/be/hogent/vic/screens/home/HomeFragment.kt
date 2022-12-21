@@ -40,6 +40,10 @@ class HomeFragment : Fragment() {
             view.findNavController().navigate(be.hogent.vic.screens.home.HomeFragmentDirections.actionHomeFragmentToVirtualMachineRequestListFragment())
         }
 
+        binding.btnProfile.setOnClickListener { view: View ->
+            view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToLoginFragment())
+        }
+
         binding.dayNightSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked) {
                 AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_YES)
