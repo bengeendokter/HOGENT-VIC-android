@@ -1,15 +1,17 @@
 package be.hogent.vic.domain
 
-import java.util.Date
+import java.util.*
 
 data class Client(
-    // From index dto
-    val id: Int,
-    val name: String?,
-    val surname: String?,
-    val phoneNumber: String?,
-    val clientOrganisation: String?,
-    // TODO...
-) {
-
-}
+    var id: Int = 1,
+    var name: String = "",
+    var surName: String = "",
+    var phoneNumber: String = "",
+    var clientType: String = "",
+    var clientOrganisation: String = "",
+    // client dto
+    var email: String? = null,
+    var backupContact: String? = null,
+    var education: String? = null,
+    var externalType: String? = null
+)

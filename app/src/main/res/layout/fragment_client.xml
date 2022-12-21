@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.client.ClientFragment">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="client"
+            type="be.hogent.vic.domain.Client" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/CardName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/LabelName"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Naam" />
+
+            <TextView
+                android:id="@+id/TxtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Bob De Smet"
+                android:text="@{client.name + ' ' + client.surName}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardClientType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/LabelClientType"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Extern/Intern" />
+
+            <TextView
+                android:id="@+id/TxtClientType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Extern"
+                android:text="@{(client.clientType != null) ? `Extern` : `Intern`}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardClientOrganisation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="@{(client.clientOrganisation != null) ? View.VISIBLE : View.GONE}"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/LabelClientOrganisation"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bedrijf" />
+
+            <TextView
+                android:id="@+id/TxtClientOrganisation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="VOKA"
+                android:text="@{client.clientOrganisation}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardExternalType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="@{(client.externalType != null) ? View.VISIBLE : View.GONE}"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/LabelExternalType"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rol" />
+
+            <TextView
+                android:id="@+id/TxtExternalType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Manager"
+                android:text="@{client.externalType}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardEducation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="@{(client.education == null) ? View.VISIBLE : View.GONE}"
+            tools:visibility="gone">
+
+            <TextView
+                android:id="@+id/LabelEducation"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Departement" />
+
+            <TextView
+                android:id="@+id/TxtEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{client.education}"
+                tools:text="Bio Wetenschappen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/LabelPhoneNumber"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefoon nummer" />
+
+            <TextView
+                android:id="@+id/TxtPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="+32 123 45 67 89"
+                android:text="@{client.phoneNumber}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/LabelEmail"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email" />
+
+            <TextView
+                android:id="@+id/TxtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="bobdesmet@voka.be"
+                android:text="@{client.email}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardBackupEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_vm_list_item"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/LabelBackupEmail"
+                style="@style/boldBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email backup contact" />
+
+            <TextView
+                android:id="@+id/TxtBackupEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="bartdewolf@voka.be"
+                android:text="@{client.backupContact}"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
