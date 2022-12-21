@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="android.view.View"/>
         <variable
             name="client"
             type="be.hogent.vic.domain.Client" />
@@ -24,7 +25,8 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Bob" />
+            tools:text="Bob"
+            android:text="@{client.name}" />
 
         <TextView
             android:id="@+id/surName"
@@ -35,7 +37,8 @@
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/name"
             app:layout_constraintTop_toTopOf="@+id/name"
-            tools:text="De Smet" />
+            tools:text="De Smet"
+            android:text="@{client.surName}" />
 
         <TextView
             android:id="@+id/phoneNumber"
@@ -48,7 +51,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@+string/phoneNumberLink" />
+            tools:text="@+string/phoneNumberLink"
+            android:text="@{client.phoneNumber}" />
 
         <TextView
             android:id="@+id/clientOrganisation"
@@ -60,7 +64,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name"
-            tools:text="VOKA" />
+            tools:text="VOKA"
+            android:text="@{client.clientOrganisation}" />
 
         <TextView
             android:id="@+id/education"
@@ -73,7 +78,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/phoneNumber"
             tools:text="hide Bio Wetenschappen"
-            tools:visibility="invisible" />
+            android:text="@{client.education}"
+            tools:visibility="invisible"
+            android:visibility="@{(client.education == null) ? View.VISIBLE : View.INVISIBLE}"/>
 
         <TextView
             android:id="@+id/externalType"
@@ -85,6 +92,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/phoneNumber"
-            tools:text="Manager" />
+            tools:text="Manager"
+            android:text="@{client.externalType}"
+            tools:visibility="visible"
+            android:visibility="visible"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
