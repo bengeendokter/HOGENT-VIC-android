@@ -98,7 +98,7 @@
             android:background="@drawable/bg_vm_list_item"
             android:orientation="vertical"
             android:padding="16dp"
-            android:visibility="@{(client.externalType != null) ? View.VISIBLE : View.GONE}"
+            android:visibility="@{(client.externalType == null) ? View.VISIBLE : View.GONE}"
             tools:visibility="visible">
 
             <TextView
@@ -113,7 +113,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="Manager"
-                android:text="@{client.externalType}"/>
+                android:text="null"/>
         </LinearLayout>
 
         <LinearLayout
