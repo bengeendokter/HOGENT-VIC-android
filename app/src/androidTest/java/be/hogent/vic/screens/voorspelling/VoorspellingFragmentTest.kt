@@ -22,7 +22,7 @@ class VoorspellingFragmentTest {
     @Test
     fun algemeenUI() {
         onView(withId(R.id.voorspelling_datum)).check(matches(isDisplayed()))
-        onView(withId(R.id.voorspelling_datum)).check(matches(hasTextColor(R.color.black)))
+        onView(withId(R.id.voorspelling_datum)).check(matches(hasTextColor(R.color.ic_hogent)))
         onView(withId(R.id.voorspelling_btn_datum)).check(matches(isDisplayed()))
         onView(withId(R.id.voorspelling_btn_datum)).check(matches(isClickable()))
         onView(withId(R.id.voorspelling_btn_datum)).check(matches(withText(containsString("Kies"))))
