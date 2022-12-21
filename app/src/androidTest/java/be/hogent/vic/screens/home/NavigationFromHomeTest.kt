@@ -33,14 +33,26 @@ class NavigationFromHomeTest {
     }
 
     @Test
-    fun testNavigationHomeToVoorspelling() {
-        onView(ViewMatchers.withId(R.id.nav_btn_voorspelling)).perform(ViewActions.click())
-        assertEquals(navController.currentDestination?.id, R.id.voorspellingFragment)
-    }
-
-    @Test
     fun testNavigationHomeToVMList() {
         onView(ViewMatchers.withId(R.id.nav_btn_virtualMachines)).perform(ViewActions.click())
         assertEquals(navController.currentDestination?.id, R.id.VMListFragment)
+    }
+
+    @Test
+    fun testNavigationHomeToRequestList() {
+        onView(ViewMatchers.withId(R.id.nav_btn_aanvragen)).perform(ViewActions.click())
+        assertEquals(navController.currentDestination?.id, R.id.virtualMachineRequestListFragment)
+    }
+
+    @Test
+    fun testNavigationHomeToClientList() {
+        onView(ViewMatchers.withId(R.id.nav_btn_klanten)).perform(ViewActions.click())
+        assertEquals(navController.currentDestination?.id, R.id.clientListFragment)
+    }
+
+    @Test
+    fun testNavigationHomeToVoorspelling() {
+        onView(ViewMatchers.withId(R.id.nav_btn_voorspelling)).perform(ViewActions.click())
+        assertEquals(navController.currentDestination?.id, R.id.voorspellingFragment)
     }
 }
