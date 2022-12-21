@@ -17,38 +17,37 @@
             android:id="@+id/lgn_logo_hogent"
             android:layout_width="220dp"
             android:layout_height="220dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:contentDescription="@string/desc_hogent_logo"
             android:src="@drawable/hogent_logo"
             app:layout_constraintBottom_toTopOf="@+id/lgn_logo_vic"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/lgn_txt_welcome"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <ImageView
             android:id="@+id/lgn_logo_vic"
             android:layout_width="220dp"
             android:layout_height="90dp"
-            android:layout_marginBottom="32dp"
             android:contentDescription="@string/desc_VIC_logo"
             android:src="@drawable/vic_logo"
-            app:layout_constraintBottom_toTopOf="@+id/lgn_txt_welcome"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/lgn_logo_hogent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/lgn_logo_hogent"
             app:layout_constraintTop_toBottomOf="@+id/lgn_logo_hogent" />
 
         <TextView
             android:id="@+id/lgn_txt_welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/lgn_btn_login"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lgn_logo_vic"
+            app:layout_constraintStart_toEndOf="@+id/lgn_logo_hogent"
+            app:layout_constraintTop_toTopOf="@+id/lgn_logo_hogent"
             app:layout_constraintVertical_chainStyle="packed"
             tools:text="Nog logged in" />
 
@@ -57,10 +56,10 @@
             style="@style/NavButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
             android:text="@string/btn_login"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/lgn_logo_vic"
+            app:layout_constraintEnd_toEndOf="@+id/lgn_txt_welcome"
+            app:layout_constraintStart_toStartOf="@+id/lgn_txt_welcome"
             app:layout_constraintTop_toBottomOf="@+id/lgn_txt_welcome"
             tools:ignore="TextContrastCheck" />
 
@@ -73,8 +72,9 @@
             android:contentDescription="@string/desc_ic_logout"
             android:text="@string/btn_logout"
             android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/lgn_logo_vic"
+            app:layout_constraintEnd_toEndOf="@+id/lgn_txt_welcome"
+            app:layout_constraintStart_toStartOf="@+id/lgn_txt_welcome"
             app:layout_constraintTop_toBottomOf="@+id/lgn_txt_welcome"
             app:srcCompat="@drawable/ic_logout"
             tools:ignore="TextContrastCheck" />

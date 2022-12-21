@@ -49,12 +49,12 @@ class LoginFragment : Fragment() {
         return binding.root
     }
 
-    override fun onStart() {
-        super.onStart()
-
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         checkIfToken()
         setLoggedIn()
     }
+
 
     private fun checkIfToken(){
         val token = CredentialsManager.getAccessToken(requireContext())
@@ -120,6 +120,7 @@ class LoginFragment : Fragment() {
                     Toast.makeText(context, "Succesfully logged out", Toast.LENGTH_SHORT).show()
                     loggedIn = false
                     setLoggedIn()
+
                 }
                 override fun onFailure(error: AuthenticationException) {
                     Toast.makeText(context, "Logout failed", Toast.LENGTH_SHORT).show()
