@@ -27,9 +27,6 @@ class VoorspellingFragmentTest {
         onView(withId(R.id.voorspelling_btn_datum)).check(matches(isClickable()))
         onView(withId(R.id.voorspelling_btn_datum)).check(matches(withText(containsString("Kies"))))
         onView(withId(R.id.voorspelling_btn_datum)).check(matches(withText("Kies een datum")))
-
-        //TODO
-        // datapicker test en kijken naar datum text en cpu velden
     }
 
     @Test

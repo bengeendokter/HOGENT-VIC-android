@@ -25,9 +25,6 @@ class HomeFragmentTest {
         onView(withId(R.id.nav_btn_virtualMachines)).check(matches(isClickable()))
         onView(withId(R.id.nav_btn_virtualMachines)).check(matches(withText(containsString("Virtual"))))
         onView(withId(R.id.nav_btn_virtualMachines)).check(matches(withText("Virtual Machines")))
-
-        //TODO
-        //op switch klikken en kijken naar kleurverandering
     }
 
     @Test
