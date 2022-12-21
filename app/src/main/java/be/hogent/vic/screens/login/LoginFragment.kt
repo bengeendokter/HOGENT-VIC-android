@@ -25,19 +25,21 @@ class LoginFragment : Fragment() {
     private lateinit var account : Auth0
 
     private var loggedIn = false
-    private var user: String? = ""
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        account = Auth0(
+            getString(R.string.auth_client_id),
+            getString(R.string.auth_domain)
+        )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
-
-        account = Auth0(
-            getString(R.string.auth_client_id),
-            getString(R.string.auth_domain)
-        )
 
         binding.apply {
             lgnBtnLogin.setOnClickListener { loginWithBrowser() }
@@ -50,7 +52,6 @@ class LoginFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        setLoading()
         checkIfToken()
         setLoggedIn()
     }
@@ -71,34 +72,23 @@ class LoginFragment : Fragment() {
         binding.apply {
             if (loggedIn) {
                 bottomNav.visibility = View.VISIBLE
-                lgnTxtWelcome.text = String.format("Welkom %s", user)
                 lgnBtnLogin.visibility = View.GONE
                 lgnBtnLogout.visibility = View.VISIBLE
-                lgnBtnLogout.isEnabled = true
             } else {
                 bottomNav.visibility = View.GONE
                 lgnTxtWelcome.text = "Niet ingelogd"
                 lgnBtnLogout.visibility = View.GONE
                 lgnBtnLogin.visibility = View.VISIBLE
-                lgnBtnLogin.isEnabled = true
             }
         }
     }
 
-    private fun setLoading() {
-        binding.apply {
-            lgnTxtWelcome.text = "Even geduld"
-            lgnBtnLogin.isEnabled = false
-            lgnBtnLogout.isEnabled = false
-            lgnBtnLogin.text = "..."
-        }
-    }
 
     private fun loginWithBrowser() {
         // Setup the WebAuthProvider, using the custom scheme and scope.
 
         WebAuthProvider.login(account)
-            .withScheme("https")
+            .withScheme("demo")
             .withScope("openid profile email")
             // Launch the authentication passing the callback where the results will be received
             .start(requireContext(), object : Callback<Credentials, AuthenticationException> {
@@ -124,7 +114,7 @@ class LoginFragment : Fragment() {
     }
     private fun logout() {
         WebAuthProvider.logout(account)
-            .withScheme("https")
+            .withScheme("demo")
             .start(requireContext(), object: Callback<Void?, AuthenticationException> {
                 override fun onSuccess(payload: Void?) {
                     Toast.makeText(context, "Succesfully logged out", Toast.LENGTH_SHORT).show()
@@ -148,7 +138,7 @@ class LoginFragment : Fragment() {
                 }
 
                 override fun onSuccess(profile: UserProfile) {
-                    user = profile.name
+                    binding.lgnTxtWelcome.text = String.format("Welkom %s", profile.name)
                     loggedIn = true
                     setLoggedIn()
                 }

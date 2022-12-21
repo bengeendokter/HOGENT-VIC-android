@@ -17,7 +17,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        manifestPlaceholders = [auth0Domain: "@string/auth_domain", auth0Scheme: "https"]
+        manifestPlaceholders = [auth0Domain: "@string/auth_domain", auth0Scheme: "demo"]
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
