@@ -9,8 +9,9 @@ data class Client(
     var phoneNumber: String = "",
     var clientType: String = "",
     var clientOrganisation: String = "",
-    var email: String = "",
-    var backupContact: String = "",
-    var education: String = "",
-    var externalType: String = ""
+    // client dto
+    var email: String? = null,
+    var backupContact: String? = null,
+    var education: String? = null,
+    var externalType: String? = null
 )

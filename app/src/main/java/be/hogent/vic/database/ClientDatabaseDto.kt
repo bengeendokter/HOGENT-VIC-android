@@ -11,21 +11,21 @@ data class ClientDatabaseDto constructor(
     @PrimaryKey
     val id: Int,
     val name: String,
-    val surName: String,
+    val surname: String,
     val phoneNumber: String,
     val clientType: String,
     val clientOrganisation: String,
-    val email: String,
-    val backupContact: String,
-    val education: String,
-    val externalType: String
+    val email: String? = null,
+    val backupContact: String? = null,
+    val education: String? = null,
+    val externalType: String? = null
 )
 
 fun ClientDatabaseDto.asDomainModel(): Client {
     return Client(
         id = id,
         name = name,
-        surName = surName,
+        surName = surname,
         phoneNumber = phoneNumber,
         clientType = clientType,
         clientOrganisation = clientOrganisation,

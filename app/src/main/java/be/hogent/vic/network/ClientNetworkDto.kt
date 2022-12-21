@@ -9,21 +9,21 @@ import java.util.*
 data class ClientNetworkDto(
     val id: Int,
     val name: String,
-    val surName: String,
+    val surname: String,
     val phoneNumber: String,
     val clientType: String,
     val clientOrganisation: String,
-    val email: String,
-    val backupContact: String,
-    val education: String,
-    val externalType: String
+    val email: String? = null,
+    val backupContact: String? = null,
+    val education: String? = null,
+    val externalType: String? = null
 )
 
 fun ClientNetworkDto.asDatabaseModel(): ClientDatabaseDto {
     return ClientDatabaseDto(
         id = id,
         name = name,
-        surName = surName,
+        surname = surname,
         phoneNumber = phoneNumber,
         clientType = clientType,
         clientOrganisation = clientOrganisation,
