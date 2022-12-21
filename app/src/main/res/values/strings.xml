@@ -26,4 +26,6 @@
     <string name="txt_einddatum">Einddatum</string>
     <string name="phoneNumberLink"><a href="tel:+32 123 45 67 89">+32 123 45 67 89</a></string>
     <string name="txt_voorspelling">Resource Planner</string>
+    <string name="homenavigatie">Home</string>
+    <string name="vmsnavigatie">VM\'s</string>
 </resources>
