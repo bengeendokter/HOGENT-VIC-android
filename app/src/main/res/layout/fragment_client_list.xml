@@ -7,7 +7,7 @@
 
     <data>
         <variable
-            name="viewModel"
+            name="viewModel2"
             type="be.hogent.vic.screens.clientList.ClientListViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,7 +35,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            app:clientlistData="@{viewModel.clients}"
+            app:clientlistData="@{viewModel2.clients}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

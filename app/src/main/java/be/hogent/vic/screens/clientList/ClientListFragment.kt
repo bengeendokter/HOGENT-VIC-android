@@ -37,7 +37,7 @@ class ClientListFragment : Fragment() {
             }
         )
         binding.clientList.adapter = viewModelAdapter
-        binding.viewModel = viewModel
+        binding.viewModel2 = viewModel
 
         viewModel.navigateToDetails.observe(
             viewLifecycleOwner,

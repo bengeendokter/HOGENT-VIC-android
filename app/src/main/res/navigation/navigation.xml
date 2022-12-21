@@ -48,7 +48,8 @@
     <fragment
         android:id="@+id/clientListFragment"
         android:name="be.hogent.vic.screens.clientList.ClientListFragment"
-        android:label="ClientListFragment" >
+        android:label="ClientListFragment"
+        tools:layout="@layout/fragment_client_list">
         <action
             android:id="@+id/action_clientListFragment_to_clientFragment"
             app:destination="@id/clientFragment" />

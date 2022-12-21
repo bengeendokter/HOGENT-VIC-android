@@ -16,7 +16,7 @@ class ClientFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentClientBinding.inflate(inflater)
-        val selectedId = ClientFragmentArgs.fromBundle(requireArguments()).selectedId // ClientFragmentArgs.fromBundle(requireArguments()).selectedId
+        val selectedId = ClientFragmentArgs.fromBundle(requireArguments()).selectedId
         val viewModel = ViewModelProvider(
             this,
             ClientViewModel.Factory(requireNotNull(this.activity).application, selectedId)
