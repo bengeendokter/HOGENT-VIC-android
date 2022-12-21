@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
             view.findNavController().navigate(be.hogent.vic.screens.home.HomeFragmentDirections.actionHomeFragmentToVMListFragment())
         }
 
-        binding.navBtnKlanten.setOnClickListener{ view: View ->
+        binding.navBtnKlanten.setOnClickListener { view: View ->
             view.findNavController().navigate(be.hogent.vic.screens.home.HomeFragmentDirections.actionHomeFragmentToClientListFragment())
         }
 
