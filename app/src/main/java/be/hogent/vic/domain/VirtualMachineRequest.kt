@@ -18,7 +18,7 @@ data class VirtualMachineRequest(
     val reason: String? = null
 )
 
-enum class Status(override val value: Int): IEnumValue{
+enum class Status(override val value: Int) : IEnumValue {
     ACCEPTED(0),
     DENIED(1),
     HANDLED(2),

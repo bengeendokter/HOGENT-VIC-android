@@ -3,7 +3,6 @@ package be.hogent.vic.database
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import be.hogent.vic.domain.Status
-import be.hogent.vic.domain.VirtualMachine
 import be.hogent.vic.domain.VirtualMachineRequest
 import java.util.*
 

@@ -4,24 +4,24 @@ import android.app.Application
 import android.content.Context
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
 import be.hogent.vic.domain.BackupFrequency
 import be.hogent.vic.domain.Template
 import be.hogent.vic.domain.VirtualMachine
-import org.junit.Before
-import org.junit.Rule
-import org.junit.Test
-import org.junit.runner.RunWith
-import java.text.SimpleDateFormat
-import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
 import be.hogent.vic.domain.Voorspelling
 import junit.framework.Assert.assertEquals
 import org.hamcrest.CoreMatchers.not
 import org.hamcrest.CoreMatchers.nullValue
 import org.hamcrest.MatcherAssert.assertThat
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
+import java.text.SimpleDateFormat
 
 @RunWith(AndroidJUnit4::class)
-class  VoorspellingLiveDataTest {
+class VoorspellingLiveDataTest {
     @get:Rule
     var instantExecutorRule = InstantTaskExecutorRule()
     private lateinit var context: Context
@@ -79,13 +79,13 @@ class  VoorspellingLiveDataTest {
     }
 
     @Test
-    fun doeResourcesBerekening_metLegeLijst_geeftLiveDataMetNulArray(){
+    fun doeResourcesBerekening_metLegeLijst_geeftLiveDataMetNulArray() {
         voorspellingViewModel.vms = MutableLiveData<List<VirtualMachine>>(listOf())
 
         var voorspelling = Voorspelling(
             arrayOf<String>("0", "0", "0"),
             arrayOf<String>("0", "0", "0"),
-        );
+        )
 
         var value = voorspellingViewModel.voorspelling.getOrAwaitValue()
         assertThat(value, not(nullValue()))
@@ -96,7 +96,7 @@ class  VoorspellingLiveDataTest {
     }
 
     @Test
-    fun doeResourcesBerekening_metVMLijst_geeftLiveDataMetJuisteArray(){
+    fun doeResourcesBerekening_metVMLijst_geeftLiveDataMetJuisteArray() {
         voorspellingViewModel.vms = MutableLiveData<List<VirtualMachine>>(lijstvms)
 
         val result = voorspellingViewModel.doeVoorspelling(
@@ -106,8 +106,7 @@ class  VoorspellingLiveDataTest {
         var voorspelling = Voorspelling(
             arrayOf<String>("10", "11", "2820"),
             arrayOf<String>("10", "11", "2820")
-        );
-
+        )
 
         var value = voorspellingViewModel.voorspelling.getOrAwaitValue()
         assertThat(value, not(nullValue()))

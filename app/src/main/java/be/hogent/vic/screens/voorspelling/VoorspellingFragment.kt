@@ -2,10 +2,10 @@ package be.hogent.vic.screens.voorspelling
 
 import android.app.DatePickerDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import be.hogent.vic.databinding.FragmentVoorspellingBinding
 import java.text.SimpleDateFormat
@@ -28,7 +28,8 @@ class VoorspellingFragment : Fragment() {
     var datum: Date = Date()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentVoorspellingBinding.inflate(inflater)
@@ -45,7 +46,7 @@ class VoorspellingFragment : Fragment() {
             val datePickerDialog = DatePickerDialog(
                 requireActivity(),
                 { view, year, monthOfYear, dayOfMonth ->
-                    datum = SimpleDateFormat("dd/MM/yyyy").parse("${dayOfMonth}/${monthOfYear+1}/${year}")
+                    datum = SimpleDateFormat("dd/MM/yyyy").parse("$dayOfMonth/${monthOfYear + 1}/$year")
                     binding.voorspellingDatum.text = SimpleDateFormat("dd/MM/yyyy").format(datum)
                     viewModel.doeVoorspelling(datum)
                 },
@@ -68,11 +69,10 @@ class VoorspellingFragment : Fragment() {
             datePickerDialog.show()
         }
 
-        binding.voorspellingDatum.text =  SimpleDateFormat("dd/MM/yyyy").format(datum).toString()
+        binding.voorspellingDatum.text = SimpleDateFormat("dd/MM/yyyy").format(datum).toString()
         viewModel.vms.observe(viewLifecycleOwner, {})
         viewModel.doeVoorspelling(datum)
 
         return binding.root
     }
-
 }

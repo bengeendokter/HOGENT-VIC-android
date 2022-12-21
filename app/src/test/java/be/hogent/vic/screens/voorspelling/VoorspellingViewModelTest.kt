@@ -4,6 +4,8 @@ import android.app.Application
 import android.content.Context
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
 import be.hogent.vic.domain.BackupFrequency
 import be.hogent.vic.domain.Template
 import be.hogent.vic.domain.VirtualMachine
@@ -13,8 +15,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.text.SimpleDateFormat
-import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
 
 @RunWith(AndroidJUnit4::class)
 class VoorspellingViewModelTest {
@@ -53,7 +53,7 @@ class VoorspellingViewModelTest {
     }
 
     @Test
-    fun berekenResources_metLegeLijst_willekeurigeDatum(){
+    fun berekenResources_metLegeLijst_willekeurigeDatum() {
         voorspellingViewModel.vms = MutableLiveData<List<VirtualMachine>>(listOf())
 
         val totaal = voorspellingViewModel.berekenVoorspelling(
@@ -66,12 +66,12 @@ class VoorspellingViewModelTest {
             false
         )
 
-        Assert.assertArrayEquals(totaal, IntArray(3) {0})
-        Assert.assertArrayEquals(vrij, IntArray(3) {0})
+        Assert.assertArrayEquals(totaal, IntArray(3) { 0 })
+        Assert.assertArrayEquals(vrij, IntArray(3) { 0 })
     }
 
     @Test
-    fun berekenResources_metVMLijst_datumVoorAlleStartDatums(){
+    fun berekenResources_metVMLijst_datumVoorAlleStartDatums() {
         voorspellingViewModel.vms = MutableLiveData<List<VirtualMachine>>(lijstvms)
 
         val totaal = voorspellingViewModel.berekenVoorspelling(
@@ -84,12 +84,12 @@ class VoorspellingViewModelTest {
             false
         )
 
-        Assert.assertArrayEquals(totaal, IntArray(3) {0})
-        Assert.assertArrayEquals(vrij, IntArray(3) {0})
+        Assert.assertArrayEquals(totaal, IntArray(3) { 0 })
+        Assert.assertArrayEquals(vrij, IntArray(3) { 0 })
     }
 
     @Test
-    fun berekenResources_metVMLijst_datumNaEenStartDatum(){
+    fun berekenResources_metVMLijst_datumNaEenStartDatum() {
         voorspellingViewModel.vms = MutableLiveData<List<VirtualMachine>>(lijstvms)
 
         val totaal = voorspellingViewModel.berekenVoorspelling(
@@ -103,11 +103,11 @@ class VoorspellingViewModelTest {
         )
 
         Assert.assertArrayEquals(totaal, intArrayOf(4, 3, 950))
-        Assert.assertArrayEquals(vrij, IntArray(3) {0})
+        Assert.assertArrayEquals(vrij, IntArray(3) { 0 })
     }
 
     @Test
-    fun berekenResources_metVMLijst_datumNaEenEinddatum(){
+    fun berekenResources_metVMLijst_datumNaEenEinddatum() {
         voorspellingViewModel.vms = MutableLiveData<List<VirtualMachine>>(lijstvms)
 
         val totaal = voorspellingViewModel.berekenVoorspelling(
@@ -125,7 +125,7 @@ class VoorspellingViewModelTest {
     }
 
     @Test
-    fun berekenResources_metVMLijst_datumNaLaatsteStartdatum(){
+    fun berekenResources_metVMLijst_datumNaLaatsteStartdatum() {
         voorspellingViewModel.vms = MutableLiveData<List<VirtualMachine>>(lijstvms)
 
         val totaal = voorspellingViewModel.berekenVoorspelling(
@@ -143,7 +143,7 @@ class VoorspellingViewModelTest {
     }
 
     @Test
-    fun berekenResources_metVMLijst_datumNaAlleEinddatums(){
+    fun berekenResources_metVMLijst_datumNaAlleEinddatums() {
         voorspellingViewModel.vms = MutableLiveData<List<VirtualMachine>>(lijstvms)
 
         val totaal = voorspellingViewModel.berekenVoorspelling(

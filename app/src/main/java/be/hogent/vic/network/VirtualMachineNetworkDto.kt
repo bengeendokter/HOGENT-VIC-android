@@ -48,7 +48,7 @@ fun VirtualMachineNetworkDto.asDatabaseModel(): VirtualMachineDatabaseDto {
         client = client?.name,
         availability = availability,
         software = software,
-        createdAt = Date() //createdAt
+        createdAt = Date() // createdAt
     )
 }
 

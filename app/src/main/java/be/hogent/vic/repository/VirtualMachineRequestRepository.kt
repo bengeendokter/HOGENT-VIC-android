@@ -1,12 +1,10 @@
 package be.hogent.vic.repository
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import be.hogent.vic.database.VicDatabase
 import be.hogent.vic.database.VirtualMachineRequestDatabaseDto
 import be.hogent.vic.database.asDomainModel
-import be.hogent.vic.domain.VirtualMachineRequest
 import be.hogent.vic.network.Network
 import be.hogent.vic.network.asDatabaseModel
 import kotlinx.coroutines.Dispatchers
@@ -19,25 +17,25 @@ class VirtualMachineRequestRepository(private val database: VicDatabase) {
 //        Transformations.map(database.virtualMachineRequestDao.getVirtualMachineRequests()){
 //            it.asDomainModel()
 //        }
-    val virtualMachineRequest = Transformations.map(_virtualMachineRequest){
+    val virtualMachineRequest = Transformations.map(_virtualMachineRequest) {
         it?.asDomainModel()
     }
 
-    val virtualMachineRequests = Transformations.map(database.virtualMachineRequestDao.getAll()){
+    val virtualMachineRequests = Transformations.map(database.virtualMachineRequestDao.getAll()) {
         it.asDomainModel()
     }
 
-    suspend fun refreshVirtualMachineRequests(){
-        withContext(Dispatchers.IO){
+    suspend fun refreshVirtualMachineRequests() {
+        withContext(Dispatchers.IO) {
             val virtualMachineRequests = Network.vic.getVirtualMachineRequests()
             database.virtualMachineRequestDao.insertAll(* virtualMachineRequests.asDatabaseModel())
         }
     }
 
-    suspend fun fetchVirtualMachineRequest(id: Int){
+    suspend fun fetchVirtualMachineRequest(id: Int) {
         var value: VirtualMachineRequestDatabaseDto?
 
-        withContext(Dispatchers.IO){
+        withContext(Dispatchers.IO) {
             val virtualMachineRequest = Network.vic.getVirtualMachineRequest(id)
             database.virtualMachineRequestDao.update(virtualMachineRequest.asDatabaseModel())
             value = database.virtualMachineRequestDao.getById(id)

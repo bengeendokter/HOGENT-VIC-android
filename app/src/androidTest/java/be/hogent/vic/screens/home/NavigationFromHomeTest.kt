@@ -9,11 +9,11 @@ import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import be.hogent.vic.R
+import junit.framework.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import be.hogent.vic.R
-import junit.framework.Assert.assertEquals
 
 @RunWith(AndroidJUnit4::class)
 class NavigationFromHomeTest {
@@ -23,7 +23,8 @@ class NavigationFromHomeTest {
     @Before
     fun setup() {
         navController = TestNavHostController(
-            ApplicationProvider.getApplicationContext())
+            ApplicationProvider.getApplicationContext()
+        )
 
         testScenario = launchFragmentInContainer<HomeFragment>()
         testScenario.onFragment { fragment ->

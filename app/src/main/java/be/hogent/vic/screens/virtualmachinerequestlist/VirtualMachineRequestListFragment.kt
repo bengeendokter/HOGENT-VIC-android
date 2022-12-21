@@ -9,11 +9,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import be.hogent.vic.databinding.FragmentVmRequestListBinding
-import be.hogent.vic.screens.virtualmachinelist.VirtualMachineAdapter
 
-class VirtualMachineRequestListFragment : Fragment(){
+class VirtualMachineRequestListFragment : Fragment() {
     private val viewModel: VirtualMachineRequestListViewModel by lazy {
-        val activity = requireNotNull(this.activity){
+        val activity = requireNotNull(this.activity) {
             "You can only access the viewModel after onViewCreated()"
         }
 
@@ -32,18 +31,23 @@ class VirtualMachineRequestListFragment : Fragment(){
     ): View? {
         val binding = FragmentVmRequestListBinding.inflate(inflater)
         binding.lifecycleOwner = viewLifecycleOwner
-        viewModelAdapter = VirtualMachineRequestAdapter(VirtualMachineRequestAdapter.OnClickListener{
-            viewModel.displayDetails(it)
-        })
+        viewModelAdapter = VirtualMachineRequestAdapter(
+            VirtualMachineRequestAdapter.OnClickListener {
+                viewModel.displayDetails(it)
+            }
+        )
         binding.vmRequestList.adapter = viewModelAdapter
         binding.viewModel = viewModel
 
-        viewModel.navigateToDetails.observe(viewLifecycleOwner, Observer {
-            if (it != null){
-                this.findNavController().navigate(VirtualMachineRequestListFragmentDirections.actionVirtualMachineRequestListFragmentToVirtualMachineRequestFragment(it))
-                viewModel.displayDetailsComplete()
+        viewModel.navigateToDetails.observe(
+            viewLifecycleOwner,
+            Observer {
+                if (it != null) {
+                    this.findNavController().navigate(VirtualMachineRequestListFragmentDirections.actionVirtualMachineRequestListFragmentToVirtualMachineRequestFragment(it))
+                    viewModel.displayDetailsComplete()
+                }
             }
-        })
+        )
         return binding.root
     }
 }
