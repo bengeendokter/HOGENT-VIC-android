@@ -14,7 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="30dp"
+        android:paddingRight="16dp">
 
         <LinearLayout
             android:id="@+id/CardName"
@@ -36,8 +39,12 @@
                 android:id="@+id/TxtName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Bob De Smet"
-                android:text="@{client.name + ' ' + client.surName}" />
+                android:enabled="true"
+                android:focusable="true"
+                android:longClickable="true"
+                android:text="@{client.name + ' ' + client.surName}"
+                android:textIsSelectable="true"
+                tools:text="Bob De Smet" />
         </LinearLayout>
 
         <LinearLayout
@@ -60,8 +67,12 @@
                 android:id="@+id/TxtClientType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Extern"
-                android:text="@{(client.clientType != null) ? `Extern` : `Intern`}" />
+                android:enabled="true"
+                android:focusable="true"
+                android:longClickable="true"
+                android:text="@{(client.clientType != null) ? `Extern` : `Intern`}"
+                android:textIsSelectable="true"
+                tools:text="Extern" />
         </LinearLayout>
 
         <LinearLayout
@@ -86,8 +97,12 @@
                 android:id="@+id/TxtClientOrganisation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="VOKA"
-                android:text="@{client.clientOrganisation}"/>
+                android:enabled="true"
+                android:focusable="true"
+                android:longClickable="true"
+                android:text="@{client.clientOrganisation}"
+                android:textIsSelectable="true"
+                tools:text="VOKA" />
         </LinearLayout>
 
         <LinearLayout
@@ -112,8 +127,12 @@
                 android:id="@+id/TxtExternalType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Manager"
-                android:text="null"/>
+                android:enabled="true"
+                android:focusable="true"
+                android:longClickable="true"
+                android:text="null"
+                android:textIsSelectable="true"
+                tools:text="Manager" />
         </LinearLayout>
 
         <LinearLayout
@@ -138,7 +157,11 @@
                 android:id="@+id/TxtEducation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="true"
+                android:focusable="true"
+                android:longClickable="true"
                 android:text="@{client.education}"
+                android:textIsSelectable="true"
                 tools:text="Bio Wetenschappen" />
         </LinearLayout>
 
@@ -162,8 +185,12 @@
                 android:id="@+id/TxtPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="+32 123 45 67 89"
-                android:text="@{client.phoneNumber}"/>
+                android:enabled="true"
+                android:focusable="true"
+                android:longClickable="true"
+                android:text="@{client.phoneNumber}"
+                android:textIsSelectable="true"
+                tools:text="+32 123 45 67 89" />
         </LinearLayout>
 
         <LinearLayout
@@ -186,8 +213,12 @@
                 android:id="@+id/TxtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="bobdesmet@voka.be"
-                android:text="@{client.email}"/>
+                android:enabled="true"
+                android:focusable="true"
+                android:longClickable="true"
+                android:text="@{client.email}"
+                android:textIsSelectable="true"
+                tools:text="bobdesmet@voka.be" />
         </LinearLayout>
 
         <LinearLayout
@@ -210,8 +241,12 @@
                 android:id="@+id/TxtBackupEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="bartdewolf@voka.be"
-                android:text="@{client.backupContact}"/>
+                android:enabled="true"
+                android:focusable="true"
+                android:longClickable="true"
+                android:text="@{client.backupContact}"
+                android:textIsSelectable="true"
+                tools:text="bartdewolf@voka.be" />
         </LinearLayout>
 
     </LinearLayout>
