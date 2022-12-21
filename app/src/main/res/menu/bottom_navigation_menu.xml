@@ -4,12 +4,22 @@
         android:id="@+id/homeFragment"
         android:enabled="true"
         android:icon="@drawable/home"
-        android:title="Home"/>
+        android:title="@string/homenavigatie"/>
     <item
         android:id="@+id/VMListFragment"
         android:enabled="true"
         android:icon="@drawable/vmlijst"
-        android:title="VM's"/>
+        android:title="@string/vmsnavigatie"/>
+    <item
+        android:id="@+id/virtualMachineRequestListFragment"
+        android:enabled="true"
+        android:icon="@drawable/aanvragenlijst"
+        android:title="@string/txt_aanvragen"/>
+    <item
+        android:id="@+id/clientListFragment"
+        android:enabled="true"
+        android:icon="@drawable/klantenlijst"
+        android:title="@string/txt_klanten"/>
     <item
         android:id="@+id/voorspellingFragment"
         android:enabled="true"
