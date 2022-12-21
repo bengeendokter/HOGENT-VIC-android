@@ -3,13 +3,10 @@ package be.hogent.vic.screens.voorspelling
 import android.app.Application
 import androidx.lifecycle.*
 import be.hogent.vic.database.getDatabase
-import be.hogent.vic.domain.BackupFrequency
-import be.hogent.vic.domain.Template
 import be.hogent.vic.domain.VirtualMachine
 import be.hogent.vic.domain.Voorspelling
 import be.hogent.vic.repository.VirtualMachineRepository
 import kotlinx.coroutines.launch
-import java.text.SimpleDateFormat
 import java.util.*
 
 class VoorspellingViewModel(application: Application) : AndroidViewModel(application) {
