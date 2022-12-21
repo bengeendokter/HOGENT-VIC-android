@@ -4,34 +4,45 @@ import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import be.hogent.vic.R
-import be.hogent.vic.domain.*
+import be.hogent.vic.domain.* // ktlint-disable no-wildcard-imports
+import be.hogent.vic.screens.ClientList.ClientAdapter
 import be.hogent.vic.screens.virtualmachinelist.VirtualMachineAdapter
 import be.hogent.vic.screens.virtualmachinerequestlist.VirtualMachineRequestAdapter
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.EnumMap
 
-val dayMap = EnumMap(mapOf(
-    Day.MONDAY to "Ma",
-    Day.TUESDAY to "Di",
-    Day.WEDNESDAY to "Woe",
-    Day.THURSDAY to "Do",
-    Day.FRIDAY to "Vri",
-    Day.SATURDAY to "Za",
-    Day.SUNDAY to "Zo"
-))
+val dayMap = EnumMap(
+    mapOf(
+        Day.MONDAY to "Ma",
+        Day.TUESDAY to "Di",
+        Day.WEDNESDAY to "Woe",
+        Day.THURSDAY to "Do",
+        Day.FRIDAY to "Vri",
+        Day.SATURDAY to "Za",
+        Day.SUNDAY to "Zo"
+    )
+)
 
-val softwareMap = EnumMap(mapOf(
-    Software.DOCKER to "Docker",
-    Software.LINUX to "Linux",
-    Software.MONGODB to "MongoDB",
-    Software.MYSQL to "MySQL",
-    Software.WINDOWS to "Windows"
-))
+val softwareMap = EnumMap(
+    mapOf(
+        Software.DOCKER to "Docker",
+        Software.LINUX to "Linux",
+        Software.MONGODB to "MongoDB",
+        Software.MYSQL to "MySQL",
+        Software.WINDOWS to "Windows"
+    )
+)
 
 @BindingAdapter("listData")
 fun bindRecyclerView(recyclerView: RecyclerView, data: List<VirtualMachine>?) {
     val adapter = recyclerView.adapter as VirtualMachineAdapter
+    adapter.submitList(data)
+}
+
+@BindingAdapter("clientlistData")
+fun bindRecyclerViewClient(recyclerView: RecyclerView, data: List<Client>?) {
+    val adapter = recyclerView.adapter as ClientAdapter
     adapter.submitList(data)
 }
 
@@ -105,8 +116,7 @@ fun bindHighlyAvailable(textView: TextView, highlyAvailable: Boolean?) {
 fun bindDate(textView: TextView, date: Date?, endDate: Date?) {
     date ?: return
 
-    if (endDate == null)
-    {
+    if (endDate == null) {
         textView.text = SimpleDateFormat("dd/MM/yyyy").format(date)
         return
     }
@@ -116,7 +126,6 @@ fun bindDate(textView: TextView, date: Date?, endDate: Date?) {
     )
 }
 
-fun Int.hasFlag(flag: Int): Boolean
-{
+fun Int.hasFlag(flag: Int): Boolean {
     return ((this and flag) == flag)
 }

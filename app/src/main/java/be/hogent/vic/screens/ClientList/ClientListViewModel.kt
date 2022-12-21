@@ -5,7 +5,6 @@ import androidx.lifecycle.* // ktlint-disable no-wildcard-imports
 import be.hogent.vic.database.getDatabase
 import be.hogent.vic.domain.Client
 import be.hogent.vic.repository.ClientRepository
-import be.hogent.vic.screens.virtualmachinelist.VirtualMachineListViewModel
 import kotlinx.coroutines.launch
 
 class ClientListViewModel(application: Application) : AndroidViewModel(application) {
@@ -33,9 +32,9 @@ class ClientListViewModel(application: Application) : AndroidViewModel(applicati
 
     class Factory(val app: Application) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            if (modelClass.isAssignableFrom(VirtualMachineListViewModel::class.java)) {
+            if (modelClass.isAssignableFrom(ClientListViewModel::class.java)) {
                 @Suppress("UNCHECKED_CAST")
-                return VirtualMachineListViewModel(app) as T
+                return ClientListViewModel(app) as T
             }
             throw IllegalArgumentException("Unable to construct viewmodel")
         }
