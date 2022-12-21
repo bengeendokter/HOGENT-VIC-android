@@ -25,18 +25,17 @@ class VoorspellingViewModel(application: Application) : AndroidViewModel(applica
         _voorspelling.value = Voorspelling( Array(3) { "0" }, Array(3) { "0" })
         viewModelScope.launch {
             virtualMachineRepository.refreshVirtualMachines()
-            doeVoorspelling(Date())
         }
     }
 
-    fun doeVoorspelling(datum: Date): Unit{
+    fun doeVoorspelling(datum: Date) {
         val tot = berekenVoorspelling(datum, true)
         val vrij = berekenVoorspelling(datum, false)
 
         _voorspelling.value =  Voorspelling(
             tot.map { it.toString() }.toTypedArray(),
             vrij.map { it.toString() }.toTypedArray(),
-        );
+        )
     }
 
     fun berekenVoorspelling(datum: Date, totaal: Boolean): IntArray {
@@ -52,13 +51,9 @@ class VoorspellingViewModel(application: Application) : AndroidViewModel(applica
         }
 
         vmlijst.forEach{ v ->
-            var tempCPU: Int = lijst[0]
-            var tempRAM: Int = lijst[1]
-            var tempStorage: Int = lijst[2]
-
-            lijst[0] = tempCPU + v.cpu;
-            lijst[1] = tempRAM + v.ram;
-            lijst[2] = tempStorage + v.storage;
+            lijst[0] += v.cpu
+            lijst[1] += v.ram
+            lijst[2] += v.storage
         }
         return lijst
     }
