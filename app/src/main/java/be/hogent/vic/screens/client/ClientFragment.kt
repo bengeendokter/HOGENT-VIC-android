@@ -1,4 +1,4 @@
-package be.hogent.vic.screens.Client
+package be.hogent.vic.screens.client
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,7 +16,7 @@ class ClientFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentClientBinding.inflate(inflater)
-        val selectedId = ClientFragmentArgs.fromBundle(requireArguments()).selectedId
+        val selectedId = ClientFragmentArgs.fromBundle(requireArguments()).selectedId // ClientFragmentArgs.fromBundle(requireArguments()).selectedId
         val viewModel = ViewModelProvider(
             this,
             ClientViewModel.Factory(requireNotNull(this.activity).application, selectedId)

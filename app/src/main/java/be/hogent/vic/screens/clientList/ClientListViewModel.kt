@@ -1,4 +1,4 @@
-package be.hogent.vic.screens.ClientList
+package be.hogent.vic.screens.clientList
 
 import android.app.Application
 import androidx.lifecycle.* // ktlint-disable no-wildcard-imports

@@ -1,4 +1,4 @@
-package be.hogent.vic.screens.ClientList
+package be.hogent.vic.screens.clientList
 
 import android.os.Bundle
 import android.view.LayoutInflater

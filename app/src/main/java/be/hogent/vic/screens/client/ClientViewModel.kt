@@ -1,4 +1,4 @@
-package be.hogent.vic.screens.Client
+package be.hogent.vic.screens.client
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

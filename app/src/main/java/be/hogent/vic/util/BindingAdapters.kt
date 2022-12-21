@@ -5,7 +5,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import be.hogent.vic.R
 import be.hogent.vic.domain.* // ktlint-disable no-wildcard-imports
-import be.hogent.vic.screens.ClientList.ClientAdapter
+import be.hogent.vic.screens.clientList.ClientAdapter
 import be.hogent.vic.screens.virtualmachinelist.VirtualMachineAdapter
 import be.hogent.vic.screens.virtualmachinerequestlist.VirtualMachineRequestAdapter
 import java.text.SimpleDateFormat

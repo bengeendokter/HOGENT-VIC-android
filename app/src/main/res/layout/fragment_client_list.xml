@@ -8,13 +8,13 @@
     <data>
         <variable
             name="viewModel"
-            type="be.hogent.vic.screens.ClientList.ClientListViewModel" />
+            type="be.hogent.vic.screens.clientList.ClientListViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background"
-        tools:context=".screens.ClientList.ClientListFragment">
+        tools:context=".screens.clientList.ClientListFragment">
 
         <ImageView
             android:id="@+id/hogent_logo2"
