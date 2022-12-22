@@ -14,7 +14,6 @@ import androidx.lifecycle.ViewModelProvider
 import be.hogent.vic.databinding.FragmentClientBinding
 import be.hogent.vic.domain.Client
 
-
 class ClientFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,36 +38,49 @@ class ClientFragment : Fragment() {
             }
         )
 
-        binding.btnEmail.setOnClickListener(View.OnClickListener {
-            val client : Client? = binding.client
+        binding.btnEmail.setOnClickListener(
+            View.OnClickListener {
+                val client: Client? = binding.client
 
-            var emailString : String
+                var emailString: String
 
-            if(client != null
-                && !client.email.isNullOrBlank()
-                && "@" in client.email!!)
-            {
-                emailString = client.email!!
-            }
-            else
-            {
-                emailString = "test@company.com"
-            }
-            val mailto = "mailto:${emailString}" +
+                if (client != null &&
+                    !client.email.isNullOrBlank() &&
+                    "@" in client.email!!
+                ) {
+                    emailString = client.email!!
+                } else {
+                    emailString = "test@company.com"
+                }
+                val mailto = "mailto:$emailString" +
                     "?cc=" +
                     "&subject=" + Uri.encode("VIC") +
                     "&body=" + Uri.encode("Beste ")
-            val emailIntent = Intent(Intent.ACTION_SENDTO)
-            emailIntent.data = Uri.parse(mailto)
-            try {
-                startActivity(emailIntent)
-            } catch (e: ActivityNotFoundException) {
-                Toast.makeText(context, "Error to open email app", Toast.LENGTH_SHORT).show()
+                val emailIntent = Intent(Intent.ACTION_SENDTO)
+                emailIntent.data = Uri.parse(mailto)
+                try {
+                    startActivity(emailIntent)
+                } catch (e: ActivityNotFoundException) {
+                    Toast.makeText(context, "Error bij het openen van email app", Toast.LENGTH_SHORT).show()
+                }
             }
-        })
+        )
+
+        binding.btnPhone.setOnClickListener(
+            View.OnClickListener {
+                val client: Client? = binding.client
+                val clientPhoneNumber: String = client?.phoneNumber ?: "+32 123 45 67 89"
+                val number: String = clientPhoneNumber
+                val intent = Intent(Intent.ACTION_CALL)
+                intent.data = Uri.parse("tel:$number")
+                try {
+                    startActivity(intent)
+                } catch (e: ActivityNotFoundException) {
+                    Toast.makeText(context, "Error bij het openen van telefoon app", Toast.LENGTH_SHORT).show()
+                }
+            }
+        )
 
         return binding.root
     }
 }
-
-
