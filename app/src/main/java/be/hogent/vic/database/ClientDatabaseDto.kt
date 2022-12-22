@@ -13,7 +13,7 @@ data class ClientDatabaseDto constructor(
     val name: String,
     val surname: String,
     val phoneNumber: String,
-    val clientType: String,
+    val clientType: Int,
     val clientOrganisation: String,
     val email: String? = null,
     val backupContact: String? = null,

@@ -13,7 +13,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_vm_list_item">
 
         <TextView
             android:id="@+id/name"
@@ -25,6 +27,10 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:enabled="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:textIsSelectable="true"
             tools:text="Bob"
             android:text="@{client.name}" />
 
@@ -37,6 +43,10 @@
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/name"
             app:layout_constraintTop_toTopOf="@+id/name"
+            android:enabled="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:textIsSelectable="true"
             tools:text="De Smet"
             android:text="@{client.surName}" />
 
@@ -46,13 +56,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
-            android:textColor="@color/black"
-            android:textColorLink="@color/purple_700"
+            android:enabled="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:text="@{client.phoneNumber}"
+            android:textIsSelectable="true"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@+string/phoneNumberLink"
-            android:text="@{client.phoneNumber}" />
+            tools:text="+32 123 45 67 89" />
 
         <TextView
             android:id="@+id/clientOrganisation"
@@ -64,6 +76,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name"
+            android:enabled="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:textIsSelectable="true"
             tools:text="VOKA"
             android:text="@{client.clientOrganisation}" />
 
@@ -77,24 +93,12 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/phoneNumber"
-            tools:text="hide Bio Wetenschappen"
-            android:text="@{client.education}"
-            tools:visibility="invisible"
-            android:visibility="@{(client.education == null) ? View.VISIBLE : View.INVISIBLE}"/>
+            android:enabled="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:textIsSelectable="true"
+            tools:text="Extern"
+            android:text="@{(client.clientType == 1) ? `Extern` : `Intern`}"/>
 
-        <TextView
-            android:id="@+id/externalType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phoneNumber"
-            tools:text="Manager"
-            android:text="@{client.externalType}"
-            tools:visibility="visible"
-            android:visibility="visible"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
