@@ -15,16 +15,17 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/background"
             android:orientation="vertical"
             android:paddingLeft="16dp"
             android:paddingTop="30dp"
-            android:paddingRight="16dp">
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp">
 
             <LinearLayout
                 android:id="@+id/CardName"
@@ -238,11 +239,11 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:id="@+id/LabelBackupEmail"
+                    android:id="@+id/LabelBackup"
                     style="@style/boldBlue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Email backup contact" />
+                    android:text="Backup contact" />
 
                 <TextView
                     android:id="@+id/TxtBackupEmail"

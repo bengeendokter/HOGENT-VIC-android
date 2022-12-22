@@ -56,17 +56,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
-            android:textColor="@color/black"
-            android:textColorLink="@color/purple_700"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:enabled="true"
             android:focusable="true"
             android:longClickable="true"
+            android:text="@{client.phoneNumber}"
             android:textIsSelectable="true"
-            tools:text="@+string/phoneNumberLink"
-            android:text="@{client.phoneNumber}" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="+32 123 45 67 89" />
 
         <TextView
             android:id="@+id/clientOrganisation"
