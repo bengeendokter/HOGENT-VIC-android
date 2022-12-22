@@ -76,7 +76,7 @@
                     android:enabled="true"
                     android:focusable="true"
                     android:longClickable="true"
-                    android:text="@{(client.clientType != null) ? `Extern` : `Intern`}"
+                    android:text="@{(client.clientType == 1) ? `Extern` : `Intern`}"
                     android:textIsSelectable="true"
                     tools:text="Extern" />
             </LinearLayout>
@@ -89,7 +89,7 @@
                 android:background="@drawable/bg_vm_list_item"
                 android:orientation="vertical"
                 android:padding="16dp"
-                android:visibility="@{(client.clientOrganisation != null) ? View.VISIBLE : View.GONE}"
+                android:visibility="@{(client.clientType == 1) ? View.VISIBLE : View.GONE}"
                 tools:visibility="visible">
 
                 <TextView
@@ -119,7 +119,7 @@
                 android:background="@drawable/bg_vm_list_item"
                 android:orientation="vertical"
                 android:padding="16dp"
-                android:visibility="@{(client.externalType == null) ? View.VISIBLE : View.GONE}"
+                android:visibility="@{(client.clientType == 1) ? View.VISIBLE : View.GONE}"
                 tools:visibility="visible">
 
                 <TextView
@@ -136,7 +136,7 @@
                     android:enabled="true"
                     android:focusable="true"
                     android:longClickable="true"
-                    android:text="null"
+                    android:text="@{client.externalType}"
                     android:textIsSelectable="true"
                     tools:text="Manager" />
             </LinearLayout>
@@ -149,7 +149,7 @@
                 android:background="@drawable/bg_vm_list_item"
                 android:orientation="vertical"
                 android:padding="16dp"
-                android:visibility="@{(client.education == null) ? View.VISIBLE : View.GONE}"
+                android:visibility="@{(client.clientType == 0) ? View.VISIBLE : View.GONE}"
                 tools:visibility="gone">
 
                 <TextView

@@ -7,7 +7,7 @@ data class Client(
     var name: String = "",
     var surName: String = "",
     var phoneNumber: String = "",
-    var clientType: String = "",
+    var clientType: Int = 1,
     var clientOrganisation: String = "",
     // client dto
     var email: String? = null,
