@@ -4,7 +4,7 @@ Welkom bij ons project voor android.
 
 Onderaan vindt u een lijst van accounts met verschillende rollen.
 
-**Wij adviseren u alleen als admin in te loggen wegens errors gebonden de andere rollen.**
+**Wij adviseren u alleen als admin in te loggen wegens errors gebonden aan de andere rollen.**
 
 ## User
 ```
