@@ -29,6 +29,7 @@ class NavigationFromHomeTest {
         testScenario = launchFragmentInContainer<HomeFragment>()
         testScenario.onFragment { fragment ->
             navController.setGraph(R.navigation.navigation)
+            navController.setCurrentDestination(R.id.homeFragment)
             Navigation.setViewNavController(fragment.requireView(), navController)
         }
     }
