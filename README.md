@@ -1,6 +1,8 @@
-# devops-22-23-dotnet-g04
+# DevOps 22-23 Android g04
 
-Welkom bij ons project voor android.
+Welkom bij het Andoid project voor VIC van Dev groep 04.
+
+- De Android app kan ook gedownload worden via [https://install.appcenter.ms/users/brent.vandenbulcke-student.hogent.be/apps/android/distribution_groups/devopsgroup](https://install.appcenter.ms/users/brent.vandenbulcke-student.hogent.be/apps/android/distribution_groups/devopsgroup)
 
 Onderaan vindt u een lijst van accounts met verschillende rollen.
 
@@ -26,6 +28,6 @@ Paswoord:	sterkModeratorPaswoord123a-
 
 ## Administrator
 ```
-Email: 	  admin_account@gmail.com
+Email: 		admin_account@gmail.com
 Paswoord:	sterkAdministratorPaswoord123a-
 ```
