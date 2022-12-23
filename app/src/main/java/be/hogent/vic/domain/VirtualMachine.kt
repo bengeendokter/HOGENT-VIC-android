@@ -26,9 +26,7 @@ data class VirtualMachine(
     val availability: Int? = null,
     val software: Int? = null,
     val createdAt: Date? = null
-) {
-
-}
+)
 
 enum class Template(override val value: Int) : IEnumValue {
     MYSQL_DATABASE(0),

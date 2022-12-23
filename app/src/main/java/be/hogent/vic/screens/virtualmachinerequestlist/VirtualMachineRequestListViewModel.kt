@@ -7,7 +7,7 @@ import be.hogent.vic.domain.VirtualMachineRequest
 import be.hogent.vic.repository.VirtualMachineRequestRepository
 import kotlinx.coroutines.launch
 
-class VirtualMachineRequestListViewModel(application: Application): AndroidViewModel(application) {
+class VirtualMachineRequestListViewModel(application: Application) : AndroidViewModel(application) {
     private val database = getDatabase(application)
     private val virtualMachineRequestRepository = VirtualMachineRequestRepository(database)
     val virtualMachineRequests = virtualMachineRequestRepository.virtualMachineRequests
@@ -22,22 +22,21 @@ class VirtualMachineRequestListViewModel(application: Application): AndroidViewM
         }
     }
 
-    fun displayDetails(request: VirtualMachineRequest){
+    fun displayDetails(request: VirtualMachineRequest) {
         _navigateToDetails.value = request.id
     }
 
-    fun displayDetailsComplete(){
+    fun displayDetailsComplete() {
         _navigateToDetails.value = null
     }
 
     class Factory(val app: Application) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            if(modelClass.isAssignableFrom(VirtualMachineRequestListViewModel::class.java)){
+            if (modelClass.isAssignableFrom(VirtualMachineRequestListViewModel::class.java)) {
                 @Suppress("UNCHECKED_CAST")
                 return VirtualMachineRequestListViewModel(app) as T
             }
             throw IllegalArgumentException("Unable to construct viewmodel")
         }
-
     }
 }

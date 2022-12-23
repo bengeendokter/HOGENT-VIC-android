@@ -1,13 +1,12 @@
 package be.hogent.vic.screens.virtualmachinerequestlist
 
-import be.hogent.vic.domain.VirtualMachineRequest
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import be.hogent.vic.databinding.VmRequestListItemBinding
-
+import be.hogent.vic.domain.VirtualMachineRequest
 
 class VirtualMachineRequestAdapter(private val onClickListener: OnClickListener) :
     ListAdapter<VirtualMachineRequest, VirtualMachineRequestAdapter.VirtualMachineRequestViewHolder>(DiffCallback) {
@@ -20,7 +19,7 @@ class VirtualMachineRequestAdapter(private val onClickListener: OnClickListener)
         }
     }
 
-    class OnClickListener(val clickListener: (virtualMachineRequest: VirtualMachineRequest) -> Unit){
+    class OnClickListener(val clickListener: (virtualMachineRequest: VirtualMachineRequest) -> Unit) {
         fun onClick(virtualMachineRequest: VirtualMachineRequest) = clickListener(virtualMachineRequest)
     }
 
@@ -50,23 +49,11 @@ class VirtualMachineRequestAdapter(private val onClickListener: OnClickListener)
         )
     }
 
-
-
-    override fun onBindViewHolder(holder: VirtualMachineRequestViewHolder, position: Int){
+    override fun onBindViewHolder(holder: VirtualMachineRequestViewHolder, position: Int) {
         val virtualMachineRequest = getItem(position)
-        holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener {
             onClickListener.onClick(virtualMachineRequest)
         }
         holder.bind(virtualMachineRequest)
     }
 }
-
-
-
-
-
-
-
-
-
-

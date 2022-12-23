@@ -5,11 +5,11 @@ import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import be.hogent.vic.R
 import org.hamcrest.Matchers.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import be.hogent.vic.R
 
 @RunWith(AndroidJUnit4::class)
 class HomeFragmentTest {
@@ -25,9 +25,6 @@ class HomeFragmentTest {
         onView(withId(R.id.nav_btn_virtualMachines)).check(matches(isClickable()))
         onView(withId(R.id.nav_btn_virtualMachines)).check(matches(withText(containsString("Virtual"))))
         onView(withId(R.id.nav_btn_virtualMachines)).check(matches(withText("Virtual Machines")))
-
-        //TODO
-        //op switch klikken en kijken naar kleurverandering
     }
 
     @Test

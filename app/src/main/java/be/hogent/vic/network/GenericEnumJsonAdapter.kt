@@ -1,6 +1,5 @@
 package be.hogent.vic.network
 
-import android.util.Log
 import com.squareup.moshi.*
 
 interface IEnumValue {

@@ -22,7 +22,7 @@
             android:layout_marginTop="84dp"
             android:text="datum"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/ic_hogent"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

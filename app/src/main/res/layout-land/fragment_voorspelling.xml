@@ -28,6 +28,7 @@
                 android:layout_marginTop="8dp"
                 android:text="datum"
                 android:textAlignment="center"
+                android:textColor="@color/ic_hogent"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"

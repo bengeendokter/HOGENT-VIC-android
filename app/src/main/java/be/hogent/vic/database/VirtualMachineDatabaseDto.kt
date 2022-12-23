@@ -1,7 +1,9 @@
 package be.hogent.vic.database
-
+// ktlint-disable import-ordering
 import androidx.room.*
+// ktlint-disable no-wildcard-imports
 import be.hogent.vic.domain.*
+// ktlint-disable no-wildcard-imports
 import java.util.*
 
 @Entity(tableName = "virtual_machines")

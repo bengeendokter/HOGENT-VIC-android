@@ -5,11 +5,11 @@ import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import be.hogent.vic.R
+import org.hamcrest.CoreMatchers.containsString
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import be.hogent.vic.R
-import org.hamcrest.CoreMatchers.containsString
 
 @RunWith(AndroidJUnit4::class)
 class VoorspellingFragmentTest {
@@ -22,14 +22,11 @@ class VoorspellingFragmentTest {
     @Test
     fun algemeenUI() {
         onView(withId(R.id.voorspelling_datum)).check(matches(isDisplayed()))
-        onView(withId(R.id.voorspelling_datum)).check(matches(hasTextColor(R.color.black)))
+        onView(withId(R.id.voorspelling_datum)).check(matches(hasTextColor(R.color.ic_hogent)))
         onView(withId(R.id.voorspelling_btn_datum)).check(matches(isDisplayed()))
         onView(withId(R.id.voorspelling_btn_datum)).check(matches(isClickable()))
         onView(withId(R.id.voorspelling_btn_datum)).check(matches(withText(containsString("Kies"))))
         onView(withId(R.id.voorspelling_btn_datum)).check(matches(withText("Kies een datum")))
-
-        //TODO
-        // datapicker test en kijken naar datum text en cpu velden
     }
 
     @Test
@@ -100,5 +97,4 @@ class VoorspellingFragmentTest {
         onView(withId(R.id.totaalStorage)).check(matches(isDisplayed()))
         onView(withId(R.id.totaalStorage)).check(matches(withText(containsString("van"))))
     }
-
 }
