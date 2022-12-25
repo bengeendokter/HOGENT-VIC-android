@@ -10,7 +10,7 @@ Onderaan vindt u een lijst van accounts met verschillende rollen.
 - **Indien de testen falen, adviseren wij u om een eerst "wipe data" en dan "cold-boot now" uit te voeren op uw emulator**
 
 ## gekende bugs
-- **Indien er nieuwe klanten, aanvragen of virtuele machines worden toegevoegd, zal de app crashen wanneer je ze probeert raad te plegen in de app.**
+- **Indien de app niet de recenste data toont, adviseren wij u om een "clean-data" en "clean-cache" op de app (binnen emulator/ op gsm) uit te voeren.**
 
 ## User
 ```
