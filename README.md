@@ -10,7 +10,7 @@ Onderaan vindt u een lijst van accounts met verschillende rollen.
 - **Indien de testen falen, adviseren wij u om een eerst "wipe data" en dan "cold-boot now" uit te voeren op uw emulator**
 
 ## gekende bugs
-- **Indien er nieuwe klanten, aanvragen of virtuele machines worden toegevoegd, zal de android applicatie niet meer werken.**
+- **Indien er nieuwe klanten, aanvragen of virtuele machines worden toegevoegd, zal de app crashen wanneer je de probeert raad te plegen in de app.**
 
 ## User
 ```
