@@ -9,6 +9,9 @@ Onderaan vindt u een lijst van accounts met verschillende rollen.
 - **Wij adviseren u alleen als admin in te loggen wegens errors gebonden aan de andere rollen.**
 - **Indien de testen falen, adviseren wij u om een eerst "wipe data" en dan "cold-boot now" uit te voeren op uw emulator**
 
+## gekende bugs
+- **Indien er nieuwe klanten, aanvragen of virtuele machines worden toegevoegd, zal de android applicatie niet meer werken.**
+
 ## User
 ```
 Email:		user_account@gmail.com
